@@ -1,0 +1,105 @@
+/*All main colors for RoboDoor
+
+gray
+white
+black
+red
+*/
+
+
+/*all of the side menu robodoor css*/
+.skin-blue .main-header .logo {
+    background-color: #000;
+}
+
+.skin-blue .main-header .navbar {
+    background-color: #000;
+}
+.skin-blue .sidebar-menu>li>.treeview-menu {
+    margin: 0 1px;
+    background: #191919;
+}
+.skin-blue .sidebar-menu>li:hover>a, .skin-blue .sidebar-menu>li.active>a, .skin-blue .sidebar-menu>li.menu-open>a {
+    color: #fff;
+    background: #bc0000;
+}
+.skin-blue .sidebar-menu .treeview-menu>li.active>a, .skin-blue .sidebar-menu .treeview-menu>li>a:hover {
+    color: #ff0000;
+    font-weight: 700;
+}
+.skin-blue .wrapper, .skin-blue .main-sidebar, .skin-blue .left-side {
+    background-color: #000;
+}
+.skin-blue .sidebar-menu .treeview-menu>li>a {
+    color: #fff;
+}
+.skin-blue .sidebar a {
+    color: #fff;
+}
+.skin-blue .sidebar-menu>li.header {
+  color: #e1e1e1;
+    background: #000;
+}
+.skin-blue .sidebar-menu>li:hover>a, .skin-blue .sidebar-menu>li.active>a, .skin-blue .sidebar-menu>li.menu-open>a {
+    color: #fff;
+    background: #bc0000;
+    font-weight: 600;
+}
+.skin-blue .main-header .logo {
+    background-color: #8b0000;
+    color: #fff;
+    border-bottom: 0 solid transparent;
+}
+.skin-blue .user-panel>.info, .skin-blue .user-panel>.info>a {
+    color: #fff;
+}
+
+.skin-blue .main-header li.user-header {
+    background-color: #000000;
+}
+
+.skin-blue .sidebar-menu>li.active>a {
+    border-left-color: #ffffff;
+}
+
+/*button robodoor code */
+
+.btn-info {
+    background-color: #787878;
+    border-color: #959595;
+}	
+.btn-primary {
+    background-color: rgba(139, 0, 0, 1);
+    border: solid rgba(139, 0, 0, 1) 0px;
+}
+
+
+/*background colors*/
+.content-wrapper {
+    min-height: 100%;
+    background-color: #cecece;
+    z-index: 800;
+}
+
+
+/*breadcrumb code*/
+.breadcrumb_pic{
+          height: 100px;
+          width: 100%;
+          border-radius: 10px;
+          background: #000;
+          margin: 20px 0px;
+}
+.breadcrumb>.active {
+    color: #fff;
+}
+.breadcrumb {
+    background-color: transparent;
+}
+.breadcrumb>li {
+    margin-top: 30px;
+}
+
+.breadcrumb_pic h1{
+    color: #fff;
+}
