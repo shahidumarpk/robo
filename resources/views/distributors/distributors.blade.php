@@ -117,19 +117,19 @@
             <form role="form">
               <div class="box-body">
                 <div class="form-group">
-                  <label for="name">Distributors First Name</label>
+                  <label for="name">First Name</label>
                   <input type="text" class="form-control" id="name" placeholder="Enter First Name">
                 </div>
                 <div class="form-group">
-                  <label for="name">Distributors Last Name</label>
+                  <label for="name">Last Name</label>
                   <input type="text" class="form-control" id="name" placeholder="Enter Last Name">
                 </div>
                 <div class="form-group">
-                  <label for="code">Distributors Email</label>
+                  <label for="code">Email</label>
                   <input type="text" class="form-control" id="code" placeholder="Enter Email">
                 </div>
                 <div class="form-group">
-                  <label for="code">Distributors Phone</label>
+                  <label for="code">Phone</label>
                   <input type="text" class="form-control" id="code" placeholder="Enter Phone">
                 </div>
                 <div class="form-group">
@@ -141,7 +141,7 @@
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="images">File input</label>
+                  <label for="images">Profile Picture</label>
                   <input type="file" id="images" name="images">
                 </div>
               </div>

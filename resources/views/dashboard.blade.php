@@ -1,156 +1,7 @@
 @extends('layouts.mainlayout')
 @section('content')
  
-<div class="row">
-        <div class="col-md-6 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-green"><i class="fa fa-usd"></i></span>
-            <div class="info-box-content">
-              <span class="info-box-text">Total Income</span>
-              <span class="info-box-number">990</span>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-        </div>
-        <!-- /.col -->
-        <div class="col-md-6 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-green"><i class="fa fa-usd"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-text">Today's Income</span>
-              <span class="info-box-number">410</span>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-        </div>
-        <!-- /.col -->
-
-        <!-- fix for small devices only -->
-       
-      </div>
-
-<div class="row">
   
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-aqua"><i class="fa fa-users"></i></span>
-            <div class="info-box-content">
-              <span class="info-box-text">User count</span>
-              <span class="info-box-number">990</span>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-        </div>
-        <!-- /.col -->
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-red"><i class="fa fa-list"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-text">Product count</span>
-              <span class="info-box-number">410</span>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-        </div>
-        <!-- /.col -->
-
-        <!-- fix for small devices only -->
-        <div class="clearfix visible-sm-block"></div>
-
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-green"><i class="fa fa-shopping-cart"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-text">Orders count</span>
-              <span class="info-box-number">760</span>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-        </div>
-        <!-- /.col -->
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-yellow"><i class="fa fa-user-plus"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-text">Total Subscriptions</span>
-              <span class="info-box-number">400</span>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-        </div>
-        <!-- /.col -->
-      </div>
-
-  <div class="row">
-  
-  <div class="col-md-3 col-sm-6 col-xs-12">
-    <div class="info-box">
-      <span class="info-box-icon bg-aqua"><i class="fa fa-users"></i></span>
-
-      <div class="info-box-content">
-        <span class="info-box-text">Today New Signup(s)</span>
-        <span class="info-box-number">90</span>
-      </div>
-      <!-- /.info-box-content -->
-    </div>
-    <!-- /.info-box -->
-  </div>
-  <!-- /.col -->
-  <div class="col-md-3 col-sm-6 col-xs-12">
-    <div class="info-box">
-      <span class="info-box-icon bg-red"><i class="fa fa-list"></i></span>
-
-      <div class="info-box-content">
-        <span class="info-box-text">Today New Product(s)</span>
-        <span class="info-box-number">410</span>
-      </div>
-      <!-- /.info-box-content -->
-    </div>
-    <!-- /.info-box -->
-  </div>
-  <!-- /.col -->
-
-  <!-- fix for small devices only -->
-  <div class="clearfix visible-sm-block"></div>
-
-  <div class="col-md-3 col-sm-6 col-xs-12">
-    <div class="info-box">
-      <span class="info-box-icon bg-green"><i class="fa fa-shopping-cart"></i></span>
-
-      <div class="info-box-content">
-        <span class="info-box-text">Today New Order(s)</span>
-        <span class="info-box-number">760</span>
-      </div>
-      <!-- /.info-box-content -->
-    </div>
-    <!-- /.info-box -->
-  </div>
-  <!-- /.col -->
-  <div class="col-md-3 col-sm-6 col-xs-12">
-    <div class="info-box">
-      <span class="info-box-icon bg-yellow"><i class="fa fa-user-plus"></i></span>
-
-      <div class="info-box-content">
-        <span class="info-box-text">Today New Subscription(s)</span>
-        <span class="info-box-number">2,000</span>
-      </div>
-      <!-- /.info-box-content -->
-    </div>
-    <!-- /.info-box -->
-  </div>
-  <!-- /.col -->
-</div>
-
     <!-- Charts -->
     <div class="row">
       <div class="col-md-6">
@@ -175,7 +26,7 @@
     <div class="col-md-6">
     <div class="box box-info">
             <div class="box-header with-border">
-              <h3 class="box-title">Subscriptions in last 7 days</h3>
+              <h3 class="box-title">Income in last 7 days</h3>
 
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -193,119 +44,209 @@
       </div>
 </div>
 
- <!-- Charts -->
+ 
  <div class="row">
-          <div class="col-xs-12">
+   <!-- Inbox Widget begins -->
+    <div class="col-md-6">
+        <div class="box box-primary">
+          <div class="box-header with-border">
+            <h3 class="box-title">Inbox</h3>
 
-            <div class="box">
-              <div class="box-header">
-                <h3 class="box-title">Recent Account Details </h3>
-              </div>
-              <!-- /.box-header -->
-              <div class="box-body">
-                <table id="example1" class="table table-bordered table-striped">
-                  <thead>
-                  <tr>
-                    <th>Customer Name</th>
-                    <th>Customer ID</th>
-                    <th>Date</th>
-                    <th>Amount</th>
-                    <th>Status</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                    <td>Trident</td>
-                    <td>DK12321
-                    </td>
-                    <td>22/02/2019</td>
-                    <td>  $1520</td>
-                    <td><span class="label label-success">recieved</span></td>
-                  </tr>
-                  <tr>
-                    <td>Trident</td>
-                    <td>DK12322
-                    </td>
-                    <td>22/02/2019</td>
-                    <td>$155</td>
-                    <td><span class="label label-warning">pending</span></td>
-                  </tr>
-                  <tr>
-                    <td>Trident</td>
-                    <td>DK12325
-                    </td>
-                    <td>22/02/2019</td>
-                    <td>$130</td>
-                    <td><span class="label label-success">recieved</span></td>
-                  </tr>
-                  <tr>
-                    <td>Trident</td>
-                    <td>DK12323
-                    </td>
-                    <td>22/02/2019</td>
-                    <td>$2550</td>
-                    <td><span class="label label-success">recieved</span></td>
-                  </tr>
-                  <tr>
-                    <td>Gecko</td>
-                    <td>DK12324</td>
-                    <td>22/02/2019</td>
-                    <td>$150</td>
-                    <td><span class="label label-success">recieved</span></td>
-                  </tr>
-                  <tr>
-                    <td>Misc</td>
-                    <td>DK12325</td>
-                    <td>22/02/2019</td>
-                    <td>$5510</td>
-                    <td><span class="label label-warning">pending</span></td>
-                  </tr>
-                  <tr>
-                    <td>Misc</td>
-                    <td>DK12326</td>
-                    <td>21/02/2019</td>
-                    <td>$250</td>
-                    <td><span class="label label-warning">pending</span></td>
-                  </tr>
-                  <tr>
-                    <td>Misc</td>
-                    <td>DK12328</td>
-                    <td>21/02/2019</td>
-                    <td>$550</td>
-                    <td><span class="label label-success">recieved</span></td>
-                  </tr>
-                  <tr>
-                    <td>Oder broders</td>
-                    <td>DK12329</td>
-                    <td>21/02/2019</td>
-                    <td>$2550</td>
-                    <td><span class="label label-success">recieved</span></td>
-                  </tr>
-                  </tbody>
-                  <tfoot>
-                  <tr>
-                    <th>Customer Name</th>
-                    <th>Customer ID</th>
-                    <th>Date</th>
-                    <th>Amount</th>
-                    <th>Status</th>
-                  </tr>
-                  </tfoot>
-                </table>
-              </div>
-              <!-- /.box-body -->
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-refresh"></i></button>
+              <!-- <button type="button" class="btn btn-warning btn-sm"><i class="fa fa-gear"></i></button> -->
+              <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
             </div>
-            <!-- /.box -->
+            <!-- /.box-tools -->
           </div>
-          <!-- /.col -->
+          <!-- /.box-header -->
+          <div class="box-body">
+            <div class="table-responsive mailbox-messages">
+              <table class="table table-hover table-striped">
+                <tbody>
+                <tr>
+                  <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
+                  <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                  <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
+                  </td>
+                  <td class="mailbox-attachment"></td>
+                  <td class="mailbox-date">5 mins ago</td>
+                </tr>
+                <tr>
+                  <td class="mailbox-star"><a href="#"><i class="fa fa-star-o text-yellow"></i></a></td>
+                  <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                  <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
+                  </td>
+                  <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
+                  <td class="mailbox-date">28 mins ago</td>
+                </tr>
+                <tr>                 
+                  <td class="mailbox-star"><a href="#"><i class="fa fa-star-o text-yellow"></i></a></td>
+                  <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                  <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
+                  </td>
+                  <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
+                  <td class="mailbox-date">11 hours ago</td>
+                </tr>
+                <tr>
+                  <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
+                  <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                  <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
+                  </td>
+                  <td class="mailbox-attachment"></td>
+                  <td class="mailbox-date">15 hours ago</td>
+                </tr>
+                <tr>
+                  <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
+                  <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                  <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
+                  </td>
+                  <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
+                  <td class="mailbox-date">Yesterday</td>
+                </tr>
+                <tr>
+                  <td class="mailbox-star"><a href="#"><i class="fa fa-star-o text-yellow"></i></a></td>
+                  <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                  <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
+                  </td>
+                  <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
+                  <td class="mailbox-date">2 days ago</td>
+                </tr>
+                <tr>
+                  <td class="mailbox-star"><a href="#"><i class="fa fa-star-o text-yellow"></i></a></td>
+                  <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                  <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
+                  </td>
+                  <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
+                  <td class="mailbox-date">2 days ago</td>
+                </tr>
+                <tr>
+                  <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
+                  <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                  <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
+                  </td>
+                  <td class="mailbox-attachment"></td>
+                  <td class="mailbox-date">2 days ago</td>
+                </tr>
+                <tr>
+                  <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
+                  <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                  <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
+                  </td>
+                  <td class="mailbox-attachment"></td>
+                  <td class="mailbox-date">2 days ago</td>
+                </tr>
+                <tr>
+                  <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
+                  <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                  <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
+                  </td>
+                  <td class="mailbox-attachment"></td>
+                  <td class="mailbox-date">2 days ago</td>
+                </tr>
+                <tr>
+                  <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
+                  <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                  <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
+                  </td>
+                  <td class="mailbox-attachment"></td>
+                  <td class="mailbox-date">2 days ago</td>
+                </tr>
+                <tr>
+                  <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
+                  <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                  <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
+                  </td>
+                  <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
+                  <td class="mailbox-date">15 days ago</td>
+                </tr>
+                </tbody>
+              </table>
+              <!-- /.table -->
+            </div>
+            <!-- /.mail-box-messages -->
+          </div>
+          <!-- /.box-body -->
+          <div class="box-footer">
+          <div class="pull-right"><a href="#" class="btn btn-success btn-sm">View All</a></div>
+          </div>
         </div>
+        <!-- /. box -->
+      </div>
+    <!-- Inbox Widget ends -->
+    <!-- Quick Email Widget begins -->
+    <div class="col-md-6">
+        <div class="box box-primary">
+          <div class="box-header with-border">
+            <h3 class="box-title">Quick Email</h3>
+            <div class="pull-right">
+              <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+            </div>
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body">
+            <div class="form-group">
+              <input class="form-control" placeholder="To:">
+            </div>
+            <div class="form-group">
+              <input class="form-control" placeholder="Subject:">
+            </div>
+            <div class="form-group">
+                  <textarea id="compose-textarea" class="form-control" style="height: 200px">
+                    <h1><u>Heading Of Message</u></h1>
+                    <h4>Subheading</h4>
+                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain
+                      was born and I will give you a complete account of the system, and expound the actual teachings
+                      of the great explorer of the truth, the master-builder of human happiness. No one rejects,
+                      dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know
+                      how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again
+                      is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain,
+                      but because occasionally circumstances occur in which toil and pain can procure him some great
+                      pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise,
+                      except to obtain some advantage from it? But who has any right to find fault with a man who
+                      chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that
+                      produces no resultant pleasure? On the other hand, we denounce with righteous indignation and
+                      dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so
+                      blinded by desire, that they cannot foresee</p>
+                    <ul>
+                      <li>List item one</li>
+                      <li>List item two</li>
+                      <li>List item three</li>
+                      <li>List item four</li>
+                    </ul>
+                    <p>Thank you,</p>
+                    <p>John Doe</p>
+                  </textarea>
+            </div>
+            <div class="form-group">
+              <div class="btn btn-default btn-file">
+                <i class="fa fa-paperclip"></i> Attachment
+                <input type="file" name="attachment">
+              </div>
+              <p class="help-block">Max. 32MB</p>
+            </div>
+          </div>
+          <!-- /.box-body -->
+          <div class="box-footer">
+            <div class="pull-right">
+              <button type="submit" class="btn btn-primary"><i class="fa fa-send-o"></i> Send</button>
+            </div>
+          </div>
+          <!-- /.box-footer -->
+        </div>
+        <!-- /. box -->
+      </div>
+      <!-- /.col -->
+    <!-- Quick Email Widget ends-->
+
+  </div> <!-- Row ends -->
     
   <div class="row">
     <!-- Lastest Orders -->
     <div class="col-md-6">
     <div class="box box-info">
             <div class="box-header with-border">
-              <h3 class="box-title">Latest Orders</h3>
+              <h3 class="box-title">Recent Quotes</h3>
 
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -319,69 +260,72 @@
                 <table class="table no-margin">
                   <thead>
                   <tr>
-                    <th>Order ID</th>
-                    <th>Item</th>
+                    <th>Quote No</th>
+                    <th>Date</th>
+                    <th>To </th>
+                    <th>Amount</th>
                     <th>Status</th>
-                    <th>Popularity</th>
+                    <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
                   <tr>
-                    <td><a href="pages/examples/invoice.html">OR9842</a></td>
-                    <td>Call of Duty IV</td>
-                    <td><span class="label label-success">Shipped</span></td>
-                    <td>
-                      <div class="sparkbar" data-color="#00a65a" data-height="20"><canvas width="34" height="20" style="display: inline-block; width: 34px; height: 20px; vertical-align: top;"></canvas></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="pages/examples/invoice.html">OR1848</a></td>
-                    <td>Samsung Smart TV</td>
+                    <td><a href="#">123</a></td>
+                    <td>21-Feb-2019</td>
+                    <td>Niku Solutions Pte. Ltd.</td>
+                    <td>$800</td>
                     <td><span class="label label-warning">Pending</span></td>
                     <td>
-                      <div class="sparkbar" data-color="#f39c12" data-height="20"><canvas width="34" height="20" style="display: inline-block; width: 34px; height: 20px; vertical-align: top;"></canvas></div>
+                      <button type="button" class="btn btn-success btn-sm"><i class="fa fa-eye"></i></button>
+                      <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>
                     </td>
                   </tr>
+
                   <tr>
-                    <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                    <td>iPhone 6 Plus</td>
-                    <td><span class="label label-danger">Delivered</span></td>
-                    <td>
-                      <div class="sparkbar" data-color="#f56954" data-height="20"><canvas width="34" height="20" style="display: inline-block; width: 34px; height: 20px; vertical-align: top;"></canvas></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                    <td>Samsung Smart TV</td>
-                    <td><span class="label label-info">Processing</span></td>
-                    <td>
-                      <div class="sparkbar" data-color="#00c0ef" data-height="20"><canvas width="34" height="20" style="display: inline-block; width: 34px; height: 20px; vertical-align: top;"></canvas></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="pages/examples/invoice.html">OR1848</a></td>
-                    <td>Samsung Smart TV</td>
+                    <td><a href="#">124</a></td>
+                    <td>21-Feb-2019</td>
+                    <td>Robo Door</td>
+                    <td>$850</td>
                     <td><span class="label label-warning">Pending</span></td>
                     <td>
-                      <div class="sparkbar" data-color="#f39c12" data-height="20"><canvas width="34" height="20" style="display: inline-block; width: 34px; height: 20px; vertical-align: top;"></canvas></div>
+                      <button type="button" class="btn btn-success btn-sm"><i class="fa fa-eye"></i></button>
+                      <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>
                     </td>
                   </tr>
                   <tr>
-                    <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                    <td>iPhone 6 Plus</td>
-                    <td><span class="label label-danger">Delivered</span></td>
+                    <td><a href="#">125</a></td>
+                    <td>21-Feb-2019</td>
+                    <td>Niku Solutions Pte. Ltd.</td>
+                    <td>$800</td>
+                    <td><span class="label label-success">Invoiced</span></td>
                     <td>
-                      <div class="sparkbar" data-color="#f56954" data-height="20"><canvas width="34" height="20" style="display: inline-block; width: 34px; height: 20px; vertical-align: top;"></canvas></div>
+                      <button type="button" class="btn btn-success btn-sm"><i class="fa fa-eye"></i></button>
+                      <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>
                     </td>
                   </tr>
                   <tr>
-                    <td><a href="pages/examples/invoice.html">OR9842</a></td>
-                    <td>Call of Duty IV</td>
-                    <td><span class="label label-success">Shipped</span></td>
+                    <td><a href="#">126</a></td>
+                    <td>21-Feb-2019</td>
+                    <td>Niku Solutions Pte. Ltd.</td>
+                    <td>$800</td>
+                    <td><span class="label label-warning">Pending</span></td>
                     <td>
-                      <div class="sparkbar" data-color="#00a65a" data-height="20"><canvas width="34" height="20" style="display: inline-block; width: 34px; height: 20px; vertical-align: top;"></canvas></div>
+                      <button type="button" class="btn btn-success btn-sm"><i class="fa fa-eye"></i></button>
+                      <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>
                     </td>
                   </tr>
+                  <tr>
+                    <td><a href="#">127</a></td>
+                    <td>21-Feb-2019</td>
+                    <td>Niku Solutions Pte. Ltd.</td>
+                    <td>$800</td>
+                    <td><span class="label bg-red">Cancel</span></td>
+                    <td>
+                      <button type="button" class="btn btn-success btn-sm"><i class="fa fa-eye"></i></button>
+                      <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>
+                    </td>
+                  </tr>
+                 
                   </tbody>
                 </table>
               </div>
@@ -389,8 +333,8 @@
             </div>
             <!-- /.box-body -->
             <div class="box-footer clearfix">
-              <a href="javascript:void(0)" class="btn btn-sm btn-info btn-flat pull-left">Place New Order</a>
-              <a href="javascript:void(0)" class="btn btn-sm btn-default btn-flat pull-right">View All Orders</a>
+              <a href="javascript:void(0)" class="btn btn-sm btn-primary btn-flat pull-left">New Quote</a>
+              <a href="javascript:void(0)" class="btn btn-sm btn-default btn-flat pull-right">View All Quotes</a>
             </div>
             <!-- /.box-footer -->
           </div>
@@ -398,9 +342,9 @@
     </div>
     <!-- Recent Added Products -->
     <div class="col-md-6">
-    <div class="box box-primary">
+    <div class="box box-info">
             <div class="box-header with-border">
-              <h3 class="box-title">Recently Added Products</h3>
+              <h3 class="box-title">Latest Invoices</h3>
 
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -410,69 +354,92 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-              <ul class="products-list product-list-in-box">
-                <li class="item">
-                  <div class="product-img">
-                    <img src="dist/img/default-50x50.gif" alt="Product Image">
-                  </div>
-                  <div class="product-info">
-                    <a href="javascript:void(0)" class="product-title">Samsung TV
-                      <span class="label label-warning pull-right">$1800</span></a>
-                    <span class="product-description">
-                          Samsung 32" 1080p 60Hz LED Smart HDTV.
-                        </span>
-                  </div>
-                </li>
-                <!-- /.item -->
-                <li class="item">
-                  <div class="product-img">
-                    <img src="dist/img/default-50x50.gif" alt="Product Image">
-                  </div>
-                  <div class="product-info">
-                    <a href="javascript:void(0)" class="product-title">Bicycle
-                      <span class="label label-info pull-right">$700</span></a>
-                    <span class="product-description">
-                          26" Mongoose Dolomite Men's 7-speed, Navy Blue.
-                        </span>
-                  </div>
-                </li>
-                <!-- /.item -->
-                <li class="item">
-                  <div class="product-img">
-                    <img src="dist/img/default-50x50.gif" alt="Product Image">
-                  </div>
-                  <div class="product-info">
-                    <a href="javascript:void(0)" class="product-title">Xbox One <span class="label label-danger pull-right">$350</span></a>
-                    <span class="product-description">
-                          Xbox One Console Bundle with Halo Master Chief Collection.
-                        </span>
-                  </div>
-                </li>
-                <!-- /.item -->
-                <li class="item">
-                  <div class="product-img">
-                    <img src="dist/img/default-50x50.gif" alt="Product Image">
-                  </div>
-                  <div class="product-info">
-                    <a href="javascript:void(0)" class="product-title">PlayStation 4
-                      <span class="label label-success pull-right">$399</span></a>
-                    <span class="product-description">
-                          PlayStation 4 500GB Console (PS4)
-                        </span>
-                  </div>
-                </li>
-                <!-- /.item -->
-              </ul>
+                <table class="table no-margin">
+                    <thead>
+                    <tr>
+                      <th>Invoice No</th>
+                      <th>Date</th>
+                      <th>To </th>
+                      <th>Amount</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td><a href="#">123</a></td>
+                      <td>21-Feb-2019</td>
+                      <td>Niku Solutions Pte. Ltd.</td>
+                      <td>$800</td>
+                      <td><span class="label label-warning">Pending</span></td>
+                      <td>
+                        <button type="button" class="btn btn-success btn-sm"><i class="fa fa-eye"></i></button>
+                        <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>
+                      </td>
+                    </tr>
+  
+                    <tr>
+                      <td><a href="#">124</a></td>
+                      <td>21-Feb-2019</td>
+                      <td>Robo Door</td>
+                      <td>$850</td>
+                      <td><span class="label label-warning">Pending</span></td>
+                      <td>
+                        <button type="button" class="btn btn-success btn-sm"><i class="fa fa-eye"></i></button>
+                        <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="#">125</a></td>
+                      <td>21-Feb-2019</td>
+                      <td>Niku Solutions Pte. Ltd.</td>
+                      <td>$800</td>
+                      <td><span class="label label-success">Paid</span></td>
+                      <td>
+                        <button type="button" class="btn btn-success btn-sm"><i class="fa fa-eye"></i></button>
+                        <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="#">126</a></td>
+                      <td>21-Feb-2019</td>
+                      <td>Niku Solutions Pte. Ltd.</td>
+                      <td>$800</td>
+                      <td><span class="label label-warning">Pending</span></td>
+                      <td>
+                        <button type="button" class="btn btn-success btn-sm"><i class="fa fa-eye"></i></button>
+                        <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><a href="#">127</a></td>
+                      <td>21-Feb-2019</td>
+                      <td>Niku Solutions Pte. Ltd.</td>
+                      <td>$800</td>
+                      <td><span class="label bg-red">Cancel</span></td>
+                      <td>
+                        <button type="button" class="btn btn-success btn-sm"><i class="fa fa-eye"></i></button>
+                        <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>
+                      </td>
+                    </tr>
+                   
+                    </tbody>
+                  </table>
             </div>
             <!-- /.box-body -->
-            <div class="box-footer text-center">
-              <a href="javascript:void(0)" class="uppercase">View All Products</a>
+            <div class="box-footer clearfix">
+                <a href="javascript:void(0)" class="btn btn-sm btn-primary btn-flat pull-left">New Invoice</a>
+                <a href="javascript:void(0)" class="btn btn-sm btn-default btn-flat pull-right">View All Invoices</a>
             </div>
             <!-- /.box-footer -->
           </div>
 
     </div>
     </div>
+
+    
+    <!-- Calendar Begins-->
+    <div class="row">
     <div class="col-md-12">
       <div class="box box-primary">
         <div class="box-body no-padding">
@@ -483,4 +450,6 @@
       </div>
     <!-- /. box -->
     </div>
+    </div>
+    <!-- Calendar Ends -->
 @endsection
