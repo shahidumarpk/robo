@@ -34,7 +34,7 @@
 
     <div class="box box-info">
             <div class="box-header with-border">
-              <h3 class="box-title">Fresh Tuna Fish Product Details</h3>
+              <h3 class="box-title"> Product Details</h3>
               <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                     </button>
@@ -43,60 +43,53 @@
             <!-- /.box-header -->
             <div class="box-body" >
             <div class="row">
-              <div class="col-md-4 text-center">
-                  <div class="kv-avatar">
-                          <img src="{{ asset('img/products/product.jpg') }}" width="100%">
-                  </div>
-                  <br>
-                  <center>
-                  <span>Change featured image </span>
-                  <br>
-                  <br>
-                  <input type="file">
-                  </center>
-              </div> 
+              
               <div class="col-md-8">
               <table class="table table-striped">
                 <tr>
-                    <td><b>Product Name</b></td>
-                    <td><input type="text" value="Fresh Tuna Fish"></td>
+                    <td><b>Inventory Name</b></td>
+                    <td><input type="text" class="form-control" value="12MM STEEL UPRIGHT BRONZE LC "></td>
                 </tr>
                 <tr>
-                    <td><b>Code</b></td>
-                    <td><input type="text" value="F001"></td>
+                    <td><b>Stock Length</b></td>
+                    <td><input type="text" class="form-control"  value="3.5"></td>
                 </tr>
                 <tr>
-                    <td><b>Price</b></td>
-                    <td><input type="text" value="K10.00"></td>
+                    <td><b>Material Cost</b></td>
+                    <td><input type="text" class="form-control"  value="10.05 "></td>
                 </tr>
                 <tr>
-                    <td><b>Available Qty</b></td>
-                    <td><input type="text" value="4"></td>
+                    <td><b>Laser Cutting</b></td>
+                    <td><input type="text" class="form-control"  value="4"></td>
                 </tr>
                 <tr>
-                    <td><b>Location</b></td>
-                    <td><input type="text" value="Madang Town"></td>
+                    <td><b>Powder Coating</b></td>
+                    <td><input type="text" class="form-control"  value="20"></td>
                 </tr>
                 <tr>
-                    <td><b>Expiry Date</b></td>
-                    <td><input type="text" value="01-01-2018 5:20am"></td>
+                    <td><b>Rate / Length</b></td>
+                    <td><input type="text" class="form-control"  value="40.2"></td>
                 </tr>
                 <tr>
-                    <td><b>Category</b></td>
-                    <td><input type="text" value="Toys"></td>
+                    <td><b>Rate per meter / pcs</b></td>
+                    <td><input type="text" class="form-control"  value="40.2"></td>
                 </tr>
 
                 <tr>
-                    <td><b>Shop</b></td>
-                    <td><input type="text" value="Lego Shop"></td>
+                    <td><b>Used in Products </b></td>
+                    <td>
+                        <div class="">
+                            
+                            <select name="status" multiple class="form-control" id="productname">
+                                <option value="0" disabled>Select Quote </option>
+                                <option value="1" selected>TRELLES Gate  </option>
+                                <option value="2" selected>DELUXS Gate</option>
+                                <option value="3">Security Chain</option>
+                            </select>
+                        </div>
+                    </td>
                 </tr>
-                <tr>
-                    <td colspan="2"><b>Product Description</b></td>
-                </tr>
-                <td colspan="2"><textarea cols="100" rows="5">This is the product description. This is the product description. This is the product description. This is the product description. 
-                        This is the product description. This is the product description. This is the product description. This is the product description. 
-                         This is the product description. This is the product description. This is the product description. This is the product description. </td>
-                </textarea>
+                
                 <tr>
                     <td><b>Created At</b></td>
                     <td>09-10-2018</td>
@@ -111,39 +104,11 @@
                         <span class="text-green"><b>Active</b></span>                        
                     </td>
                 </tr>
-                <tr>
-                    <td><b>Upload Images</b></td>
-                    <td>
-                        <input type='file'>                        
-                    </td>
-                </tr>
+               
               </table>
               </div>
               </div>
-              <div class="col-md-12">
-                <div class="col-md-3 text-center">
-                        <div class="kv-avatar" style="border: solid 1px gray; padding: 5px;">
-                                <img src="{{ asset('img/products/product.jpg') }}" width="100%">
-                        </div>
-                    </div> 
-                    <div class="col-md-3 text-center">
-                        <div class="kv-avatar" style="border: solid 1px gray; padding: 5px;">
-                                <img src="{{ asset('img/products/product.jpg') }}" width="100%">
-                        </div>
-                    </div> 
-                    <div class="col-md-3 text-center">
-                        <div class="kv-avatar" style="border: solid 1px gray; padding: 5px;">
-                                <img src="{{ asset('img/products/product.jpg') }}" width="100%">
-                        </div>
-                    </div> 
-                    <div class="col-md-3 text-center">
-                            <div class="kv-avatar" style="border: solid 1px gray; padding: 5px;">
-                                    <img src="{{ asset('img/products/product.jpg') }}" width="100%">
-                            </div>
-                    </div> 
-
-
-              </div>
+              
 
           </div>
           
@@ -155,5 +120,12 @@
               </div>
               <!-- /.box-footer -->
 </div>
-
+<script>
+        //select 2 code for the popup styling
+          $(window).on('load',function() {
+              $('#productname').select2();
+              $('.select2-container').attr('style', 'width:100%');
+              
+          });
+</script>
 @endsection

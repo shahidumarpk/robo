@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Inventory;
 use Illuminate\Http\Request;
 
-class InventoryController extends Controller
+class MailboxController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +13,18 @@ class InventoryController extends Controller
      */
     public function index()
     {
-        $users=\App\User::where('iscustomer',1)->get();
-        return view('inventory.inventory',compact('users'));
+        //$users = \App\User::where('role_id' , 8)->get();
+        return view('mailbox.inbox');
     }
 
+    public function read()
+    {
+        return view('mailbox.read');
+    }
+    public function compose()
+    {
+        return view('mailbox.compose');
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -25,7 +32,7 @@ class InventoryController extends Controller
      */
     public function create()
     {
-        return view('inventory.add');
+        //
     }
 
     /**
@@ -36,37 +43,38 @@ class InventoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Inventory  $inventory
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        return view('inventory.show');
+        $user = \App\User::findorFail($id);
+        return view('distributors.show',compact('user'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Inventory  $inventory
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        // return view('inventory.edit',compact('id'));
-        return view('inventory.edit');
+        $user = \App\User::findorFail($id);
+        return view('distributors.edit',compact('user'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Inventory  $inventory
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -77,7 +85,7 @@ class InventoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Inventory  $inventory
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

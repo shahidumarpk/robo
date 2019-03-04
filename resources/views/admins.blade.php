@@ -27,7 +27,7 @@
               </span>
             </div>
             <!-- /.box-header -->
-            <div class="box-body">
+            <div class="box-body table-responsive">
             @if(count($users) > 0)
               <table id="example1" class="display responsive nowrap" style="width:100%">
                 <thead>
@@ -35,6 +35,7 @@
                   <th>Name</th>
                   <th>Email</th>
                   <th>Phone Number</th>
+                  <th>Address</th>
                   <th>Role</th>
                   <th>Status</th>
                   <th>Action</th>
@@ -46,6 +47,7 @@
                     <td>{{$user['fname']}} {{$user['lname']}}</td>
                     <td>{{$user['email']}}</td>
                     <td>{{$user['phonenumber']}}</td>
+                    <td>21 West, NY, USA</td>
                     <td>{{$user['role']['role_title']}}</td>
                     <td>
                       @if ($user['status'] === 1)
@@ -71,9 +73,6 @@
                       <button class="btn btn-danger" onclick="archiveFunction('form{{$user['id']}}')"><i class="fa fa-trash"></i></button>
                       <a href="{!! url('/resetpassword/'.$user->id); !!}"  class="btn btn-info" title="Reset Password"><i class="fa fa-key"></i> </a>
                     </td>
-                   
-                    
-
                   </tr>
                   @endforeach
                 </tbody>
@@ -82,6 +81,7 @@
                   <th>Name</th>
                   <th>Email</th>
                   <th>Phone Number</th>
+                  <th>Address</th>
                   <th>Role</th>
                   <th>Status</th>
                   <th>Action</th>

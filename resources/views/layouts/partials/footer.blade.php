@@ -5,5 +5,5 @@
       
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; {{date('Y')}} <a href="#">Aladdins</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; {{date('Y')}} <a href="#">Robo ERP</a>.</strong> All rights reserved.
   </footer>

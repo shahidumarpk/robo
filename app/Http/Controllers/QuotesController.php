@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Inventory;
+use App\Quotes;
 use Illuminate\Http\Request;
 
-class InventoryController extends Controller
+class QuotesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class InventoryController extends Controller
      */
     public function index()
     {
-        $users=\App\User::where('iscustomer',1)->get();
-        return view('inventory.inventory',compact('users'));
+        return view('quotes.quotes');
     }
 
     /**
@@ -25,7 +24,7 @@ class InventoryController extends Controller
      */
     public function create()
     {
-        return view('inventory.add');
+        return view('quotes.create');
     }
 
     /**
@@ -42,34 +41,33 @@ class InventoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Inventory  $inventory
+     * @param  \App\Quotes  $quotes
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Quotes $quotes)
     {
-        return view('inventory.show');
+        return view('quotes.show');
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Inventory  $inventory
+     * @param  \App\Quotes  $quotes
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        // return view('inventory.edit',compact('id'));
-        return view('inventory.edit');
+        return view('quotes.edit');
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Inventory  $inventory
+     * @param  \App\Quotes  $quotes
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Quotes $quotes)
     {
         //
     }
@@ -77,10 +75,10 @@ class InventoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Inventory  $inventory
+     * @param  \App\Quotes  $quotes
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Quotes $quotes)
     {
         //
     }

@@ -98,4 +98,111 @@
               <!-- /.box-footer -->
 
 </div>
+
+<div class="row">
+
+        <div class="col-md-12">
+        <div class="box box-success">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Quotes</h3>
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body" style="">
+                    <div id="nofeaturesapp_wrapper" class="dataTables_wrapper no-footer">
+                        <table id="nofeaturesapp" class="display responsive wrap dataTable no-footer dtr-inline" style="width:100%;" role="grid">
+                            <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Quote#</th>
+                                <th>Total Amount</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+                            
+                            <tbody>			  
+                            <tr>
+                                <td>01-Jan-2018</td>
+                                <td>RB123</td>
+                                <td>R277.97</td>
+                                <td>
+                                    <span class="label label-info">New</span>
+                                </td>
+                                <td>
+                                <a href="{!! url('/quotes/1'); !!}" class="btn btn-primary" title="View Detail"><li class="fa fa-eye"></li> </a>
+                                </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                            </tfoot>
+                        </table></div>
+                            
+            
+                </div>
+                <!-- /.box-body -->
+            </div>
+        </div>
+        <!-- Order Widget ends -->
+    
+        <!-- Product Widget begins -->
+        <div class="col-md-12">
+                <div class="box box-danger">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Invoices</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body" style="">
+                            <div id="nofeaturesapp_wrapper" class="dataTables_wrapper no-footer">
+                                <table id="nofeaturesapp" class="display responsive wrap dataTable no-footer dtr-inline" style="width:100%;" role="grid">
+                                    <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Invoice#</th>
+                                        <th>Total Amount</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    </thead>
+                                    
+                                    <tbody>			  
+                                        <tr>
+                                            <td>11-Jan-2019</td>
+                                            <td>RB001</td>
+                                            <td>R100.00</td>
+                                            <td><label class="label label-success">paid</label></td>
+                                            <td>
+                                                <a href="{!! url('/invoices/1'); !!}" class="btn btn-primary" title="View Detail"><li class="fa fa-eye"></li> </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>01-Jan-2018</td>
+                                            <td>RB001</td>
+                                            <td>R105.60</td>
+                                            <td><label class="label label-danger">unpaid</label></td>
+                                            <td>
+                                                <a href="{!! url('/invoices/1'); !!}" class="btn btn-primary" title="View Detail"><li class="fa fa-eye"></li> </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                    </tfoot>
+                                </table></div>
+                                    
+                    
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                </div>
+        <!-- Product Widget ends -->
+    
+    </div>
+
 @endsection

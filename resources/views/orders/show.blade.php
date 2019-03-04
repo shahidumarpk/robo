@@ -22,25 +22,26 @@
     <!-- info row -->
     <div class="row invoice-info">
       <div class="col-sm-4 invoice-col">
-        From
+        To Customer
         <address>
-          <strong>Robo Door, RBD</strong><br>
-          P O Box 926<br>
-          CA, USA<br>
-          Phone: +0123 4567<br>
-          Email: jamesbond@abc.com
-        </address>
+            <strong>James Bond</strong><br>
+            P O Box 926<br>
+            Lae, Morobe Province<br>
+            Phone: 7100 0007<br>
+            Email: james@bond.com
+          </address>
       </div>
       <!-- /.col -->
       <div class="col-sm-4 invoice-col">
-        To
+        Sales Representative
+        
         <address>
-          <strong>James Bond</strong><br>
-          P O Box 926<br>
-          Lae, Morobe Province<br>
-          Phone: 7100 0007<br>
-          Email: james@bond.com
-        </address>
+            <strong>Robo Door, RBD</strong><br>
+            P O Box 926<br>
+            CA, USA<br>
+            Phone: +0123 4567<br>
+            Email: jamesbond@abc.com
+          </address>
       </div>
       <!-- /.col -->
       <div class="col-sm-4 invoice-col">
@@ -61,6 +62,7 @@
           <tr>
             <th>#</th>
             <th>Product Name</th>
+            <th>Size</th>
             <th>Qty</th>
             <th>Unit Price</th>
             <th>Subtotal</th>
@@ -69,35 +71,60 @@
           <tbody>
           <tr>
             <td>1</td>
-            <td>Security Gate Lock</td>
+            <td>DELUXE TRELLIS</td>
+            <td>300 x 200</td>
             <td>1</td>
             <td>$45.00</td>
             <td>$45.00</td>
           </tr>
           <tr>
             <td>2</td>
-            <td>Security Gate Chain</td>
+            <td>DELUXE FIXTURE</td>
+            <td>150 x 200</td>
             <td>1</td>
             <td>$87.90</td>
             <td>$87.90</td>
           </tr>
           <tr>
             <td>3</td>
-            <td>Security Gate Handle</td>
+            <td>ECONO TRELLIS</td>
+            <td>900 x 200</td>
             <td>2</td>
             <td>$20.00</td>
             <td>$40.00</td>
           </tr>
           <tr>
             <td>4</td>
-            <td>Security Gate Key Cover</td>
+            <td>ECONO FIXTURE</td>
+            <td>900 x 200</td>  
             <td>1</td>
             <td>$60.00</td>
             <td>$60.00</td>
           </tr>
+          <tr>
+              <th colspan="7" ></th></th>
+            </tr>
+          <tr>
+              <th colspan="6" style="">Additional Work</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td colspan="4">Change Door Lock</td>
+                <td>$45.00</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td colspan="4">Door is very old, repair</td>
+                <td>$45.00</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td colspan="4">Blue paint for new door</td>
+                <td>$45.00</td>
+            </tr>
           </tbody>
         </table>
-      </div>
+     </div>
       <!-- /.col -->
     </div>
     <!-- /.row -->
@@ -109,31 +136,32 @@
       </div>
       <!-- /.col -->
       <div class="col-xs-6">
-        <div class="table-responsive">
-          <table class="table">
-            <tbody><tr>
-              <th style="width:50%">Subtotal:</th>
-              <td>$232.90</td>
-            </tr>
-            <tr>
-              <th>Delivery(1-7 business days):</th>
-              <td>$19.80</td>
-            </tr>
-            <tr>
-                <th></th>
-                <td><b>$252.70</b></td>
-                </tr>
-            <tr>
-                <th>GST (10%)</th>
-                <td>$25.27</td>
-                </tr>
-            <tr>
-              <th><b>Total:</b></th>
-              <td><b>$277.97</b></td>
-            </tr>
-          </tbody></table>
+          <div class="table-responsive">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th style="width:64%">Subtotal:</th>
+                  <td>$232.90</td>
+              </tr>
+              <tr>
+                <th>Delivery(1-7 business days):</th>
+                <td>$19.80</td>
+              </tr>
+              <tr>
+                  <th></th>
+                  <td><b>$252.70</b></td>
+                  </tr>
+              <tr>
+                  <th>GST (10%)</th>
+                  <td>$25.27</td>
+                  </tr>
+              <tr>
+                <th><b>Total:</b></th>
+                <td><b>$277.97</b></td>
+              </tr>
+            </tbody></table>
+          </div>
         </div>
-      </div>
       <!-- /.col -->
     </div>
     <!-- /.row -->
@@ -142,10 +170,12 @@
     <div class="row no-print">
       <div class="col-xs-12">
         <span class="pull-right">
-        <button type="button" class="btn btn-primary" style="margin-right: 5px;">
-          <i class="fa fa-plane"></i> Track
-        </button>
-        <a href="{!! url('/orders/createticket'); !!}" class="btn btn-info"><i class="fa fa-support"></i> Create Complaint</a>
+            <button type="button" class="btn btn-primary" style="margin-right: 5px;">
+                <i class="fa fa-file"></i> Print
+              </button>
+              <button type="button" class="btn btn-info" style="margin-right: 5px;">
+                <i class="fa fa-download"></i> PDF
+              </button>
         </span>
       </div>
     </div>

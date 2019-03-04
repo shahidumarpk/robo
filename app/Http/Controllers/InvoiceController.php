@@ -25,7 +25,7 @@ class InvoiceController extends Controller
      */
     public function create()
     {
-        //
+        return view('invoices.add');
     }
 
     /**
@@ -45,7 +45,7 @@ class InvoiceController extends Controller
      * @param  \App\Invoice  $invoice
      * @return \Illuminate\Http\Response
      */
-    public function show(Invoice $invoice)
+    public function show($id)
     {
         return view('invoices.show');
     }

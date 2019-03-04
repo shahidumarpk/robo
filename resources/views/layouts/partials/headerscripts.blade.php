@@ -15,8 +15,7 @@
  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
  <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css">
 
-  <!-- Theme style -->
-  <link rel="stylesheet" href="{{ asset('dist/css/AdminLTE.min.css') }}">
+ 
 <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
         page. However, you can choose any other skin. Make sure you
         apply the skin class to the body tag so the changes take effect. -->
@@ -50,10 +49,17 @@
 <script src="{{ asset('bower_components/select2/dist/js/select2.full.min.js') }}"></script>
 <script src="{{ asset('plugins/input-mask/jquery.inputmask.js') }}"></script>
 {{-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> --}}
-
+ <!-- Theme style -->
+ <link rel="stylesheet" href="{{ asset('dist/css/AdminLTE.min.css') }}">
 <style>
 .modal-content {
     border-radius: 6px;
 }
-
+.form-control-sm {
+    height: calc(1.5em + .5rem + 2px);
+    padding: .25rem .5rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    border-radius: .2rem;
+}
 </style>

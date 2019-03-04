@@ -105,6 +105,42 @@
                   </div>
                 </div>
                 <div class="form-group">
+                  <label for="company" class="col-sm-3 control-label">Company Name</label>
+
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="company" name="company" placeholder="Company Name" value="Robo Door" autocomplete="off" require>
+                    @if ($errors->has('company'))
+                          <span class="text-red">
+                              <strong>{{ $errors->first('company') }}</strong>
+                          </span>
+                      @endif
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="vatnumber" class="col-sm-3 control-label">VAT Number</label>
+
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="vatnumber" name="vatnumber" placeholder="VAT Number" value="RB123123" autocomplete="off" require>
+                    @if ($errors->has('vatnumber'))
+                          <span class="text-red">
+                              <strong>{{ $errors->first('vatnumber') }}</strong>
+                          </span>
+                      @endif
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="address" class="col-sm-3 control-label">Address</label>
+
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="address" name="address" placeholder="Address" value="21 West, Barg Town, CA" autocomplete="off" require>
+                    @if ($errors->has('address'))
+                          <span class="text-red">
+                              <strong>{{ $errors->first('address') }}</strong>
+                          </span>
+                      @endif
+                  </div>
+                </div>
+                <div class="form-group">
                   <label for="status" class="col-sm-3 control-label">Status</label>
 
                   <div class="col-sm-9">
@@ -123,7 +159,7 @@
           </div>
               <!-- /.box-body -->
               <div class="box-footer">
-                <a href="{!! url('/admins'); !!}" class="btn btn-default">Cancel</a>
+                <a href="{!! url('/distributors'); !!}" class="btn btn-default">Cancel</a>
                 <button type="submit" disabled class="btn btn-info pull-right">Update</button>
               </div>
               <!-- /.box-footer -->

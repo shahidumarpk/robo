@@ -36,95 +36,129 @@
             <div class="box-header with-border">
               <h3 class="box-title">Robo ERP Settings</h3>
               <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                    </button>
+                    
                   </div>
             </div>
             <!-- /.box-header -->
             <div class="box-body" >
-            <div class="row">
-              <div class="col-md-4 text-center">
-                  <div class="kv-avatar" style="margin: 10px 20px;">
-                          <img src="{{ asset('img/logo.webp') }}" width="100%">
-                  </div>
-                  <br>
-                  <center>
-                  <span>Change Logo </span>
-                  <br>
-                  <br>
-                  <input type="file">
-                  </center>
-              </div> 
+            
+
               <div class="col-md-8">
-              <table class="table table-striped">
-                <tr>
-                    <td><b>ERP Name</b></td>
-                    <td><input type="text" value="Robo ERP"></td>
-                </tr>
-                <tr>
-                    <td><b>ERP Title</b></td>
-                    <td><input type="text" value="Robo Door ERP"></td>
-                </tr>
-                <tr>
-                    <td><b>ERP Description</b></td>
-                    <td><textarea rows="5" cols="40">Robo group of Company provide Security gates and doors services.</textarea></td>
-                </tr>
-                <tr>
-                    <td><b>Currency</b></td>
-                    <td><input type="text" value="USD"></td>
-                </tr>
-                <tr>
-                    <td><b>Currency Symbol</b></td>
-                    <td><input type="text" value="$"></td>
-                </tr>
+                <h3> General Setting</h3>
+                <div class="" style="height:20px;"></div>
+                <form class="form-horizontal ">
+                  <div class="form-group">
+                      <label for="" class="col-sm-3">Currency</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" id="" placeholder="" value="ZAR">
+                      </div>
+                    </div>
+                  <div class="form-group">
+                    <label for="" class="col-sm-3">Currency Symbol</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="" placeholder="" value="R">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="" class="col-sm-3">Contact Phone 1</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" id="" placeholder="" value="123123132">
+                      </div>
+                    </div>
+                  <div class="form-group">
+                    <label for="" class="col-sm-3">Contact Phone 2</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="" placeholder="" value="123123123">
+                    </div>
+                  </div>
 
-                <tr>
-                    <td><b>Initial Tax</b></td>
-                    <td><input type="text" value="4%"></td>
-                </tr>
-                <tr>
-                    <td><b>Products Tax</b></td>
-                    <td><input type="text" value="4%"></td>
-                </tr>
-                <tr>
-                    <td><b>Service Tax</b></td>
-                    <td><input type="text" value="5%"></td>
-                </tr>
-                <tr>
-                    <td><b>Tax Markup</b></td>
-                    <td><input type="text" value="2.5%"></td>
-                </tr>
-                <tr>
-                    <td><b>Service Fee</b></td>
-                    <td><input type="text" value="2.35%"></td>
-                </tr>
-                <tr>
-                    <td><b>Initial Fee</b></td>
-                    <td><input type="text" value="1.5%"></td>
-                </tr>
-
-                <tr>
-                    <td><b>Contact Phone 1</b></td>
-                    <td><input type="text" value="123123132"></td>
-                </tr>
-                <tr>
-                    <td><b>Contact Phone 2</b></td>
-                    <td><input type="text" value="123123123"></td>
-                </tr>
-                <tr>
-                    <td><b>Contact Email</b></td>
-                    <td><input type="text" value="contact@robodoor.com"></td>
-                </tr>
-              </table>
+                  <div class="form-group">
+                      <label for="" class="col-sm-3">Address</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" id="" placeholder="" value="Abc, 123, ABC">
+                      </div>
+                    </div>
+                  <div class="form-group">
+                    <label for="" class="col-sm-3">Contact Email</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="" placeholder="" value="contact@robodoor.com">
+                    </div>
+                  </div>
+                 
+                </form>
               </div>
+
+              <div class="col-md-8">
+                  <h3> Trellis Mark-up</h3>
+                  <div class="" style="height:20px;"></div>
+                  <form class="form-horizontal ">
+                    <div class="form-group">
+                        <label for="" class="col-sm-3">Distributor Mark Up</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="" placeholder="" value="">
+                        </div>
+                      </div>
+                    <div class="form-group">
+                      <label for="" class="col-sm-3">Factory Mark up</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" id="" placeholder="" value="">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="col-sm-3">Scrap Rate</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="" placeholder="" value="">
+                        </div>
+                      </div>
+                    <div class="form-group">
+                      <label for="" class="col-sm-3">Cost of Assembly</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" id="" placeholder="" value="">
+                      </div>
+                    </div>
+                   
+                  </form>
+                </div>
+              
+              <div class="col-md-8">
+                  <h3> Fixture Mark-up</h3>
+                  <div class="" style="height:20px;"></div>
+                  <form class="form-horizontal ">
+                    <div class="form-group">
+                        <label for="" class="col-sm-3">Distributor Mark Up</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="" placeholder="" value="">
+                        </div>
+                      </div>
+                    <div class="form-group">
+                      <label for="" class="col-sm-3">Factory Mark up</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" id="" placeholder="" value="">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="col-sm-3">Scrap Rate</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="" placeholder="" value="">
+                        </div>
+                      </div>
+                    <div class="form-group">
+                      <label for="" class="col-sm-3">Cost of Assembly</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" id="" placeholder="" value="">
+                      </div>
+                    </div>
+                   
+                  </form>
+                </div>
             </div>
 
-          </div>
+          
           
               <!-- /.box-body -->
-              <div class="box-footer pull-right">
+              <div class="box-footer">
               
-                <a href="{!! url('/settings'); !!}" class="btn btn-default">Back</a>
+                
                 <a href="{!! url('/settings'); !!}" class="btn btn-primary">Save</a>
                 
               </div>

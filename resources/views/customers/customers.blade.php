@@ -44,7 +44,6 @@
                 
              
               <script>
-                
                  $(document).ready(function() { 
                     $('.select2').select2({
                         placeholder: "Select Staff",
@@ -70,6 +69,7 @@
           <div class="box">
             <div class="box-header">
               <h3 class="box-title">Manage Customers</h3>
+              <a href="/customers/create" class="btn btn-primary pull-right">Add Customer</a>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -80,6 +80,7 @@
                   <th>Name</th>
                   <th>Email</th>
                   <th>Phone Number</th>
+                  <th>Company</th>
                   <th>Status</th>
                   <th>Action</th>
                 </tr>
@@ -90,11 +91,12 @@
                     <td>{{$user['fname']}} {{$user['lname']}}</td>
                     <td>{{$user['email']}}</td>
                     <td>{{$user['phonenumber']}}</td>
+                    <td>Google</td>
                     <td>
                       @if ($user['status'] === 1)
-                      <span class="btn btn-success">Active</span>
+                      <span class="label label-success">Active</span>
                       @else
-                      <span class="btn btn-danger">Deactive</span>
+                      <span class="label label-danger">Deactive</span>
                       @endif
                     </td>
                      <!-- For Delete Form begin -->
@@ -112,7 +114,7 @@
                         <a href="{!! url('/customers/active/'.$user['id']); !!}"  class="btn btn-info" title="Active"><i class="fa fa-check"></i> </a>
                       @endif
                       <button class="btn btn-danger" onclick="archiveFunction('form{{$user['id']}}')"><i class="fa fa-trash"></i></button>
-                      <a href="{!! url('/customers/resetpassword/'.$user->id); !!}"  class="btn btn-info" title="Reset Password"><i class="fa fa-key"></i> </a>
+                      
                     </td>
                    
                     
@@ -125,6 +127,7 @@
                   <th>Name</th>
                   <th>Email</th>
                   <th>Phone Number</th>
+                  <th>Company</th>
                   <th>Status</th>
                   <th>Action</th>
                 </tr>

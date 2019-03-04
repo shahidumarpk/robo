@@ -42,11 +42,7 @@
             <!-- /.box-header -->
             <div class="box-body" >
             <div class="row">
-              <div class="col-md-4 text-center">
-                  <div class="kv-avatar">
-                          <img src="{{ asset('img/doors/door7.png') }}" width="100%">
-                  </div>
-              </div> 
+              
               <div class="col-md-8">
               <table class="table table-striped">
                 <tr>
@@ -54,30 +50,26 @@
                     <td>Security gate</td>
                 </tr>
                 <tr>
-                    <td><b>Code</b></td>
-                    <td>F001</td>
+                        <td><b>Circumference</b></td>
+                    <td>6.3</td>
                 </tr>
                 <tr>
-                    <td><b>Price</b></td>
-                    <td>$10.00</td>
+                    <td><b>Length</b></td>
+                    <td>7.25</td>
                 </tr>
                 <tr>
-                    <td><b>Available Qty</b></td>
-                    <td>4</td>
+                    <td><b>Total Surface</b></td>
+                    <td>4.5</td>
                 </tr>
                 <tr>
-                    <td><b>Expiry Date</b></td>
-                    <td>01-01-2018 5:20am</td>
+                    <td><b>Unit Cost</b></td>
+                    <td>35.60</td>
                 </tr>
                 <tr>
-                    <td><b>Category</b></td>
-                    <td>Gates</td>
+                    <td><b>Rate per meter</b></td>
+                    <td>75.82</td>
                 </tr>
-                <tr>
-                    <td colspan="2"><b>Product Description</b></td>
-                </tr>
-                <td colspan="2">We pride ourselves in the most suitable and durable burglar bars for your home and business. If you are looking for serious Burglar Proofing for your property at highest standards then our Burglar Bars are the perfect solution. Robo Door - South Africa offers fixed Burglar Bars as well as retractable. DIY burglar bars for aluminium windows options available.  </td>
-                
+
                 <tr>
                     <td><b>Created At</b></td>
                     <td>09-10-2018</td>
@@ -95,30 +87,7 @@
               </table>
               </div>
               </div>
-              <div class="col-md-12">
-                <div class="col-md-3 text-center">
-                        <div class="kv-avatar" style="border: solid 1px gray; padding: 5px;">
-                                <img src="{{ asset('img/doors/door7.png') }}" width="100%">
-                        </div>
-                    </div> 
-                    <div class="col-md-3 text-center">
-                        <div class="kv-avatar" style="border: solid 1px gray; padding: 5px;">
-                                <img src="{{ asset('img/doors/door5.png') }}" width="100%">
-                        </div>
-                    </div> 
-                    <div class="col-md-3 text-center">
-                        <div class="kv-avatar" style="border: solid 1px gray; padding: 5px;">
-                                <img src="{{ asset('img/doors/door7.png') }}" width="100%">
-                        </div>
-                    </div> 
-                    <div class="col-md-3 text-center">
-                            <div class="kv-avatar" style="border: solid 1px gray; padding: 5px;">
-                                    <img src="{{ asset('img/doors/door2.png') }}" width="100%">
-                            </div>
-                    </div> 
-
-
-              </div>
+              
 
           </div>
           

@@ -102,6 +102,18 @@
                   </div>
                 </div>
 
+                <div class="form-group">
+                    <label for="code" class="col-sm-3 control-label">Address</label>
+  
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="address" name="address" placeholder="Enter Address">
+                      @if ($errors->has('address'))
+                            <span class="text-red">
+                                <strong>{{ $errors->first('password') }}</strong>
+                            </span>
+                        @endif
+                    </div>
+                  </div>
 
                 <div class="form-group">
                   <label for="phonenumber" class="col-sm-3 control-label">Phone Number</label>

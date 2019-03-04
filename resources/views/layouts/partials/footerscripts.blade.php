@@ -22,7 +22,7 @@
      Both of these plugins are recommended to enhance the
      user experience. -->
      <!-- page script -->
-@if (\Request::is('admins') or \Request::is('roles') or \Request::is('distributors') or \Request::is('categories') or \Request::is('menu') or \Request::is('customers') or \Request::is('leads') or Route::currentRouteName()=='leads.show' or \Request::is('recordings') or \Request::is('sellers') or \Request::is('products') or \Request::is('orders') or \Request::is('attributes') or \Request::is('memberships') or \Request::is('membershipsreports') or  Route::currentRouteName()=='seller.pending' or Route::currentRouteName()=='order.messages' or \Request::is('support')  or \Request::is('inventory') or \Request::is('invoices') or \Request::is('lead'))  
+@if (\Request::is('admins') or \Request::is('roles') or \Request::is('quotes') or \Request::is('distributors') or \Request::is('categories') or \Request::is('menu') or \Request::is('customers') or \Request::is('leads') or Route::currentRouteName()=='leads.show' or \Request::is('recordings') or \Request::is('sellers') or \Request::is('products') or \Request::is('orders') or \Request::is('attributes') or \Request::is('memberships') or \Request::is('membershipsreports') or  Route::currentRouteName()=='seller.pending' or Route::currentRouteName()=='order.messages' or \Request::is('support')  or \Request::is('inventory') or \Request::is('invoices') or \Request::is('lead'))  
   <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
 
@@ -130,6 +130,17 @@
   </script>
 @endif
 
+@if (\Request::is('mail/compose'))  
+<!-- Bootstrap WYSIHTML5 -->
+<script src="{{ asset('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js')}}"></script>
+<!-- Page Script -->
+<script>
+  $(function () {
+    //Add text editor
+    $("#compose-textarea").wysihtml5();
+  });
+</script>
+@endif
 @if (\Request::is('dashboard'))  
 <!-- Bootstrap WYSIHTML5 -->
 <script src="{{ asset('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js')}}"></script>

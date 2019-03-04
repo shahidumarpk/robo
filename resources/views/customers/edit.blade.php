@@ -91,6 +91,18 @@
                   </div>
                 </div>
 
+                <div class="form-group">
+                    <label for="companyname" class="col-sm-3 control-label">Company Name</label>
+  
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="companyname" name="companyname" placeholder="Company Name" value="{{ $user->companyname }}" autocomplete="off" require>
+                      @if ($errors->has('companyname'))
+                            <span class="text-red">
+                                <strong>{{ $errors->first('companyname') }}</strong>
+                            </span>
+                        @endif
+                    </div>
+                  </div>
 
                 <div class="form-group">
                   <label for="phonenumber" class="col-sm-3 control-label">Phone Number</label>
@@ -104,6 +116,33 @@
                       @endif
                   </div>
                 </div>
+
+                <div class="form-group">
+                    <label for="address" class="col-sm-3 control-label">Address 1</label>
+  
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="address" name="address" placeholder="Address 1" value="{{ old('address') }}" autocomplete="off" require>
+                      @if ($errors->has('address'))
+                            <span class="text-red">
+                                <strong>{{ $errors->first('address') }}</strong>
+                            </span>
+                        @endif
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="address2" class="col-sm-3 control-label">Address 2</label>
+  
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="address2" name="address2" placeholder="Address 2" value="{{ old('address2') }}" autocomplete="off" require>
+                      @if ($errors->has('address2'))
+                            <span class="text-red">
+                                <strong>{{ $errors->first('address2') }}</strong>
+                            </span>
+                        @endif
+                    </div>
+                  </div>
+
+                  
                 <div class="form-group">
                   <label for="status" class="col-sm-3 control-label">Status</label>
 

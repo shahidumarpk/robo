@@ -89,20 +89,21 @@
                   </div>
                 </div>
 
+               
+
                 <div class="form-group">
-                  <label for="password" class="col-sm-3 control-label">Password</label>
+                  <label for="company" class="col-sm-3 control-label">Company Name</label>
 
                   <div class="col-sm-9">
-                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" autocomplete="off" require>
-                    @if ($errors->has('password'))
+                    <input type="text" class="form-control" id="company" name="company" placeholder="Phone Number" value="{{ old('company') }}" autocomplete="off" require>
+                    @if ($errors->has('company'))
                           <span class="text-red">
-                              <strong>{{ $errors->first('password') }}</strong>
+                              <strong>{{ $errors->first('company') }}</strong>
                           </span>
                       @endif
                   </div>
                 </div>
-
-
+                
                 <div class="form-group">
                   <label for="phonenumber" class="col-sm-3 control-label">Phone Number</label>
 
@@ -115,6 +116,31 @@
                       @endif
                   </div>
                 </div>
+                <div class="form-group">
+                  <label for="address" class="col-sm-3 control-label">Address 1</label>
+
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="address" name="address" placeholder="Address 1" value="{{ old('address') }}" autocomplete="off" require>
+                    @if ($errors->has('address'))
+                          <span class="text-red">
+                              <strong>{{ $errors->first('address') }}</strong>
+                          </span>
+                      @endif
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="address2" class="col-sm-3 control-label">Address 2</label>
+
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="address2" name="address2" placeholder="Address 2" value="{{ old('address2') }}" autocomplete="off" require>
+                    @if ($errors->has('address2'))
+                          <span class="text-red">
+                              <strong>{{ $errors->first('address2') }}</strong>
+                          </span>
+                      @endif
+                  </div>
+                </div>
+                
 
               </div>
               </div>
@@ -123,7 +149,7 @@
               <!-- /.box-body -->
               <div class="box-footer">
                 <a href="{!! url('/customers'); !!}" class="btn btn-default">Cancel</a>
-                <button type="submit" class="btn btn-info pull-right">Add</button>
+                <a href="{!! url('/customers'); !!}" class="btn btn-info pull-right">Add</a>
               </div>
               <!-- /.box-footer -->
             </form>

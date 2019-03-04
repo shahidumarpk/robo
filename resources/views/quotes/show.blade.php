@@ -13,7 +13,7 @@
     <div class="row">
       <div class="col-xs-12">
         <h2 class="page-header">
-          <i class="fa fa-globe"></i> Invoice No.: RB55123
+          <i class="fa fa-globe"></i> Quotes No.: 123
           <small class="pull-right">Expiry Date: 21-Feb-2019</small>
         </h2>
       </div>
@@ -48,7 +48,7 @@
          <span>  Date: 18-Feb-2019 </span><br>
         <b>Order No.: RBD001</b><br>
         <br>
-        <b>Status: <span class="text-green">Partial Paid</span></b><br>
+        <b>Status: <span class="text-green">New</span></b><br>
         <b>Total Amount:</b> $277.97<br>
       </div>
       <!-- /.col -->
@@ -148,7 +148,6 @@
               <th>Delivery(1-7 business days):</th>
               <td>$19.80</td>
             </tr>
-            
             <tr>
                 <th></th>
                 <td><b>$252.70</b></td>
@@ -158,17 +157,9 @@
                 <td>$25.27</td>
                 </tr>
             <tr>
-              <th><b>Sub Total:</b></th>
+              <th><b>Total:</b></th>
               <td><b>$277.97</b></td>
             </tr>
-            <tr>
-                <th>Advance</th>
-                <td>$200</td>
-            </tr>
-            <tr>
-                    <th><b>Total:</b></th>
-                    <td><b>$77.97</b></td>
-                  </tr>
           </tbody></table>
         </div>
       </div>
@@ -181,7 +172,7 @@
       <div class="col-xs-12">
         <span class="pull-right">
         
-        <button type="button" class="btn btn-warning" style="margin-right: 5px;">
+        <button type="button" class="btn btn-warning" style="">
           <i class="fa fa-download"></i> PDF
         </button>
         <a href="{{url('/quotes/1')}}" class="btn btn-primary"><i class="fa fa-envelope"></i> Email</a>

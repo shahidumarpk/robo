@@ -35,13 +35,17 @@
             <!-- /.box-header -->
             <div class="box-body">
             @if(count($users) > 0)
-              <table id="example1" class="display responsive nowrap" style="width:100%">
+            <div class="table-responsive">
+              <table id="example1" class="display  nowrap" style="width:100%">
                 <thead>
                 <tr>
                   <th>No</th>
                   <th>Distributors Name</th>
                   <th>Phone </th>
                   <th>Email</th>
+                  <th>Address</th>
+                  <th>Company Name</th>
+                  <th>VAT Number</th>
                   <th>Status</th>
                   <th>Action</th>
                 </tr>
@@ -54,6 +58,9 @@
                     <td>{{$user->fname}} {{$user->lname}}</td>
                     <td>{{$user->phonenumber}}</td>
                     <td>{{$user->email}}</td>
+                    <td>21, West, Barg Town, CA</td>
+                    <td>Niku Solution PTE LTD</td>
+                    <td>NK123456</td>
                     <td>{{$user->status == 1 ? "active" : 'Not active'}}</td>
                      <!-- For Delete Form begin - ->
                     <form id="form{{$user['id']}}" action="{{action('ProductController@destroy', $user['id'])}}" method="post">
@@ -87,11 +94,15 @@
                   <th>Distributors Name</th>
                   <th>Phone</th>
                   <th>Email</th>
+                  <th>Address</th>
+                  <th>Company Name</th>
+                  <th>VAT Number</th>
                   <th>Status</th>
                   <th>Action</th>
                 </tr>
                 </tfoot>
               </table>
+            </div>
               @else
               <div>No Record found.</div>
               @endif
@@ -118,20 +129,32 @@
               <div class="box-body">
                 <div class="form-group">
                   <label for="name">First Name</label>
-                  <input type="text" class="form-control" id="name" placeholder="Enter First Name">
+                  <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Enter First Name">
                 </div>
                 <div class="form-group">
                   <label for="name">Last Name</label>
-                  <input type="text" class="form-control" id="name" placeholder="Enter Last Name">
+                  <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Enter Last Name">
                 </div>
                 <div class="form-group">
                   <label for="code">Email</label>
-                  <input type="text" class="form-control" id="code" placeholder="Enter Email">
+                  <input type="text" class="form-control" id="email" name="email" placeholder="Enter Email">
                 </div>
                 <div class="form-group">
                   <label for="code">Phone</label>
-                  <input type="text" class="form-control" id="code" placeholder="Enter Phone">
+                  <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter Phone">
                 </div>
+                <div class="form-group">
+                  <label for="code">Address</label>
+                  <input type="text" class="form-control" id="address" name="address" placeholder="Enter Address">
+                </div>
+                <div class="form-group">
+                  <label for="code">Company Name</label>
+                  <input type="text" name="company" class="form-control" id="company" placeholder="Enter Address">
+                </div>
+                <div class="form-group">
+                    <label for="code">VAT Number</label>
+                    <input type="text" class="form-control" id="vat_number" name="vat_number" placeholder="Enter VAT Number">
+                  </div>
                 <div class="form-group">
                   <label for="status">Status</label>
                   <select name="status" class="form-control">

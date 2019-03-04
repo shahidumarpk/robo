@@ -48,7 +48,7 @@
 <div class="box box-info">
         <div class="box-header with-border">
         <div class="box-header">
-          <h4 class="box-title">Edit Invoice</h4>
+          <h4 class="box-title">Create Invoice</h4>
           
         </div>
         <div class="box-body">

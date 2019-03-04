@@ -100,4 +100,12 @@ Route::resource('attributes', 'AttributeController')->middleware('auth');
  // settings
  Route::resource('/settings', 'SettingController')->middleware('auth');
 
+ // quotes
+ Route::resource('/quotes', 'QuotesController')->middleware('auth');
+
+ // mailbox routes
+ Route::get('mail/inbox', 'MailboxController@index')->middleware('auth')->name('mailinbox'); 
+ Route::get('mail/read', 'MailboxController@read')->middleware('auth')->name('mailread'); 
+ Route::get('mail/compose', 'MailboxController@compose')->middleware('auth')->name('mailcompose'); 
+
  

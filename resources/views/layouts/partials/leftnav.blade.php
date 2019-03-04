@@ -14,7 +14,7 @@ $permissions=explode(",",$user->role->permission);
       <img src="{{ asset('img/staff/'.$user->avatar) }}" class="img-circle" alt="User Image">
     </div>
     <div class="pull-left info">
-      <p><a href="profile">{{$user->fname}} {{$user->lname}}</a></p>
+      <p><a href="{{url('profile')}}">{{$user->fname}} {{$user->lname}}</a></p>
       <!-- <p>Super Admin</p> -->
     </div>
   </div>

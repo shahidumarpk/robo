@@ -33,7 +33,7 @@
 
     <div class="box box-info">
             <div class="box-header with-border">
-              <h3 class="box-title">Fresh Tuna Fish Product Details</h3>
+              <h3 class="box-title">Inventory Details</h3>
               <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                     </button>
@@ -41,97 +41,68 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body" >
-            <div class="row">
-              <div class="col-md-4 text-center">
-                  <div class="kv-avatar">
-                          <img src="{{ asset('img/products/product.jpg') }}" width="100%">
-                  </div>
-              </div> 
-              <div class="col-md-8">
-              <table class="table table-striped">
-                <tr>
-                    <td><b>Product Name</b></td>
-                    <td>Fresh Tuna Fish</td>
-                </tr>
-                <tr>
-                    <td><b>Code</b></td>
-                    <td>F001</td>
-                </tr>
-                <tr>
-                    <td><b>Price</b></td>
-                    <td>K10.00</td>
-                </tr>
-                <tr>
-                    <td><b>Available Qty</b></td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td><b>Location</b></td>
-                    <td>Madang Town</td>
-                </tr>
-                <tr>
-                    <td><b>Expiry Date</b></td>
-                    <td>01-01-2018 5:20am</td>
-                </tr>
-                <tr>
-                    <td><b>Category</b></td>
-                    <td>Toys</td>
-                </tr>
-
-                <tr>
-                    <td><b>Shop</b></td>
-                    <td>Lego Shop</td>
-                </tr>
-                <tr>
-                    <td colspan="2"><b>Product Description</b></td>
-                </tr>
-                <td colspan="2">This is the product description. This is the product description. This is the product description. This is the product description. 
-                        This is the product description. This is the product description. This is the product description. This is the product description. 
-                         This is the product description. This is the product description. This is the product description. This is the product description. </td>
-                
-                <tr>
-                    <td><b>Created At</b></td>
-                    <td>09-10-2018</td>
-                </tr>
-                <tr>
-                    <td><b>Updated At</b></td>
-                    <td>09-10-2018</td>
-                </tr>
-                <tr>
-                    <td><b>Status</b></td>
-                    <td>
-                        <span class="text-green"><b>Active</b></span>                        
-                    </td>
-                </tr>
-              </table>
-              </div>
-              </div>
-              <div class="col-md-12">
-                <div class="col-md-3 text-center">
-                        <div class="kv-avatar" style="border: solid 1px gray; padding: 5px;">
-                                <img src="{{ asset('img/products/product.jpg') }}" width="100%">
-                        </div>
-                    </div> 
-                    <div class="col-md-3 text-center">
-                        <div class="kv-avatar" style="border: solid 1px gray; padding: 5px;">
-                                <img src="{{ asset('img/products/product.jpg') }}" width="100%">
-                        </div>
-                    </div> 
-                    <div class="col-md-3 text-center">
-                        <div class="kv-avatar" style="border: solid 1px gray; padding: 5px;">
-                                <img src="{{ asset('img/products/product.jpg') }}" width="100%">
-                        </div>
-                    </div> 
-                    <div class="col-md-3 text-center">
-                            <div class="kv-avatar" style="border: solid 1px gray; padding: 5px;">
-                                    <img src="{{ asset('img/products/product.jpg') }}" width="100%">
+                    <div class="row">
+              
+                            <div class="col-md-8">
+                            <table class="table table-striped">
+                              <tr>
+                                  <td><b>Inventory Name</b></td>
+                                  <td>12MM STEEL UPRIGHT BRONZE LC</td>
+                              </tr>
+                              <tr>
+                                  <td><b>Type of Purchase</b></td>
+                                  <td>7.25</td>
+                              </tr>
+                              <tr>
+                                  <td><b>Stock Length</b></td>
+                                  <td>4.5</td>
+                              </tr>
+                              <tr>
+                                  <td><b>Material Costs</b></td>
+                                  <td>75.82</td>
+                              </tr>
+                              <tr>
+                                  <td><b>Laser Cutting</b></td>
+                                  <td>75.82</td>
+                              </tr>
+                              <tr>
+                                  <td><b>Powder Coating</b></td>
+                                  <td>75.82</td>
+                              </tr>
+                              <tr>
+                                  <td><b>Rate per Length</b></td>
+                                  <td>75.82</td>
+                              </tr>
+                              <tr>
+                                  <td><b>Used in Products</b></td>
+                                  <td>
+                                      <label class="label label-info margin">Security Chain Gate	</label>
+                                      <label class="label  label-info margin"> DELUX Gate	</label>
+                                      <label class="label  label-info margin">TRELLES Gate	</label>
+                                      
+                                    </td>
+                              </tr>
+              
+                              <tr>
+                                  <td><b>Created At</b></td>
+                                  <td>09-10-2018</td>
+                              </tr>
+                              <tr>
+                                  <td><b>Updated At</b></td>
+                                  <td>09-10-2018</td>
+                              </tr>
+                              <tr>
+                                  <td><b>Status</b></td>
+                                  <td>
+                                      <span class="text-green"><b>Active</b></span>                        
+                                  </td>
+                              </tr>
+                            </table>
                             </div>
-                    </div> 
-
-
-              </div>
-
-          </div>
+                            </div>
+                            
+              
+                        </div>
           
               <!-- /.box-body -->
               <div class="box-footer">
