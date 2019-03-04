@@ -69,7 +69,7 @@
           <div class="box">
             <div class="box-header">
               <h3 class="box-title">Manage Customers</h3>
-              <a href="/customers/create" class="btn btn-primary pull-right">Add Customer</a>
+              <a href="{{url('/customers/create')}}" class="btn btn-primary pull-right">Add Customer</a>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
