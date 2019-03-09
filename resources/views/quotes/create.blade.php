@@ -8,114 +8,7 @@
 }
 /* custom code for the checkboxes */
 
-.funkyradio div {
-  clear: both;
-  overflow: hidden;
-}
 
-.funkyradio label {
-  width: 100%;
-  border-radius: 3px;
-  border: 1px solid #D1D3D4;
-  font-weight: normal;
-}
-
-.funkyradio input[type="radio"]:empty,
-.funkyradio input[type="checkbox"]:empty {
-  display: none;
-}
-
-.funkyradio input[type="radio"]:empty ~ label,
-.funkyradio input[type="checkbox"]:empty ~ label {
-  position: relative;
-  line-height: 2.5em;
-  text-indent: 3.25em;
-  margin-top: 2em;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.funkyradio input[type="radio"]:empty ~ label:before,
-.funkyradio input[type="checkbox"]:empty ~ label:before {
-  position: absolute;
-  display: block;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  content: '';
-  width: 2.5em;
-  background: #D1D3D4;
-  border-radius: 3px 0 0 3px;
-}
-
-.funkyradio input[type="radio"]:hover:not(:checked) ~ label,
-.funkyradio input[type="checkbox"]:hover:not(:checked) ~ label {
-  color: #888;
-}
-
-.funkyradio input[type="radio"]:hover:not(:checked) ~ label:before,
-.funkyradio input[type="checkbox"]:hover:not(:checked) ~ label:before {
-  content: '\2714';
-  text-indent: .9em;
-  color: #C2C2C2;
-}
-
-.funkyradio input[type="radio"]:checked ~ label,
-.funkyradio input[type="checkbox"]:checked ~ label {
-  color: #777;
-}
-
-.funkyradio input[type="radio"]:checked ~ label:before,
-.funkyradio input[type="checkbox"]:checked ~ label:before {
-  content: '\2714';
-  text-indent: .9em;
-  color: #333;
-  background-color: #ccc;
-}
-
-.funkyradio input[type="radio"]:focus ~ label:before,
-.funkyradio input[type="checkbox"]:focus ~ label:before {
-  box-shadow: 0 0 0 3px #999;
-}
-
-.funkyradio-default input[type="radio"]:checked ~ label:before,
-.funkyradio-default input[type="checkbox"]:checked ~ label:before {
-  color: #333;
-  background-color: #ccc;
-}
-
-.funkyradio-primary input[type="radio"]:checked ~ label:before,
-.funkyradio-primary input[type="checkbox"]:checked ~ label:before {
-  color: #fff;
-  background-color: #337ab7;
-}
-
-.funkyradio-success input[type="radio"]:checked ~ label:before,
-.funkyradio-success input[type="checkbox"]:checked ~ label:before {
-  color: #fff;
-  background-color: #5cb85c;
-}
-
-.funkyradio-danger input[type="radio"]:checked ~ label:before,
-.funkyradio-danger input[type="checkbox"]:checked ~ label:before {
-  color: #fff;
-  background-color: #d9534f;
-}
-
-.funkyradio-warning input[type="radio"]:checked ~ label:before,
-.funkyradio-warning input[type="checkbox"]:checked ~ label:before {
-  color: #fff;
-  background-color: #f0ad4e;
-}
-
-.funkyradio-info input[type="radio"]:checked ~ label:before,
-.funkyradio-info input[type="checkbox"]:checked ~ label:before {
-  color: #fff;
-  background-color: #5bc0de;
-}
 
 </style>
 @if(session('success'))
@@ -123,7 +16,7 @@
       $( document ).ready(function() {
         swal("Success", "{{session('success')}}", "success");
       });
-      
+  
     </script>
 @endif
 <div class="box box-info">
@@ -156,6 +49,11 @@
                               <label for="lastname">Last Name</label>
                               <input type="text" name="lastname" class=" form-control form-control-sm" id="lastname" placeholder="Enter Last Name">
                           </div>
+                          <div class="form-group">
+                              <label for="address">Address</label>
+                              <input type="text" name="address" class=" form-control form-control-sm" id="address" placeholder="Enter Address">
+                          </div>
+
                     </div>
                     <div class="col-md-3 ">
                           <div class="form-group">
@@ -176,6 +74,7 @@
                       </div>
                       <div class="col-md-4 pull-right">
                           <div class="invoice-col">
+                              <img src="{{asset('img/logo.webp')}}" class="responsive"  style="display: block; width:200px;" />
                              <label> Sales Representative </label>
                               
                               <address>
@@ -188,8 +87,8 @@
                                 </address>
                             </div>
                             <div class="form-group">
-                                <label for="firstname">Expiry Date  </label>
-                                <input type="text" name="firstname" class="form-control form-control-sm" id="firstname" placeholder="Enter First Name">
+                                <label for="expirydateInitial">Expiry Date  </label>
+                                <input type="text" name="expirydateInitial" class="form-control form-control-sm" id="expirydateInitial" placeholder="Enter First Name">
                             </div>
                       </div>
                     </section>
@@ -202,8 +101,8 @@
                         <table class="table table-bordered" id="product_info_table">
                             <thead>
                             <tr>
-                                <th style="width:35%">Product Name</th>
-                                <th style="width:20%">Size</th>
+                                <th style="width:35%">Choose Product</th>
+                                <th style="width:20%">View Details</th>
                                 <th style="width:10%">Qty</th>
                                 <th style="width:10%">Rate</th>
                                 <th style="width:15%">Amount</th>
@@ -214,23 +113,17 @@
                             <tbody>
                             <tr id="row_1">
                                 <td>
-                                <select class="form-control select_group product" data-row-id="row_1" id="product_1" name="product[]" style="width:100%;" onchange="putPrice()" required>
-                                    <option value="" selected>Security Chain Gate</option>
-                                    <option value="">DELUX Gate</option>
-                                    <option value="">TRELLES Gate</option>
-                                    <option value="">Security Chain Gate</option>
+                                <select onchange="onProductChange()" class="form-control select_group product" data-row-id="row_1" id="product_1" name="product[]" style="width:100%;" onchange="putPrice()" required>
+                                  <option value="" selected disabled>Select Product</option>
+                                  <option value="" >Econo Burglar Bars</option>
+                                  <option value="">Robo Clear Bars</option>
+                                  <option value="" >Deluxe Fixture</option>
+                                  <option value="">	Econo Fixture</option>
                                     
                                     </select>
                                 </td>
                                 <td>
-                                  <div class="row">
-                                    <div class="col-md-6">
-                                      <input type="number" name="qty[]" id="qty_1" class="form-control  form-control-sm" required onkeyup="getTotal(1)" placeholder="Length">
-                                    </div>
-                                    <div class="col-md-6">
-                                      <input type="number" name="qty[]" id="qty_1" class="form-control form-control-sm" required onkeyup="getTotal(1)" placeholder="Width">
-                                    </div>
-                                  </div>
+                                  <a class="btn btn-primary" onclick="showProductDetails()"><i class="fa fa-eye"></i></a>
                                 </td>
                                 <td><input type="number" placeholder="Qty"  name="qty[]" id="qty_1" class="form-control" required onkeyup="getTotal(1)"></td>
                                 <td>
@@ -241,50 +134,34 @@
                                     <input type="text" name="amount[]" id="amount_1" class="form-control" disabled autocomplete="off">
                                     <input type="hidden" name="amount_value[]" id="amount_value_1" class="form-control" autocomplete="off">
                                 </td>
-                                <td><button type="button" id="add_row" class="btn btn-success"><i class="fa fa-plus"></i></button></td>
+                                <td><button disabled type="button" class="btn btn-danger" onclick="removeRow(1)"><i class="fa fa-close"></i></button></td>
                             </tr>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                                <td><button type="button" id="addBtn_1" onclick="addNewRow()" class="btn btn-success"><i class="fa fa-plus"></i></button></td>
+                              </tr>
                             
                             
                             </tbody>
-                            </table>
-                            <div class="col-md-6 col-xs-12 pull-right">
-                              
-                              <div class="">
-                                <div class="form-group">
-                                  <label for="gross_amount" class="col-sm-5 ">Gross Amount</label>
-                                  <div class="col-sm-7">
-                                    <input type="text" value="45,003" class="form-control" id="gross_amount" name="gross_amount"  autocomplete="off" disabled>
-                                    <input type="hidden" class="form-control" id="gross_amount_value" name="gross_amount_value" autocomplete="off">
-                                  </div>
-                                </div>
-                                <div class="" style="height:50px;"></div>
-                                <div class="form-group">
-                                  <label for="discount" class="col-sm-5">Discount</label>
-                                  <div class="col-sm-7">
-                                    <input type="text" class="form-control" id="discount" name="discount" placeholder="Discount" onkeyup="subAmount()" autocomplete="off">
-                                  </div>
-                                </div>
-                                <div class="" style="height:36px;"></div>
-                                <div class="form-group">
-                                  <label for="net_amount" class="col-sm-5">Net Amount</label>
-                                  <div class="col-sm-7">
-                                    <input type="text"  value="59,113" class="form-control" id="net_amount" name="net_amount"  autocomplete="off" disabled>
-                                    <input type="hidden" class="form-control" id="net_amount_value" name="net_amount_value" autocomplete="off">
-                                  </div>
-                                </div>
-                              </div>
-                              </div>
-                    </div>
+                          </table>
+                           
                     <div class="">
                         
                       <div class="col-md-12">
-                          <label> Additional Work (if any)</label>
-                          <div class=" row control-group after-add-more">
+                        
+                        
+                        <label id="additionalWorkLabel" style="display:none"> Additional Work (if any)</label>
+                        <div class=" row control-group after-add-more" id="after_additional_work_">
                               <div class="col-md-7">
-                                  <input type="text" name="addmore[]" class="form-control" placeholder="Enter Additional Work Here">
+                                  <label id="additionalWorkOldLabel"> Additional Work (if any)</label>
+                                  {{-- <input type="text" name="addmore[]" class="form-control" placeholder="Enter Additional Work Here"> --}}
                                 </div>
                                 <div class="col-md-4">
-                                  <input type="number" name="addmore[]" class="form-control" placeholder="Price"> 
+                                  {{-- <input type="number" name="addmore[]" class="form-control" placeholder="Price">  --}}
                                 </div>
                                 <div class="col-md-1">
                                   <div class="input-group-btn"> 
@@ -307,15 +184,54 @@
                           </div>
                         </div>
                       </div>
-    
-                  
-                  
                   </div>
-               
-                
-               
               </form>
         </div>
+        <div class="col-md-6 col-xs-12 pull-right">
+                              
+            <div class="">
+              <div class="form-group">
+                <label for="gross_amount" class="col-sm-5 ">Gross Amount</label>
+                <div class="col-sm-7">
+                  <input type="text" value="45,003" class="form-control" id="gross_amount" name="gross_amount"  autocomplete="off" disabled>
+                  <input type="hidden" class="form-control" id="gross_amount_value" name="gross_amount_value" autocomplete="off">
+                </div>
+              </div>
+              <div class="" style="height:50px;"></div>
+              <div class="form-group">
+                <label for="discount" class="col-sm-5">Discount</label>
+                <div class="col-sm-7">
+                    <div class="input-group">
+                        <span class="input-group-addon" style="padding: 0px;">
+                          <select name="type_amount" onchange="" class="">
+                            <option value="fixed">Fixed</option>
+                            <option value="percentage">Percentage</option>
+                          </select>
+                        </span>
+                          <input type="text" class="form-control" id="discount" name="discount" placeholder="Discount" onkeyup="subAmount()" autocomplete="off">
+                      </div>
+                </div>
+              </div>
+              <div class="" style="height:36px;"></div>
+              <div class="form-group">
+                <label for="vat_amount" class="col-sm-5">VAT</label>
+                <div class="col-sm-7">
+                  <input type="text"  value="1.5%" class="form-control" id="vat_amount" name="vat_amount"  autocomplete="off">
+                  <input type="hidden" class="form-control" id="vat_amount_value" name="vat_amount_value" autocomplete="off">
+                </div>
+              </div>
+              <div class="" style="height:36px;"></div>
+              <div class="form-group">
+                <label for="total_amount" class="col-sm-5">Total Amount</label>
+                <div class="col-sm-7">
+                  <input type="text"  value="59,113" class="form-control" id="total_amount" name="total_amount"  autocomplete="off" disabled>
+                  <input type="hidden" class="form-control" id="total_amount_value" name="total_amount_value" autocomplete="off">
+                </div>
+              </div>
+
+            </div>
+            </div>
+  </div>
         <div class="box-footer">
           <div class="pull-right">
             <a href="{{url('/quotes/1')}}" class="btn btn-warning ">Save as Draft</a>
@@ -326,9 +242,795 @@
         </div>
     </div>    
   </div>
+{{-- on load modal --}}
+<div class="modal fade" id="ProductDetails" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Components</h4></h4>
+  
+            </div>
+            
+            <div class="modal-body" id="add_windows">
+              <!-- /.box-header -->
+              <!-- form start -->
+              <form role="form">
+                <div class="box-body">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="name">Product Name</label>
+                      <input type="text" class="form-control" id="name" placeholder="Enter Name">
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                      <div class="form-group">
+                          <label for="code">TRELLIS FIXTURE</label>
+                          <input type="text" class="form-control" id="code" placeholder="">
+                        </div>
+                       
+                  </div>
+                  <div class="col-md-2">
+                      <div class="form-group">
+                          <label for="code">DOGGY BARS</label>
+                          <input type="text" class="form-control" id="code" placeholder="">
+                        </div>
+                       
+                  </div>
+                 
+                  <div class="col-md-2">
+                      <div class="form-group">
+                          <label for="code">TSWING GATE</label>
+                          <input type="text" class="form-control" id="code" placeholder="">
+                      </div>
+                  </div>
+                  <div class="col-md-2">
+                      <div class="form-group">
+                          <label for="code">MONKEY BARS</label>
+                          <input type="text" class="form-control" id="code" placeholder="">
+                        </div>
+                  </div>
+                  <div class="col-md-3">
+                      <div class="form-group">
+                          <label for="code">SWING GATE</label>
+                          <input type="text" class="form-control" id="code" placeholder="">
+                        </div>
+                    
+                  </div>
+                  <div class="clearfix"></div>
+                  <hr>
+                  {{-- 2 --}}
+                  <div class="col-md-3">
+                      <div class="form-group">
+                          <label for="code">Heigth</label>
+                          <input type="text" class="form-control" id="code" placeholder="">
+                        </div>
+                  </div>
+                  <div class="col-md-3">
+                      <div class="form-group">
+                          <label for="price">Width  </label>
+                          <input type="text" class="form-control" id="price" placeholder="Enter Length">
+                        </div>
+                  </div>
+                  <div class="col-md-2">
+                      <div class="input-group">
+                          <label for="status">Inside/Outside</label><br/>
+                          <select name="status" class="form-control" id="yes">
+                              <option value="0">NO</option>
+                              <option value="1">YES </option>
+                          </select>
+                      </div>
+                  </div>
+                  <div class="col-md-2">
+                      <div class="input-group">
+                          <label for="status">Building Outside</label><br/>
+                          <select name="status" class="form-control" id="yes">
+                              <option value="0">NO</option>
+                              <option value="1">YES </option>
+                          </select>
+                      </div>
+                  </div>
+                  <div class="col-md-2">
+                      <div class="input-group">
+                          <label for="status">Face-On</label><br/>
+                          <select name="status" class="form-control" id="yes">
+                              <option value="0">NO</option>
+                              <option value="1">YES </option>
+                          </select>
+                        </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <hr>
+                  {{-- 3--}}
+                  <div class="col-md-4">
+                      <div class="form-group">
+                          <label for="code">Rows of Flights</label>
+                          <input type="text" class="form-control" id="code" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="quantity">Key Alike</label>
+                            <input type="text" class="form-control" id="quantity" placeholder="Enter Total Surface">
+                        </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="form-group">
+                          <label for="price">Lock Side</label>
+                          <input type="text" class="form-control" id="price" placeholder="Enter Length">
+                        </div>
+                        <div class="form-group">
+                            <label for="status">Lock Type</label>
+                            <select name="status" class="form-control">
+                              <option disabled selected>Select Lock Type </option>
+                              <option  >Slaim </option>
+                              <option  >Dead </option>
+                            </select>
+                          </div>
+                  </div>
+                  <div class="col-md-4">
+                    
+                      <div class="form-group">
+                          <label for="quantity">Number Locks</label>
+                          <input type="text" class="form-control" id="quantity" placeholder="Enter Unit Cost">
+                        </div>
+                      <div class="form-group">
+                          <label for="quantity">Lockbar size</label>
+                          <input type="text" class="form-control" id="quantity" placeholder="Enter Unit Cost">
+                        </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <hr>
+                  <br/>
+                  <div class="row">
+                    <div class="col-md-12">
+                      
+                        <label class="badge badge-primary">Beam Sections Required</label>
+                        <br/>
+                            <div class="col-md-1">
+                              <label for="status">25x50</label><br/>
+                              </div>
+                            <div class="col-md-2">
+                              <select name="status" class="form-control form-control-sm" id="yes">
+                                <option value="0">NO</option>
+                                <option value="1">YES </option>
+                            </select>
+                          </div>
+                    
+                 
+                     
+                          <div class="col-md-1"> 
+                            <label for="status">50x50</label><br/>
+                          </div>
+                          <div class="col-md-2">
+                             <select name="status" class="form-control form-control-sm" id="yes">
+                              <option value="0">NO</option>
+                              <option value="1">YES </option>
+                          </select>
+                          </div>
+                      
+                  
+                     
+                          <div class="col-md-1">  
+                            <label for="status">76x38</label><br/> 
+                          </div>
+                            <div class="col-md-2">  
+                              <select name="status" class="form-control form-control-sm" id="yes">
+                              <option value="0">NO</option>
+                              <option value="1">YES </option>
+                          </select>
+                            </div>
+                      
+                 
+                     
+                            <div class="col-md-1">
+                              <label for="status">25x75</label><br/>
+                            </div>
+                            <div class="col-md-2">
+                              <select name="status" class="form-control form-control-sm" id="yes">
+                              <option value="0">NO</option>
+                              <option value="1">YES </option>
+                            </select>
+                            </div>
+                            <hr/>
+                    </div>
+                   
+                    <div class="col-md-12">
+                        <br/>
+                        <br/>
+                        <label class="badge badge-primary">Beam Required</label>
+                        <br/>
+                        
+                                <div class="col-md-2"> <label for="code">TOP BEAM</label></div>
+                                <div class="col-md-2"><input value="1" type="text" class="form-control" id="code" placeholder=""></div>
+                          
+                            <div class="col-md-2">
+                              <label for="code">BOTTOM BEAM</label>
+                            </div>
+                            <div class="col-md-2">
+                              <input type="text" class="form-control" id="code" placeholder="">
+                            </div>
+                            <div class="col-md-2">
+                              <label for="code">Total Meters</label>
+                            </div>
+                            <div class="col-md-2">
+                              <input type="text" value="23" class="form-control" id="code" placeholder="">
+                            </div>
+                            
+                         <br/>
+                         <br/>
+                          <div class="col-md-2">
+                              <label for="code">BACK CHANELL</label>
+                          </div>
+                          <div class="col-md-2"> 
+                            <input type="text"  class="form-control" id="code" placeholder="">
+                          </div>  
+                          <div class="col-md-2">
+                              <label for="code">LOCK BAR</label>
+                          </div>
+                          <div class="col-md-2">
+                            <input type="text" value="1"  class="form-control" id="code" placeholder="">
+                          </div>
+                          <div class="col-md-2 ">
+                              <label>Color</label>
+                            </div>
+                            <div class="col-md-2">
+                              <select class="form-control">
+                                <option selected disabled> Select</option>
+                                <option> Green</option>
+                                <option > White</option>
+                                <option> Grey</option>
+                                <option> Red</option>
+                                <option> Blue</option>
+                              </select>
+                            </div>
+                    </div>
+                
+              </div>        
+  
+                </div>
+                <!-- /.box-body -->
+              </form>
+            </div>
+        
+          <div class="modal-footer">
+            <div class="col-md-2">
+            <label> Total Amount</label> </div>
+            <div class="col-md-3">
+            <input type="text" disabled value="23,452" class="form-control"/></div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+{{-- modal for the onChange Prodcut --}}
+<!-- modal  -->
+<div class="modal fade" id="ProductDetails" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Components</h4></h4>
 
+          </div>
+          
+          <div class="modal-body" id="add_windows">
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form role="form">
+              <div class="box-body">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="name">Product Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter Name">
+                  </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="code">TRELLIS FIXTURE</label>
+                        <input type="text" class="form-control" id="code" placeholder="">
+                      </div>
+                     
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="code">DOGGY BARS</label>
+                        <input type="text" class="form-control" id="code" placeholder="">
+                      </div>
+                     
+                </div>
+               
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="code">TSWING GATE</label>
+                        <input type="text" class="form-control" id="code" placeholder="">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="code">MONKEY BARS</label>
+                        <input type="text" class="form-control" id="code" placeholder="">
+                      </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="code">SWING GATE</label>
+                        <input type="text" class="form-control" id="code" placeholder="">
+                      </div>
+                  
+                </div>
+                <div class="clearfix"></div>
+                <hr>
+                {{-- 2 --}}
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="code">Heigth</label>
+                        <input type="text" class="form-control" id="code" placeholder="">
+                      </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="price">Width  </label>
+                        <input type="text" class="form-control" id="price" placeholder="Enter Length">
+                      </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="input-group">
+                        <label for="status">Inside/Outside</label><br/>
+                        <select name="status" class="form-control" id="yes">
+                            <option value="0">NO</option>
+                            <option value="1">YES </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="input-group">
+                        <label for="status">Building Outside</label><br/>
+                        <select name="status" class="form-control" id="yes">
+                            <option value="0">NO</option>
+                            <option value="1">YES </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="input-group">
+                        <label for="status">Face-On</label><br/>
+                        <select name="status" class="form-control" id="yes">
+                            <option value="0">NO</option>
+                            <option value="1">YES </option>
+                        </select>
+                      </div>
+                </div>
+                <div class="clearfix"></div>
+                <hr>
+                {{-- 3--}}
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="code">Rows of Flights</label>
+                        <input type="text" class="form-control" id="code" placeholder="">
+                      </div>
+                      <div class="form-group">
+                          <label for="quantity">Key Alike</label>
+                          <input type="text" class="form-control" id="quantity" placeholder="Enter Total Surface">
+                      </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="price">Lock Side</label>
+                        <input type="text" class="form-control" id="price" placeholder="Enter Length">
+                      </div>
+                      <div class="form-group">
+                          <label for="status">Lock Type</label>
+                          <select name="status" class="form-control">
+                            <option disabled selected>Select Lock Type </option>
+                            <option  >Slaim </option>
+                            <option  >Dead </option>
+                          </select>
+                        </div>
+                </div>
+                <div class="col-md-4">
+                  
+                    <div class="form-group">
+                        <label for="quantity">Number Locks</label>
+                        <input type="text" class="form-control" id="quantity" placeholder="Enter Unit Cost">
+                      </div>
+                    <div class="form-group">
+                        <label for="quantity">Lockbar size</label>
+                        <input type="text" class="form-control" id="quantity" placeholder="Enter Unit Cost">
+                      </div>
+                </div>
+                <div class="clearfix"></div>
+                <hr>
+                <br/>
+                <div class="row">
+                  <div class="col-md-12">
+                    
+                      <label class="badge badge-primary">Beam Sections Required</label>
+                      <br/>
+                          <div class="col-md-1">
+                            <label for="status">25x50</label><br/>
+                            </div>
+                          <div class="col-md-2">
+                            <select name="status" class="form-control form-control-sm" id="yes">
+                              <option value="0">NO</option>
+                              <option value="1">YES </option>
+                          </select>
+                        </div>
+                  
+               
+                   
+                        <div class="col-md-1"> 
+                          <label for="status">50x50</label><br/>
+                        </div>
+                        <div class="col-md-2">
+                           <select name="status" class="form-control form-control-sm" id="yes">
+                            <option value="0">NO</option>
+                            <option value="1">YES </option>
+                        </select>
+                        </div>
+                    
+                
+                   
+                        <div class="col-md-1">  
+                          <label for="status">76x38</label><br/> 
+                        </div>
+                          <div class="col-md-2">  
+                            <select name="status" class="form-control form-control-sm" id="yes">
+                            <option value="0">NO</option>
+                            <option value="1">YES </option>
+                        </select>
+                          </div>
+                    
+               
+                   
+                          <div class="col-md-1">
+                            <label for="status">25x75</label><br/>
+                          </div>
+                          <div class="col-md-2">
+                            <select name="status" class="form-control form-control-sm" id="yes">
+                            <option value="0">NO</option>
+                            <option value="1">YES </option>
+                          </select>
+                          </div>
+                          <hr/>
+                  </div>
+                 
+                  <div class="col-md-12">
+                      <br/>
+                      <br/>
+                      <label class="badge badge-primary">Beam Required</label>
+                      <br/>
+                      
+                              <div class="col-md-2"> <label for="code">TOP BEAM</label></div>
+                              <div class="col-md-2"><input value="1" type="text" class="form-control" id="code" placeholder=""></div>
+                        
+                          <div class="col-md-2">
+                            <label for="code">BOTTOM BEAM</label>
+                          </div>
+                          <div class="col-md-2">
+                            <input type="text" class="form-control" id="code" placeholder="">
+                          </div>
+                          <div class="col-md-2">
+                            <label for="code">Total Meters</label>
+                          </div>
+                          <div class="col-md-2">
+                            <input type="text" value="23" class="form-control" id="code" placeholder="">
+                          </div>
+                          
+                       <br/>
+                       <br/>
+                        <div class="col-md-2">
+                            <label for="code">BACK CHANELL</label>
+                        </div>
+                        <div class="col-md-2"> 
+                          <input type="text"  class="form-control" id="code" placeholder="">
+                        </div>  
+                        <div class="col-md-2">
+                            <label for="code">LOCK BAR</label>
+                        </div>
+                        <div class="col-md-2">
+                          <input type="text" value="1"  class="form-control" id="code" placeholder="">
+                        </div>
+                        <div class="col-md-2 ">
+                            <label>Color</label>
+                          </div>
+                          <div class="col-md-2">
+                            <select class="form-control">
+                              <option selected disabled> Select</option>
+                              <option> Green</option>
+                              <option > White</option>
+                              <option> Grey</option>
+                              <option> Red</option>
+                              <option> Blue</option>
+                            </select>
+                          </div>
+                  </div>
+              
+            </div>        
 
+              </div>
+              <!-- /.box-body -->
+            </form>
+          </div>
+      
+        <div class="modal-footer">
+          <div class="col-md-2">
+          <label> Total Amount</label> </div>
+          <div class="col-md-3">
+          <input type="text" disabled value="23,452" class="form-control"/></div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      
+    </div>
+  </div>
+</div>
+  {{-- modal for the product details  --}}
+{{-- modal for the onChange Prodcut --}}
+<!-- modal  -->
+<div class="modal fade" id="ProductDetailsShow" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Components</h4></h4>
+  
+            </div>
+            
+            <div class="modal-body" id="add_windows">
+              <!-- /.box-header -->
+              <!-- form start -->
+              <form role="form">
+                <div class="box-body">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="name">Product Name</label>
+                      <input type="text" class="form-control" id="name" placeholder="" value="Deluxe Fixture ">
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                      <div class="form-group">
+                          <label for="code">TRELLIS FIXTURE</label>
+                          <input type="text" class="form-control" id="code" placeholder="" value=" 1">
+                        </div>
+                       
+                  </div>
+                  <div class="col-md-2">
+                      <div class="form-group">
+                          <label for="code">DOGGY BARS</label>
+                          <input type="text" class="form-control" id="code" placeholder="" value=" 1">
+                        </div>
+                       
+                  </div>
+                 
+                  <div class="col-md-2">
+                      <div class="form-group">
+                          <label for="code">TSWING GATE</label>
+                          <input type="text" class="form-control" id="code" placeholder="" value=" 1">
+                      </div>
+                  </div>
+                  <div class="col-md-2">
+                      <div class="form-group">
+                          <label for="code">MONKEY BARS</label>
+                          <input type="text" class="form-control" id="code" placeholder="" value=" 1">
+                        </div>
+                  </div>
+                  <div class="col-md-3">
+                      <div class="form-group">
+                          <label for="code">SWING GATE</label>
+                          <input type="text" class="form-control" id="code" placeholder="" value="">
+                        </div>
+                    
+                  </div>
+                  <div class="clearfix"></div>
+                  <hr>
+                  {{-- 2 --}}
+                  <div class="col-md-3">
+                      <div class="form-group">
+                          <label for="code">Heigth</label>
+                          <input type="text" class="form-control" id="code" placeholder="" value="600">
+                        </div>
+                  </div>
+                  <div class="col-md-3">
+                      <div class="form-group">
+                          <label for="price">Width  </label>
+                          <input type="text" class="form-control" id="price" placeholder="" value="1000">
+                        </div>
+                  </div>
+                  <div class="col-md-2">
+                      <div class="input-group">
+                          <label for="status">Inside/Outside</label><br/>
+                          <select name="status" class="form-control" id="yes">
+                              <option value="0">NO</option>
+                              <option value="1" selected>YES </option>
+                          </select>
+                      </div>
+                  </div>
+                  <div class="col-md-2">
+                      <div class="input-group">
+                          <label for="status">Building Outside</label><br/>
+                          <select name="status" class="form-control" id="yes">
+                              <option value="0">NO</option>
+                              <option value="1" selected>YES </option>
+                          </select>
+                      </div>
+                  </div>
+                  <div class="col-md-2">
+                      <div class="input-group">
+                          <label for="status">Face-On</label><br/>
+                          <select name="status" class="form-control" id="yes">
+                              <option value="0">NO</option>
+                              <option value="1">YES </option>
+                          </select>
+                        </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <hr>
+                  {{-- 3--}}
+                  <div class="col-md-4">
+                      <div class="form-group">
+                          <label for="code">Rows of Flights</label>
+                          <input type="text" class="form-control" id="code" placeholder="" value="1">
+                        </div>
+                        <div class="form-group">
+                            <label for="quantity">Key Alike</label>
+                            <input type="text" class="form-control" id="quantity" placeholder="" value="5">
+                        </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="form-group">
+                          <label for="price">Lock Side</label>
+                          <input type="text" class="form-control" id="price" placeholder=""  value="2">
+                        </div>
+                        <div class="form-group">
+                            <label for="status">Lock Type</label>
+                            <select name="status" class="form-control">
+                              <option disabled selected>Select Lock Type </option>
+                              <option  >Slaim </option>
+                              <option selected >Dead </option>
+                            </select>
+                          </div>
+                  </div>
+                  <div class="col-md-4">
+                    
+                      <div class="form-group">
+                          <label for="quantity">Number Locks</label>
+                          <input type="text" class="form-control" id="quantity" placeholder="" value="1">
+                        </div>
+                      <div class="form-group">
+                          <label for="quantity">Lockbar size</label>
+                          <input type="text" class="form-control" id="quantity" placeholder="" value="1">
+                        </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <hr>
+                  <br/>
+                  <div class="row">
+                    <div class="col-md-12">
+                      
+                        <label class="badge badge-primary">Beam Sections Required</label>
+                        <br/>
+                            <div class="col-md-1">
+                              <label for="status">25x50</label><br/>
+                              </div>
+                            <div class="col-md-2">
+                              <select name="status" class="form-control form-control-sm" id="yes">
+                                <option value="0">NO</option>
+                                <option value="1" selected>YES </option>
+                            </select>
+                          </div>
+                    
+                 
+                     
+                          <div class="col-md-1"> 
+                            <label for="status">50x50</label><br/>
+                          </div>
+                          <div class="col-md-2">
+                             <select name="status" class="form-control form-control-sm" id="yes">
+                              <option value="0">NO</option>
+                              <option value="1" selected>YES </option>
+                          </select>
+                          </div>
+                      
+                  
+                     
+                          <div class="col-md-1">  
+                            <label for="status">76x38</label><br/> 
+                          </div>
+                            <div class="col-md-2">  
+                              <select name="status" class="form-control form-control-sm" id="yes">
+                              <option value="0">NO</option>
+                              <option value="1">YES </option>
+                          </select>
+                            </div>
+                      
+                 
+                     
+                            <div class="col-md-1">
+                              <label for="status">25x75</label><br/>
+                            </div>
+                            <div class="col-md-2">
+                              <select name="status" class="form-control form-control-sm" id="yes">
+                              <option value="0">NO</option>
+                              <option value="1">YES </option>
+                            </select>
+                            </div>
+                     
+                    </div>
+                    
+                    <div class="col-md-12">
+                        <br/>
+                        <br/>
+                        <label class="badge badge-primary">Beam Required</label>
+                        <br/>
+                        
+                                <div class="col-md-2"> <label for="code">TOP BEAM</label></div>
+                                <div class="col-md-2"><input value="1" type="text" class="form-control" id="code" placeholder=""></div>
+                          
+                            <div class="col-md-2">
+                              <label for="code">BOTTOM BEAM</label>
+                            </div>
+                            <div class="col-md-2">
+                              <input type="text" class="form-control" id="code" placeholder="">
+                            </div>
+                            <div class="col-md-2">
+                              <label for="code">Total Meters</label>
+                            </div>
+                            <div class="col-md-2">
+                              <input type="text" value="23" class="form-control" id="code" placeholder="">
+                            </div>
+                            
+                         <br/>
+                         <br/>
+                          <div class="col-md-2">
+                              <label for="code">BACK CHANELL</label>
+                          </div>
+                          <div class="col-md-2"> 
+                            <input type="text"  class="form-control" id="code" placeholder="">
+                          </div>  
+                          <div class="col-md-2">
+                              <label for="code">LOCK BAR</label>
+                          </div>
+                          <div class="col-md-2">
+                            <input type="text" value="1"  class="form-control" id="code" placeholder="">
+                          </div>
+                          <div class="col-md-2 ">
+                              <label>Color</label>
+                            </div>
+                            <div class="col-md-2">
+                              <select class="form-control">
+                                <option disabled> Choose Color</option>
+                                <option> Green</option>
+                                <option selected> White</option>
+                                <option> Grey</option>
+                                <option> Red</option>
+                                <option> Blue</option>
+                              </select>
+                            </div>
+                    </div>
+              </div>        
+  
+                </div>
+                <!-- /.box-body -->
+              </form>
+            </div>
+        
+          <div class="modal-footer">
+              <div class="col-md-2">
+                  <label> Total Amount</label> </div>
+                  <div class="col-md-3">
+                  <input type="text" disabled value="23,452" class="form-control"/></div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        
+      </div>
+    </div>
+</div>
   <script type="text/javascript">
+   $('#expirydateInitial').daterangepicker({
+        singleDatePicker: true,
+      });
     function putCustomerName(value){
       if(value == 1){
         document.getElementById('firstname').value = "Jhon";
@@ -336,6 +1038,7 @@
         document.getElementById('companyname').value = "Niku Solutions PTE LTD";
         document.getElementById('email').value = "customer@gmail.com";
         document.getElementById('phone').value = "+1 123 4567 890";
+        document.getElementById('address').value = "Jhonsburg, 67 college Street, SA";
       }
       else if(value == 2){
         document.getElementById('firstname').value = "Noman ";
@@ -343,6 +1046,7 @@
         document.getElementById('companyname').value = "Google Solutions PTE LTD";
         document.getElementById('email').value = "nomihahah@gmail.com";
         document.getElementById('phone').value = "+1 456 8790 123";
+        document.getElementById('address').value = "Jhonsburg, Rocket Plaza Street, SA";
       }
       else if(value == 3){
         document.getElementById('firstname').value = "Raheel ";
@@ -350,11 +1054,13 @@
         document.getElementById('companyname').value = "Yahoo Solutions PTE LTD";
         document.getElementById('email').value = "khana123@gmail.com";
         document.getElementById('phone').value = "+1 963 8542 789";
+        document.getElementById('address').value = "Jhonsburg, 12 Up Street, SA";
       }
       else if(value == 0){
         document.getElementById('firstname').value = "";
         document.getElementById('lastname').value = "";
         document.getElementById('companyname').value = "";
+        document.getElementById('address').value = "";
         document.getElementById('email').value = "";
         document.getElementById('phone').value = "";
       }
@@ -364,6 +1070,7 @@
         document.getElementById('companyname').value = "Upwork Solutions PTE LTD";
         document.getElementById('email').value = "paki123@gmail.com";
         document.getElementById('phone').value = "+1 741 8502 354";
+        document.getElementById('address').value = "Jhonsburg, 81 Street, SA";
       }
         
       
@@ -399,11 +1106,25 @@
       }
     }
 
+
+    function onProductChange(){
+      $('#ProductDetails').modal('show');
+      document.getElementById('qty_1').value = "2";
+    }
+    function showProductDetails(){
+      console.log('Product Details Clicked');
+      $('#ProductDetailsShow').modal('show');
+    }
+
     $('.js-example-basic-multiple').select2({
       placeholder: 'Select an option'
     });
       $(document).ready(function() {
+        
         $(".add-more").click(function(){ 
+         $('#additionalWorkLabel').show();
+         $('#additionalWorkOldLabel').hide();
+
             var html = $(".copy").html();
             $(".after-add-more").before(html);
         });
@@ -413,39 +1134,46 @@
         });
       });
 
-      // add new row 
-      $("#add_row").unbind('click').bind('click', function() {
+      // add new row #############
+      //$("#add_row").unbind('click').bind('click', function() {
+        function addNewRow(){
         var table = $("#product_info_table");
         var count_table_tbody_tr = $("#product_info_table tbody tr").length;
-        var row_id = count_table_tbody_tr + 2;
+        var row_id = count_table_tbody_tr + 1;
+        
         var html = '<tr id="row_'+row_id+'">'+      
             '<td>'+ 
-            '<select class="form-control select_group product" data-row-id="2" id="product_'+row_id+'" name="product[]" style="width:100%;" onchange="getProductData('+row_id+')">'+
-                '<option value="">Security Chain Gate</option>'+
-                          '<option value="">DELUX Gate</option>'+
-                          '<option value="">TRELLES Gate</option>'+
-                          '<option value="">Security Chain Gate</option>';
+            '<select onchange="onProductChange()" class="form-control select_group product" data-row-id="2" id="product_'+row_id+'" name="product[]" style="width:100%;" onchange="getProductData('+row_id+')">'+
+                `<option value="" selected disabled>Select Product</option>
+                <option value="" >Econo Burglar Bars</option>
+                      <option value="">Robo Clear Bars</option>
+                      <option value="" >Deluxe Fixture</option>
+                  <option value="">	Econo Fixture</option>`;
             html += '</select>'+
             '</td>'+ 
-            `<td><div class="row">
-                          <div class="col-md-6">
-                            <input type="number" name="qty[]" id="qty_1" class="form-control  form-control-sm" required onkeyup="getTotal(1)" placeholder="Length">
-                          </div>
-                          <div class="col-md-6">
-                            <input type="number" name="qty[]" id="qty_1" class="form-control form-control-sm" required onkeyup="getTotal(1)" placeholder="Width">
-                          </div>
-                        </div></td>` +
-            '<td><input type="number" placeholder="Qty" name="qty[]" id="qty_1" class="form-control" onkeyup="getTotal(1)" ></td>'+
+            ` <td>
+            <a class="btn btn-primary" onclick="showProductDetails()">
+            <i class="fa fa-eye"></i>
+            </a>
+            </td>` +
+            '<td><input type="number" placeholder="Qty" name="qty[]" value="1" id="qty_1" class="form-control" onkeyup="getTotal(1)" ></td>'+
             '<td><input type="text" name="rate[]" id="rate_1" class="form-control" disabled value="350"><input type="hidden" name="rate_value[]" id="rate_value_1" class="form-control"></td>'+
             '<td><input type="text" name="amount[]" id="amount_1" class="form-control" disabled><input type="hidden" name="amount_value[]" id="amount_value_1" class="form-control"></td>'+
-            '<td><button type="button" class="btn btn-danger" onclick="removeRow(' + row_id + ')"><i class="fa fa-close"></i></button></td>'+
+            '<td><button type="button" class="btn btn-danger" onclick="removeRow(' + row_id + ')"><i class="fa fa-close"></i></button>'+
+            //'<button type="button" class="btn btn-success"  id="addBtn_'+row_id+'" onclick="addNewRow()"><i class="fa fa-plus"></i></button></td>'+
             '</tr>';
-
+             // console.log(row_id);
+              newid = row_id -1;
+           //$('#addBtn_'+newid).remove();
+         
+       
         if(count_table_tbody_tr >= 1) {
-        $("#product_info_table tbody tr:last").before(html); 
+          $('#firstRowRemoveButton').removeAttr('disabled');
+        $("#product_info_table tbody tr:last").prev().after(html); 
         }
         row_id++;
-      });
+      }
+
       var row_idd = 1;
       function removeRow(tr_id)
       {

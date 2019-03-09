@@ -20,7 +20,7 @@
 <section class="content">
         <div class="row">
           <div class="col-md-3">
-            <a href="/mail/compose" class="btn btn-primary btn-block margin-bottom">Compose</a>
+            <a href="{{url('/mail/compose')}}" class="btn btn-primary btn-block margin-bottom">Compose</a>
   
             <div class="box box-solid">
               <div class="box-header with-border">

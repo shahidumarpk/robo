@@ -143,11 +143,12 @@
                 <thead>
                 <tr>
                   <th>Inventory Name</th>
-                  <th>Stock Length</th>
+                  <th>Stock</th>
+                  <th>Unit</th>
                   <th>Material Cost</th>
                   <th>Laser Cutting</th>
                   <th>Powder Coating</th>
-                  <th>Rate / Length</th>
+                  <th>Rate Per Unit</th>
                   <th>Rate m/p</th>
                   <th>Action</th>
                 </tr>
@@ -157,6 +158,7 @@
                   <tr>
                     <td>19MM STEEL UPRIGHT WHITE LC</td>
                     <td>6.6</td>
+                    <td>Meter</td>
                     <td>R 61.12</td>
                     <td>R 34.00</td>
                     <td>R 30.50</td>
@@ -172,6 +174,7 @@
                   <tr>
                     <td>19MM STEEL UPRIGHT CHARCOAL LC</td>
                     <td>6.6</td>
+                    <td>Meter</td>
                     <td>R 61.12</td>
                     <td>R 34.00</td>
                     <td>R 30.50</td>
@@ -187,6 +190,7 @@
                   <tr>
                     <td>12MM STEEL UPRIGHT BRONZE LC</td>
                     <td>6.6</td>
+                    <td>Meter</td>
                     <td>R 61.12</td>
                     <td>R 34.00</td>
                     <td>R 30.50</td>
@@ -202,6 +206,7 @@
                   <tr>
                     <td>19MM STEEL UPRIGHT CHARCOAL</td>
                     <td>6.6</td>
+                    <td>Meter</td>
                     <td>R 61.12</td>
                     <td>R 34.00</td>
                     <td>R 30.50</td>
@@ -217,6 +222,7 @@
                   <tr>
                     <td>20 MM ALUMINIUM UPRIGHTS WHITE LC</td>
                     <td>6.6</td>
+                    <td>Meter</td>
                     <td>R 61.12</td>
                     <td>R 34.00</td>
                     <td>R 30.50</td>
@@ -230,11 +236,27 @@
                   </tr>
 
                   <tr>
-                    <td>20 MM ALUMINIUM UPRIGHTS BRONZE LC</td>
-                    <td>6.6</td>
+                    <td>CARDBOARD</td>
+                    <td>40.0</td>
+                    <td>KG</td>
+                    <td>R 398.00</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>R 398.00</td>
+                    <td>R 9.95</td>
+                    <td>
+                        <a href="{{url('/inventory/1/')}}" class="btn btn-primary" title="View Detail"><i class="fa fa-eye"></i> </a>    
+                        <a href="{{url('/inventory/1/edit')}}" class="btn btn-success" title="Edit"><i class="fa fa-edit"></i> </a>
+                        <a  class="btn btn-danger" title="Delete"><i class="fa fa-trash"></i> </a>  
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>STAINLESS STEEL BEARINGS</td>
+                    <td>1</td>
+                    <td>Item</td>
                     <td>R 61.12</td>
-                    <td>R 34.00</td>
-                    <td>R 30.50</td>
+                    <td>-</td>
+                    <td>-</td>
                     <td>R 125.62</td>
                     <td>R 19.03</td>
                     <td>
@@ -248,7 +270,8 @@
                 <tfoot>
                 <tr>
                     <th>Inventory Name</th>
-                    <th>Stock Length</th>
+                    <th>Stock</th>
+                    <th>Unit</th>
                     <th>Material Cost</th>
                     <th>Laser Cutting</th>
                     <th>Powder Coating</th>

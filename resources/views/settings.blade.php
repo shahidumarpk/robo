@@ -84,73 +84,23 @@
                       <input type="text" class="form-control" id="" placeholder="" value="contact@robodoor.com">
                     </div>
                   </div>
+                  <div class="form-group">
+                    <label for="" class="col-sm-3">Cost of Assembly</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="" placeholder="" value="">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="" class="col-sm-3">Scrap Rate</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="" placeholder="" value="">
+                    </div>
+                  </div>
                  
                 </form>
               </div>
 
-              <div class="col-md-8">
-                  <h3> Trellis Mark-up</h3>
-                  <div class="" style="height:20px;"></div>
-                  <form class="form-horizontal ">
-                    <div class="form-group">
-                        <label for="" class="col-sm-3">Distributor Mark Up</label>
-                        <div class="col-sm-8">
-                          <input type="text" class="form-control" id="" placeholder="" value="">
-                        </div>
-                      </div>
-                    <div class="form-group">
-                      <label for="" class="col-sm-3">Factory Mark up</label>
-                      <div class="col-sm-8">
-                        <input type="text" class="form-control" id="" placeholder="" value="">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="" class="col-sm-3">Scrap Rate</label>
-                        <div class="col-sm-8">
-                          <input type="text" class="form-control" id="" placeholder="" value="">
-                        </div>
-                      </div>
-                    <div class="form-group">
-                      <label for="" class="col-sm-3">Cost of Assembly</label>
-                      <div class="col-sm-8">
-                        <input type="text" class="form-control" id="" placeholder="" value="">
-                      </div>
-                    </div>
-                   
-                  </form>
-                </div>
-              
-              <div class="col-md-8">
-                  <h3> Fixture Mark-up</h3>
-                  <div class="" style="height:20px;"></div>
-                  <form class="form-horizontal ">
-                    <div class="form-group">
-                        <label for="" class="col-sm-3">Distributor Mark Up</label>
-                        <div class="col-sm-8">
-                          <input type="text" class="form-control" id="" placeholder="" value="">
-                        </div>
-                      </div>
-                    <div class="form-group">
-                      <label for="" class="col-sm-3">Factory Mark up</label>
-                      <div class="col-sm-8">
-                        <input type="text" class="form-control" id="" placeholder="" value="">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="" class="col-sm-3">Scrap Rate</label>
-                        <div class="col-sm-8">
-                          <input type="text" class="form-control" id="" placeholder="" value="">
-                        </div>
-                      </div>
-                    <div class="form-group">
-                      <label for="" class="col-sm-3">Cost of Assembly</label>
-                      <div class="col-sm-8">
-                        <input type="text" class="form-control" id="" placeholder="" value="">
-                      </div>
-                    </div>
-                   
-                  </form>
-                </div>
+              {{-- removed on the suggestion of Sir Shahid --}}
             </div>
 
           

@@ -45,9 +45,9 @@ class LeadController extends Controller
      * @param  \App\Lead  $lead
      * @return \Illuminate\Http\Response
      */
-    public function show(Lead $lead)
+    public function show($id)
     {
-        //
+        return view('leads.show');
     }
 
     /**

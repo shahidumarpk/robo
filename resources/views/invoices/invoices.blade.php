@@ -235,6 +235,7 @@
                 <tr>
                   <th>Code</th>
                   <th>Invoice Name</th>
+                  <th>Sales Person</th>
                   <th>Price</th>
                   <th>Category</th>
                   <th>Status</th>

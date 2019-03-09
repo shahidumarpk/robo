@@ -33,6 +33,7 @@
       </div>
       <!-- /.col -->
       <div class="col-sm-4 invoice-col">
+          <img src="{{asset('img/logo.webp')}}" class="responsive"  style="display: block; width:200px;" />
         Sales Representative
         
         <address>

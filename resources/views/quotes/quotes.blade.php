@@ -160,6 +160,7 @@
                       <span class="label label-primary">Closed</span>
                     </td>
                     <td>
+                      {{-- <a href="{!! url('/quote/table'); !!}" class="btn btn-info" title="View Table"><i class="fa fa-suitcase"></i> </a>     --}}
                       <a href="{!! url('/quotes/1'); !!}" class="btn btn-primary" title="View Detail"><i class="fa fa-eye"></i> </a>    
                       <a href="{!! url('/quotes/1/edit'); !!}" class="btn btn-success" title="Edit Details"><i class="fa fa-edit"></i> </a>    
                       <a href="" class="btn btn-primary" title="Download Details"><i class="fa fa-download"></i> </a>    

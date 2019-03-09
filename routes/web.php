@@ -17,9 +17,6 @@ Route::get('/', function () {
 
 
 Auth::routes();
-// Two Factor Authentication
-Route::get('/otp', 'TwoFactorController@showTwoFactorForm');
-Route::post('/otp', 'TwoFactorController@verifyTwoFactor');
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/dashboard', ['as' => 'dashboard' , function () {
@@ -81,8 +78,6 @@ Route::resource('attributes', 'AttributeController')->middleware('auth');
   Route::get('membershipsreports', 'MembershipController@membershipsreports')->middleware('auth')->name('membershipsreports');
   Route::resource('memberships', 'MembershipController')->middleware('auth');
 
-  //Support Tickets
-  Route::resource('support', 'SupportController')->middleware('auth');
   
   
  // inventory 
@@ -93,6 +88,7 @@ Route::resource('attributes', 'AttributeController')->middleware('auth');
 
  // leads
  Route::resource('lead', 'LeadController')->middleware('auth');
+ 
 
  // distributors
  Route::resource('/distributors', 'DistributorController')->middleware('auth');

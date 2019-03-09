@@ -8,136 +8,289 @@
       
     </script>
 @endif
-<!-- some CSS styling changes and overrides -->
-<style>
-        .kv-avatar .krajee-default.file-preview-frame,.kv-avatar .krajee-default.file-preview-frame:hover {
-            margin: 0;
-            padding: 0;
-            border: none;
-            box-shadow: none;
-            text-align: center;
-        }
-        .kv-avatar {
-            display: inline-block;
-        }
-        .kv-avatar .file-input {
-            display: table-cell;
-            width: 250px;
-        }
-        .kv-reqd {
-            color: red;
-            font-family: monospace;
-            font-weight: normal;
-        }
-        </style>
-
+@if(session('failed'))
+    <script>
+      $( document ).ready(function() {
+        swal("Failed", "{{session('failed')}}", "error");
+      });
+      
+    </script>
+@endif
+<?php
+function makeLinks($str) {
+	$reg_exUrl = "/(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/";
+	$urls = array();
+	$urlsToReplace = array();
+	if(preg_match_all($reg_exUrl, $str, $urls)) {
+		$numOfMatches = count($urls[0]);
+		$numOfUrlsToReplace = 0;
+		for($i=0; $i<$numOfMatches; $i++) {
+			$alreadyAdded = false;
+			$numOfUrlsToReplace = count($urlsToReplace);
+			for($j=0; $j<$numOfUrlsToReplace; $j++) {
+				if($urlsToReplace[$j] == $urls[0][$i]) {
+					$alreadyAdded = true;
+				}
+			}
+			if(!$alreadyAdded) {
+				array_push($urlsToReplace, $urls[0][$i]);
+			}
+		}
+		$numOfUrlsToReplace = count($urlsToReplace);
+		for($i=0; $i<$numOfUrlsToReplace; $i++) {
+			$str = str_replace($urlsToReplace[$i], "<a target='_blank' href=\"".$urlsToReplace[$i]."\">".$urlsToReplace[$i]."</a> ", $str);
+		}
+		return $str;
+	} else {
+		return $str;
+	}
+}
+?>
     <div class="box box-info">
             <div class="box-header with-border">
-              <h3 class="box-title">Fresh Tuna Fish Product Details</h3>
-              <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                    </button>
-                  </div>
+              <h3 class="box-title">Lead Details of <b>Micheal Gak</b></h3>
             </div>
             <!-- /.box-header -->
-            <div class="box-body" >
-            <div class="row">
-              <div class="col-md-4 text-center">
-                  <div class="kv-avatar">
-                          <img src="{{ asset('img/products/product.jpg') }}" width="100%">
-                  </div>
-              </div> 
-              <div class="col-md-8">
-              <table class="table table-striped">
-                <tr>
-                    <td><b>Product Name</b></td>
-                    <td>Fresh Tuna Fish</td>
-                </tr>
-                <tr>
-                    <td><b>Code</b></td>
-                    <td>F001</td>
-                </tr>
-                <tr>
-                    <td><b>Price</b></td>
-                    <td>K10.00</td>
-                </tr>
-                <tr>
-                    <td><b>Available Qty</b></td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td><b>Location</b></td>
-                    <td>Madang Town</td>
-                </tr>
-                <tr>
-                    <td><b>Expiry Date</b></td>
-                    <td>01-01-2018 5:20am</td>
-                </tr>
-                <tr>
-                    <td><b>Category</b></td>
-                    <td>Toys</td>
-                </tr>
-
-                <tr>
-                    <td><b>Shop</b></td>
-                    <td>Lego Shop</td>
-                </tr>
-                <tr>
-                    <td colspan="2"><b>Product Description</b></td>
-                </tr>
-                <td colspan="2">This is the product description. This is the product description. This is the product description. This is the product description. 
-                        This is the product description. This is the product description. This is the product description. This is the product description. 
-                         This is the product description. This is the product description. This is the product description. This is the product description. </td>
-                
-                <tr>
-                    <td><b>Created At</b></td>
-                    <td>09-10-2018</td>
-                </tr>
-                <tr>
-                    <td><b>Updated At</b></td>
-                    <td>09-10-2018</td>
-                </tr>
-                <tr>
-                    <td><b>Status</b></td>
-                    <td>
-                        <span class="text-green"><b>Active</b></span>                        
-                    </td>
-                </tr>
-              </table>
-              </div>
-              </div>
-              <div class="col-md-12">
-                <div class="col-md-3 text-center">
-                        <div class="kv-avatar" style="border: solid 1px gray; padding: 5px;">
-                                <img src="{{ asset('img/products/product.jpg') }}" width="100%">
-                        </div>
-                    </div> 
-                    <div class="col-md-3 text-center">
-                        <div class="kv-avatar" style="border: solid 1px gray; padding: 5px;">
-                                <img src="{{ asset('img/products/product.jpg') }}" width="100%">
-                        </div>
-                    </div> 
-                    <div class="col-md-3 text-center">
-                        <div class="kv-avatar" style="border: solid 1px gray; padding: 5px;">
-                                <img src="{{ asset('img/products/product.jpg') }}" width="100%">
-                        </div>
-                    </div> 
-                    <div class="col-md-3 text-center">
-                            <div class="kv-avatar" style="border: solid 1px gray; padding: 5px;">
-                                    <img src="{{ asset('img/products/product.jpg') }}" width="100%">
-                            </div>
-                    </div> 
-
-
-              </div>
-
-          </div>
-          
-              <!-- /.box-body -->
-              <div class="box-footer">
-                <a href="{!! url('/products'); !!}" class="btn btn-default">Back</a>
-              </div>
-              <!-- /.box-footer -->
+				<div class="box-body" >
+				  <div class="row">
+					  <div class="col-md-12">
+					  
+						<table class="table table-striped">
+						<tr>
+							<td width="25%"><b>Name</b></td>
+							<td width="75%">Micheal Gak	</td>
+                        </tr>
+                        <tr>
+                            <td width="25%"><b>Address</b></td>
+                            <td width="75%">Address Goes Here	</td>
+                        </tr>
+						<tr>
+							<td><b>Phone Number </b></td>
+							<td><a href="tel:+1123456789">+1 123 4567 89</a></td>
+						</tr>
+						<tr>
+							<td><b>Email</b></td>
+							<td><a href="mailto:email@robodoor.com	">email@robodoor.com</a></td>
+                        </tr>
+                        <tr>
+                            <td><b>Assigned To</b></td>
+                            <td><a href="#">Florin Ristea</a></td>
+                        </tr>
+                        <tr>
+                            <td><b>Date</b></td>
+                            <td>01-Jan-2019 11:15 AM</td>
+                        </tr>
+                        <tr>
+                            <td><b>Description</b></td>
+                            <td>He is looking for TRELLIS DOOR & WINDOW FIXTURE. He is looking for TRELLIS DOOR & WINDOW FIXTURE. He is looking for TRELLIS DOOR & WINDOW FIXTURE. 
+                                He is looking for TRELLIS DOOR & WINDOW FIXTURE. He is looking for TRELLIS DOOR & WINDOW FIXTURE. He is looking for TRELLIS DOOR & WINDOW FIXTURE. 
+                                He is looking for TRELLIS DOOR & WINDOW FIXTURE. He is looking for TRELLIS DOOR & WINDOW FIXTURE. He is looking for TRELLIS DOOR & WINDOW FIXTURE. 
+                                He is looking for TRELLIS DOOR & WINDOW FIXTURE. He is looking for TRELLIS DOOR & WINDOW FIXTURE. He is looking for TRELLIS DOOR & WINDOW FIXTURE. 
+                                He is looking for TRELLIS DOOR & WINDOW FIXTURE. He is looking for TRELLIS DOOR & WINDOW FIXTURE. He is looking for TRELLIS DOOR & WINDOW FIXTURE. 
+                                He is looking for TRELLIS DOOR & WINDOW FIXTURE. He is looking for TRELLIS DOOR & WINDOW FIXTURE. He is looking for TRELLIS DOOR & WINDOW FIXTURE. 
+                                He is looking for TRELLIS DOOR & WINDOW FIXTURE. He is looking for TRELLIS DOOR & WINDOW FIXTURE. He is looking for TRELLIS DOOR & WINDOW FIXTURE. 
+                                He is looking for TRELLIS DOOR & WINDOW FIXTURE. He is looking for TRELLIS DOOR & WINDOW FIXTURE. He is looking for TRELLIS DOOR & WINDOW FIXTURE. 
+                                He is looking for TRELLIS DOOR & WINDOW FIXTURE. He is looking for TRELLIS DOOR & WINDOW FIXTURE. He is looking for TRELLIS DOOR & WINDOW FIXTURE. 
+                            </td>
+                        </tr>
+                        <tr>
+                                <td><b>Status</b></td>
+                                <td><span class="label bg-green">Open</span></td>
+                            </tr>
+						</table>
+						</div>
+				  </div>
+				</div>
+			<!-- /.box-body -->
+			<div class="box-footer">
+				<a href="{{ URL::previous() }}" class="btn btn-default">Back</a>
+			</div>
+			<!-- /.box-footer -->
 </div>
 
+<div id="btnNew" style="cursor:pointer;z-index:100;" class="pull-right">
+    <span class="btn bg-orange btn-flat btn-lg margin" onclick="openNav()" id="btnNewMessage"><li class="fa fa-plus"></li> New Message</span>
+</div>
+
+<div class="row">
+        <div class="col-md-12">
+            <!-- The time line -->
+            <ul class="timeline" id="timelinemore" data-next-page="https://erp.nsol.sg/projects/24?page=2">
+                            <!-- timeline time label -->
+                <li class="time-label">
+                            <span class="bg-red">
+                                29-Nov-2018
+                            </span>
+                </li>
+                <!-- /.timeline-label -->
+                            <!-- timeline item -->
+                <li>
+                    <i class="fa fa-envelope bg-blue"></i>
+    
+                    <div class="timeline-item">
+                        <span class="time"><i class="fa fa-clock-o"></i> 13:35 </span>
+    
+                        <h3 class="timeline-header"><a href="#">John Smith</a> posted with <span class="label bg-blue">STATUS</span> </h3>
+    
+                        <div class="timeline-body">
+                            Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here 
+                            Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here 
+                            Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here 
+                            Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here 
+                        </div>
+    
+                    </div>
+                </li>
+            <!-- End timeline item -->
+            
+                                <!-- The time line -->
+            <ul class="timeline" id="timelinemore" data-next-page="#">
+                            <!-- timeline item -->
+                <li>
+                    <i class="fa fa-envelope bg-blue"></i>
+    
+                    <div class="timeline-item">
+                        <span class="time"><i class="fa fa-clock-o"></i> 13:35 </span>
+    
+                        <h3 class="timeline-header"><a href="#">John Smith</a> posted with <span class="label bg-yellow">STATUS</span> </h3>
+    
+                        <div class="timeline-body">
+                            Need Samples. Need Samples. Need Samples. Need Samples. Need Samples. Need Samples. Need Samples. 
+                        </div>
+    
+                    </div>
+                </li>
+                <!-- END timeline item -->
+                
+                                <!-- The time line -->
+            <ul class="timeline" id="timelinemore" data-next-page="#">
+                            <!-- timeline item -->
+                <li>
+                    <i class="fa fa-envelope bg-blue"></i>
+    
+                    <div class="timeline-item">
+                        <span class="time"><i class="fa fa-clock-o"></i> 13:35 </span>
+    
+                        <h3 class="timeline-header"><a href="#">John Smith</a> posted with <span class="label bg-green">STATUS</span> </h3>
+    
+                        <div class="timeline-body">
+                            Need Samples. Need Samples. Need Samples. Need Samples. Need Samples. Need Samples. 
+                            Need Samples. Need Samples. Need Samples. Need Samples. Need Samples. Need Samples. Need Samples. 
+                            <div class="clearfix"><br></div>
+                        </div>
+    
+                    </div>
+                </li>
+                <!-- END timeline item -->
+                
+                                <!-- The time line -->
+            <ul class="timeline" id="timelinemore" data-next-page="#">
+                            <!-- timeline time label -->
+                <li class="time-label">
+                            <span class="bg-red">
+                                28-Nov-2018
+                            </span>
+                </li>
+                <!-- /.timeline-label -->
+                            <!-- timeline item -->
+                <li>
+                    <i class="fa fa-envelope bg-blue"></i>
+    
+                    <div class="timeline-item">
+                        <span class="time"><i class="fa fa-clock-o"></i> 05:27 </span>
+    
+                        <h3 class="timeline-header"><a href="#">John Smith</a> posted with <span class="label bg-blue">STATUS</span> </h3>
+    
+                        <div class="timeline-body">
+                            Qoute Sent to him my post and email. 
+                        </div>
+    
+                    </div>
+                </li>
+                <!-- END timeline item -->
+             
+                
+                        </ul>
+        </ul></ul></ul>
+    </div>
+        <!-- /.col -->
+    </div>
+
+<div id="btnNew" style="cursor:pointer;z-index:100;" class="pull-right">
+    <span class="btn bg-orange btn-flat btn-lg margin" onclick="openNav()" id="btnNewMessage"><li class="fa fa-plus"></li> New Message</span>
+</div>
+    <style>
+
+            .sidenav {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1050;
+                top: 0;
+                right: 0;
+                background-color: #111;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+            }
+            
+            .sidenav a {
+                padding: 4px 4px 4px 16px;
+                text-decoration: none;
+                color: #f1f1f1;
+                display: block;
+                transition: 0.3s;
+            }
+            
+            .sidenav .closebtn {
+                position: absolute;
+                top: 0;
+                left: 5px;
+                font-size: 56px;
+                    border-radius:100%;
+            }
+            @media screen and (max-height: 450px)
+            {
+                .sidenav
+                {width:100%;}
+            }
+            @media screen and (max-height: 450px) {
+              .sidenav {padding-top: 15px;}
+              .sidenav a {font-size: 18px;}
+            }
+            </style>
+            
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                
+                <div style="padding: 50px;">
+                    <!-- form start -->
+                    <form role="form" id="frmMessage" method="get" >
+                    @csrf
+                    <input type="hidden" name="project_id" value="1">
+                        <div class="box-body">
+                        <div class="form-group">
+                            <textarea class="form-control" rows="12" name="message" id="message" placeholder="Enter your Message Here"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="file" id="MessageAssets" name="MessageAssets[]" class="btn btn-danger btn-lg" multiple>
+                        </div>                
+                        <div class="form-group">
+                            <span id="errmessage"></span>
+                            <button class="btn btn-danger btn-lg pull-right">Post Message</button>                  
+                        </div>
+                        </div>
+                    </form>
+                    <!-- form ends -->
+                </div>              
+            </div>
+    <script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "70%";
+    }
+    
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
 @endsection

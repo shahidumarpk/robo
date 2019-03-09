@@ -20,7 +20,7 @@
 <section class="content">
         <div class="row">
           <div class="col-md-3">
-            <a href="/mail/inbox" class="btn btn-primary btn-block margin-bottom">Back to Inbox</a>
+            <a href="{{url('/mail/inbox')}}" class="btn btn-primary btn-block margin-bottom">Back to Inbox</a>
   
             <div class="box box-solid">
               <div class="box-header with-border">
@@ -33,7 +33,7 @@
               </div>
               <div class="box-body no-padding">
                 <ul class="nav nav-pills nav-stacked">
-                  <li><a href="/mail/inbox"><i class="fa fa-inbox"></i> Inbox
+                  <li><a href="{{url('/mail/inbox')}}"><i class="fa fa-inbox"></i> Inbox
                     <span class="label label-primary pull-right">12</span></a></li>
                   <li><a href="#"><i class="fa fa-envelope-o"></i> Sent</a></li>
                   <li><a href="#"><i class="fa fa-file-text-o"></i> Drafts</a></li>

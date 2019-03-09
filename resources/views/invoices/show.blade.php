@@ -34,7 +34,7 @@
       <!-- /.col -->
       <div class="col-sm-4 invoice-col">
         Sales Representative
-        
+        <img src="{{asset('img/logo.webp')}}" class="responsive"  style="display: block; width:200px;" />
         <address>
             <strong>Robo Door, RBD</strong><br>
             P O Box 926<br>

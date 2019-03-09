@@ -24,12 +24,10 @@
           
             <div class="box-header">
               <h3 class="box-title">Leads List</h3>
-              <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#exampleModalCenter">
-                Add New Leads
-              </button>
-
               <span class="pull-right">
-              <!-- <a href="{!! url('/sellers/create'); !!}" class="btn btn-info"><span class="fa fa-plus"></span> Add Seller</a> -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddModalCenter">
+                  Add New Leads
+                </button>
               </span>
             </div>
             <!-- /.box-header -->
@@ -38,53 +36,54 @@
               <table id="example1" class="display responsive nowrap" style="width:100%">
                 <thead>
                 <tr>
-                  <th>Code</th>
-                  <th>Leads Name</th>
-                  <th>Phone</th>
+                  <th>Id</th>
+                  <th>Name</th>
                   <th>Address</th>
+                  <th>Phone No.</th>
+                  <th>Email</th>
+                  <th>Assigned To</th>
+                  <th>At</th>
                   <th>Status</th>
                   <th>Action</th>
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($users as $user)
+                @php 
+                $id=0;
+                @endphp
+                @for ($i = 0; $i <= 9; $i++)
+                @php 
+                $id++;
+                @endphp
                   <tr>
-                    <td>F001</td>
+                    <td>{{$id}}</td>
                     <td>Micheal Gak</td>
+                    <td>Address goes here</td>
                     <td>+1 123 4567 89</td>
-                    <td>18 West, Gork Street, CA</td>
+                    <td>email@robodoor.com</td>
+                    <td>Florin Ristea</td>
+                    <td>01-Jan-2019 11:15 AM</td>
                     <td><span class="btn btn-success">Active</span></td>
-                     <!-- For Delete Form begin - ->
-                    <form id="form{{$user['id']}}" action="{{action('LeadController@destroy', $user['id'])}}" method="post">
-                        @csrf
-                        <input name="_method" type="hidden" value="DELETE">
-                    </form>
-                    <!-- For Delete Form Ends -->
                     <td>
-                      <button class="btn btn-primary" title="View Detail"><i class="fa fa-eye"></i> </button>    
-                      <button  class="btn btn-success" title="Edit"><i class="fa fa-edit"></i> </button>
+                      <a href="{{url('lead')}}/1" class="btn btn-primary" title="View Detail"><i class="fa fa-eye"></i> </a>    
+                      <button  class="btn btn-success" title="Edit" data-toggle="modal" data-target="#EditModalCenter"><i class="fa fa-edit"></i> </button>
                       <button  class="btn btn-danger" title="Delete"><i class="fa fa-trash"></i> </button>
-                      <!--
-                      @if ($user['status'] === 1)
-                        <a href="{!! url('/lead/deactivate/'.$user['id']); !!}"  class="btn btn-warning" title="Deactivate"><i class="fa fa-times"></i> </a>
-                      @else
-                        <a href="{!! url('/lead/active/'.$user['id']); !!}"  class="btn btn-info" title="Active"><i class="fa fa-check"></i> </a>
-                      @endif
-                       <button class="btn btn-danger" onclick="archiveFunction('form{{$user['id']}}')"><i class="fa fa-trash"></i></button>
-                      <a href="{!! url('/lead/resetpassword/'.$user->id); !!}"  class="btn btn-info" title="Reset Password"><i class="fa fa-key"></i> </a> -->
                     </td>
                    
                     
 
                   </tr>
-                  @endforeach
+                  @endfor
                 </tbody>
                 <tfoot>
                 <tr>
-                  <th>Code</th>
-                  <th>Lead Name</th>
-                  <th>Price</th>
-                  <th>Category</th>
+                  <th>Id</th>
+                  <th>Name</th>
+                  <th>Address</th>
+                  <th>Phone No.</th>
+                  <th>Email</th>
+                  <th>Assigned To</th>
+                  <th>At</th>
                   <th>Status</th>
                   <th>Action</th>
                 </tr>
@@ -101,13 +100,13 @@
         <!-- /.col -->
       </div>
       <!-- /.row -->   
-<!-- modal  -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<!-- add modal  -->
+<div class="modal fade" id="AddModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Add Inventory</h4>
+            <h4 class="modal-title">New Lead Information</h4>
           </div>
           <div class="modal-body">
             <!-- /.box-header -->
@@ -115,35 +114,35 @@
             <form role="form">
               <div class="box-body">
                 <div class="form-group">
-                  <label for="name">Lead Name</label>
+                  <label for="name">Name</label>
                   <input type="text" class="form-control" id="name" placeholder="Enter Name">
                 </div>
-                
                 <div class="form-group">
-                  <label for="price">Lead Phone</label>
-                  <input type="text" class="form-control" id="price" placeholder="Enter Phone">
+                    <label for="code">Address</label>
+                    <input type="text" class="form-control" id="address" placeholder="Enter Address">
+                 </div>
+                <div class="form-group">
+                    <label for="price">Phone</label>
+                    <input type="text" class="form-control" id="phoneno" placeholder="Enter Phone">
                 </div>
                 <div class="form-group">
-                    <label for="code">Lead Address</label>
-                    <input type="text" class="form-control" id="code" placeholder="Enter Address">
-                  </div>
+                    <label for="price">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter Email">
+                </div>
                 <div class="form-group">
-                  <label for="status">Status</label>
+                    <label for="description">Description</label>
+                    <textarea name="description" class="form-control" rows="5"> </textarea>
+                </div>
+                <div class="form-group">
+                  <label for="status">Assigned To</label>
                   <select name="status" class="form-control">
-                    <option disabled selected>Select Status </option>
-                    <option  >Active </option>
-                    <option  >Rejected </option>
-                    <option  >Call Back </option>
+                    <option disabled selected>Select Agent/Distributor </option>
+                    <option value="1">Florin Ristea(Agent)</option>
+                    <option value="2">John SMith (Agent)</option>
+                    <option value="3">Shahid (Distributor)</option>
                   </select>
                 </div>
-                <div class="form-group">
-                  <label for="description">Leads Description</label>
-                  <textarea name="description" class="form-control" rows="5"> </textarea>
-                </div>
-                <div class="form-group">
-                  <label for="images">File input</label>
-                  <input type="file" id="images" name="images">
-                </div>
+                
               </div>
               <!-- /.box-body -->
 
@@ -157,5 +156,64 @@
     </div>
   </div>
 </div>
+
+
+<!-- Edit modal  -->
+<div class="modal fade" id="EditModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Lead Information</h4>
+            </div>
+            <div class="modal-body">
+              <!-- /.box-header -->
+              <!-- form start -->
+              <form role="form">
+                <div class="box-body">
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter Name" value="Micheal Gak">
+                  </div>
+                  <div class="form-group">
+                      <label for="code">Address</label>
+                      <input type="text" class="form-control" id="address" placeholder="Enter Address" value="Address goes here	">
+                   </div>
+                  <div class="form-group">
+                      <label for="price">Phone</label>
+                      <input type="text" class="form-control" id="phoneno" placeholder="Enter Phone" value="+1 123 4567 89	">
+                  </div>
+                  <div class="form-group">
+                      <label for="price">Email</label>
+                      <input type="email" class="form-control" id="email" placeholder="Enter Email" value="email@robodoor.com	">
+                  </div>
+                  <div class="form-group">
+                      <label for="description">Description</label>
+                      <textarea name="description" class="form-control" rows="5">Looking for Gates and much more</textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="status">Assigned To</label>
+                    <select name="status" class="form-control">
+                      <option disabled selected>Select Agent/Distributor </option>
+                      <option value="1" selected>Florin Ristea(Agent)</option>
+                      <option value="2">John SMith (Agent)</option>
+                      <option value="3">Shahid (Distributor)</option>
+                    </select>
+                  </div>
+                  
+                </div>
+                <!-- /.box-body -->
+  
+                  
+              </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+      </div>
+    </div>
+  </div>
+
 
 @endsection
