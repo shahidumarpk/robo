@@ -131,9 +131,6 @@
                 Add New Inventory
               </button>
 
-              <span class="pull-right">
-              <!-- <a href="{!! url('/sellers/create'); !!}" class="btn btn-info"><span class="fa fa-plus"></span> Add Seller</a> -->
-              </span>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -165,7 +162,9 @@
                     <td>R 125.62</td>
                     <td>R 19.03</td>
                     <td>
-                    <a href="{{url('/inventory/1/')}}" class="btn btn-primary" title="View Detail"><i class="fa fa-eye"></i> </a>    
+                      <a href="{{url('/inventory/1/')}}" class="btn btn-info" title="View Detail"><i class="fa fa-eye"></i> </a>    
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddStock" title="Add More Stock"><i class="fa fa-plus"></i></button>
+                      <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#MinusStock" title="Less Stock"><i class="fa fa-minus"></i></button>
                       <a href="{{url('/inventory/1/edit')}}" class="btn btn-success" title="Edit"><i class="fa fa-edit"></i> </a>
                       <a  class="btn btn-danger" title="Delete"><i class="fa fa-trash"></i> </a>
                     </td>
@@ -181,9 +180,11 @@
                     <td>R 125.62</td>
                     <td>R 19.03</td>
                     <td>
-                        <a href="{{url('/inventory/1/')}}" class="btn btn-primary" title="View Detail"><i class="fa fa-eye"></i> </a>    
-                        <a href="{{url('/inventory/1/edit')}}" class="btn btn-success" title="Edit"><i class="fa fa-edit"></i> </a>
-                        <a  class="btn btn-danger" title="Delete"><i class="fa fa-trash"></i> </a>
+                      <a href="{{url('/inventory/1/')}}" class="btn btn-info" title="View Detail"><i class="fa fa-eye"></i> </a>    
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddStock" title="Add More Stock"><i class="fa fa-plus"></i></button>
+                      <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#MinusStock" title="Less Stock"><i class="fa fa-minus"></i></button>
+                      <a href="{{url('/inventory/1/edit')}}" class="btn btn-success" title="Edit"><i class="fa fa-edit"></i> </a>
+                      <a  class="btn btn-danger" title="Delete"><i class="fa fa-trash"></i> </a>
                     </td>
                   </tr>
 
@@ -197,9 +198,11 @@
                     <td>R 125.62</td>
                     <td>R 19.03</td>
                     <td>
-                        <a href="{{url('/inventory/1/')}}" class="btn btn-primary" title="View Detail"><i class="fa fa-eye"></i> </a>    
-                        <a href="{{url('/inventory/1/edit')}}" class="btn btn-success" title="Edit"><i class="fa fa-edit"></i> </a>
-                        <a  class="btn btn-danger" title="Delete"><i class="fa fa-trash"></i> </a>
+                      <a href="{{url('/inventory/1/')}}" class="btn btn-info" title="View Detail"><i class="fa fa-eye"></i> </a> 
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddStock" title="Add More Stock"><i class="fa fa-plus"></i></button>
+                      <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#MinusStock" title="Less Stock"><i class="fa fa-minus"></i></button>   
+                      <a href="{{url('/inventory/1/edit')}}" class="btn btn-success" title="Edit"><i class="fa fa-edit"></i> </a>
+                      <a  class="btn btn-danger" title="Delete"><i class="fa fa-trash"></i> </a>
                     </td>
                   </tr>
 
@@ -213,9 +216,11 @@
                     <td>R 125.62</td>
                     <td>R 19.03</td>
                     <td>
-                        <a href="{{url('/inventory/1/')}}" class="btn btn-primary" title="View Detail"><i class="fa fa-eye"></i> </a>    
-                        <a href="{{url('/inventory/1/edit')}}" class="btn btn-success" title="Edit"><i class="fa fa-edit"></i> </a>
-                        <a  class="btn btn-danger" title="Delete"><i class="fa fa-trash"></i> </a>
+                      <a href="{{url('/inventory/1/')}}" class="btn btn-info" title="View Detail"><i class="fa fa-eye"></i> </a>    
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddStock" title="Add More Stock"><i class="fa fa-plus"></i></button>
+                      <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#MinusStock" title="Less Stock"><i class="fa fa-minus"></i></button>
+                      <a href="{{url('/inventory/1/edit')}}" class="btn btn-success" title="Edit"><i class="fa fa-edit"></i> </a>
+                      <a  class="btn btn-danger" title="Delete"><i class="fa fa-trash"></i> </a>
                     </td>
                   </tr>
 
@@ -229,9 +234,11 @@
                     <td>R 125.62</td>
                     <td>R 19.03</td>
                     <td>
-                        <a href="{{url('/inventory/1/')}}" class="btn btn-primary" title="View Detail"><i class="fa fa-eye"></i> </a>    
-                        <a href="{{url('/inventory/1/edit')}}" class="btn btn-success" title="Edit"><i class="fa fa-edit"></i> </a>
-                        <a  class="btn btn-danger" title="Delete"><i class="fa fa-trash"></i> </a>
+                      <a href="{{url('/inventory/1/')}}" class="btn btn-info" title="View Detail"><i class="fa fa-eye"></i> </a>    
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddStock" title="Add More Stock"><i class="fa fa-plus"></i></button>
+                      <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#MinusStock" title="Less Stock"><i class="fa fa-minus"></i></button>
+                      <a href="{{url('/inventory/1/edit')}}" class="btn btn-success" title="Edit"><i class="fa fa-edit"></i> </a>
+                      <a  class="btn btn-danger" title="Delete"><i class="fa fa-trash"></i> </a>
                     </td>
                   </tr>
 
@@ -245,10 +252,12 @@
                     <td>R 398.00</td>
                     <td>R 9.95</td>
                     <td>
-                        <a href="{{url('/inventory/1/')}}" class="btn btn-primary" title="View Detail"><i class="fa fa-eye"></i> </a>    
-                        <a href="{{url('/inventory/1/edit')}}" class="btn btn-success" title="Edit"><i class="fa fa-edit"></i> </a>
-                        <a  class="btn btn-danger" title="Delete"><i class="fa fa-trash"></i> </a>  
-                    </td>
+                      <a href="{{url('/inventory/1/')}}" class="btn btn-info" title="View Detail"><i class="fa fa-eye"></i> </a>    
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddStock" title="Add More Stock"><i class="fa fa-plus"></i></button>
+                      <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#MinusStock" title="Less Stock"><i class="fa fa-minus"></i></button>
+                      <a href="{{url('/inventory/1/edit')}}" class="btn btn-success" title="Edit"><i class="fa fa-edit"></i> </a>
+                      <a  class="btn btn-danger" title="Delete"><i class="fa fa-trash"></i> </a>  
+                  </td>
                   </tr>
                   <tr>
                     <td>STAINLESS STEEL BEARINGS</td>
@@ -260,9 +269,11 @@
                     <td>R 125.62</td>
                     <td>R 19.03</td>
                     <td>
-                        <a href="{{url('/inventory/1/')}}" class="btn btn-primary" title="View Detail"><i class="fa fa-eye"></i> </a>    
-                        <a href="{{url('/inventory/1/edit')}}" class="btn btn-success" title="Edit"><i class="fa fa-edit"></i> </a>
-                        <a  class="btn btn-danger" title="Delete"><i class="fa fa-trash"></i> </a>  
+                      <a href="{{url('/inventory/1/')}}" class="btn btn-info" title="View Detail"><i class="fa fa-eye"></i> </a>
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddStock" title="Add More Stock"><i class="fa fa-plus"></i></button>
+                      <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#MinusStock" title="Less Stock"><i class="fa fa-minus"></i></button>    
+                      <a href="{{url('/inventory/1/edit')}}" class="btn btn-success" title="Edit"><i class="fa fa-edit"></i> </a>
+                      <a  class="btn btn-danger" title="Delete"><i class="fa fa-trash"></i> </a>  
                     </td>
                   </tr>
                   @endforeach
@@ -293,7 +304,7 @@
         <!-- /.col -->
       </div>
       <!-- /.row -->   
-<!-- modal  -->
+<!-- modal creat inventory -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
@@ -367,7 +378,7 @@
                 </form>
           </div>
           <div class="modal-footer">
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary" onclick="showsuccess()">Submit</button>
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
         </div>
@@ -376,6 +387,104 @@
     </div>
   </div>
 </div>
+<!-- model ends -->
+
+<!-- modal more stock -->
+<div class="modal fade" id="AddStock" tabindex="-1" role="dialog" aria-labelledby="AddStock" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Add More Stock for 19MM STEEL UPRIGHT WHITE LC</h4>
+          </div>
+          <div class="modal-body">
+              <form role="form">
+                  <div class="box-body">
+                    <div class="col-md-12">  
+                      <div class="form-group">
+                          <label for="stock_length">Select Reason</label>
+                          <select name="reason" class="form-control" id="reason">
+                            <option value="purchased">Purchased</option>
+                            <option value="other">other</option>
+                          </select>
+                        </div>                 
+                    <div class="form-group">
+                      <label for="stock_length">Enter Stock Quantity</label>
+                      <input type="text" name="stock_length" class="form-control" id="stock_length" placeholder="Enter Stock Quantity">
+                    </div>
+                    <div class="form-group">
+                      <label for="laser_cutting">Description</label>
+                      <input type="text" name="description" class="form-control" id="description" placeholder="Enter Description">
+                    </div>
+                   
+                  </div>
+                  </div>
+                  <!-- /.box-body -->
+              
+                 
+                </form>
+          </div>
+          <div class="modal-footer">
+              <button type="submit" class="btn btn-primary" onclick="showsuccess()">Update</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+    
+      
+    </div>
+  </div>
+</div>
+<!-- model ends -->
+
+
+
+
+<!-- modal minus stock -->
+<div class="modal fade" id="MinusStock" tabindex="-1" role="dialog" aria-labelledby="MinusStock" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Less Stock for 19MM STEEL UPRIGHT WHITE LC</h4>
+          </div>
+          <div class="modal-body">
+              <form role="form">
+                  <div class="box-body">
+                    <div class="col-md-12">                   
+                      <div class="form-group">
+                        <label for="stock_length">Select Reason</label>
+                        <select name="reason" class="form-control" id="reason">
+                          <option value="damaged">Damaged</option>
+                          <option value="useless">Useless</option>
+                        </select>
+                      </div>
+                    <div class="form-group">
+                      <label for="stock_length">Enter Stock Quantity</label>
+                      <input type="text" name="stock_length" class="form-control" id="stock_length" placeholder="Enter Stock Quantity">
+                    </div>
+                    <div class="form-group">
+                      <label for="laser_cutting">Description</label>
+                      <input type="text" name="description" class="form-control" id="description" placeholder="Enter Description">
+                    </div>
+                   
+                  </div>
+                  </div>
+                  <!-- /.box-body -->
+              
+                 
+                </form>
+          </div>
+          <div class="modal-footer">
+              <button type="submit" class="btn btn-primary" onclick="showsuccess()">Update</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+    
+      
+    </div>
+  </div>
+</div>
+<!-- model ends -->
 
 <script>
   //select 2 code for the popup styling
@@ -385,7 +494,10 @@
         
     });
 
-
+function showsuccess(){
+  swal("Success", "Record has been updated.", "success");
+  $('.modal').modal('hide');
+}
   function changeTypeOfPurchase(){
     var typeofpurchase = document.getElementById('type_of_purchase').value;
     document.getElementById('type_of_purchase_text').innerHTML = typeofpurchase;

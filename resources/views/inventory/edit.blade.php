@@ -52,7 +52,7 @@
                 </tr>
                 <tr>
                     <td><b>Stock Length</b></td>
-                    <td><input type="text" class="form-control"  value="3.5"></td>
+                    <td><input type="text" class="form-control"  value="3.5" readonly></td>
                 </tr>
                 <tr>
                     <td><b>Material Cost</b></td>

@@ -23,6 +23,12 @@ Route::get('/dashboard', ['as' => 'dashboard' , function () {
    return view('dashboard');
 }])->middleware('auth');
 
+
+Route::get('/calendar', ['as' => 'calendar' , function () {
+   return view('calendar.index');
+}])->middleware('auth');
+
+
 Route::get('/changepassword', ['as' => 'changepassword' , function () {
     return view('changepassword');
  }])->middleware('auth');
@@ -88,6 +94,7 @@ Route::resource('attributes', 'AttributeController')->middleware('auth');
 
  // leads
  Route::resource('lead', 'LeadController')->middleware('auth');
+ 
  
 
  // distributors
