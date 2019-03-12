@@ -24,11 +24,6 @@ Route::get('/dashboard', ['as' => 'dashboard' , function () {
 }])->middleware('auth');
 
 
-Route::get('/calendar', ['as' => 'calendar' , function () {
-   return view('calendar.index');
-}])->middleware('auth');
-
-
 Route::get('/changepassword', ['as' => 'changepassword' , function () {
     return view('changepassword');
  }])->middleware('auth');
@@ -106,6 +101,11 @@ Route::resource('attributes', 'AttributeController')->middleware('auth');
  // quotes
  Route::resource('/quotes', 'QuotesController')->middleware('auth');
 
+ //Calendar
+ Route::get('/calendar/list', 'CalendarController@list')->middleware('auth')->name('callistmode'); 
+ Route::resource('/calendar', 'CalendarController')->middleware('auth');
+ 
+ 
  // mailbox routes
  Route::get('mail/inbox', 'MailboxController@index')->middleware('auth')->name('mailinbox'); 
  Route::get('mail/read', 'MailboxController@read')->middleware('auth')->name('mailread'); 

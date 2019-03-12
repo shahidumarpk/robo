@@ -32,12 +32,13 @@ $permissions=explode(",",$user->role->permission);
                     <i class="fa fa-angle-left pull-right"></i>
                   </span>
               </a>
-                @if(! empty ($nav->childrenformenu))
+                @if(!empty ($nav->childrenformenu))
                   <ul class="treeview-menu">
                   @foreach($nav->childrenformenu as $childnav)
                     @if(in_array($childnav->id,$permissions) && $childnav->showinnav==1)
-                    <li class="{{ (strpos($childnav->mselect,$urlpath) !== false || strpos($childnav->mselect, Route::currentRouteName()) !== false  )  ? "active" : "" }}"><a href="{!! url($childnav->urllink); !!}">{{$childnav->menutitle}}
-                      </a></li>
+                    <li class="{{ (strpos($childnav->mselect,$urlpath) !== false || strpos($childnav->mselect, Route::currentRouteName()) !== false  )  ? "active" : "" }}">
+                      <a href="{!! url($childnav->urllink); !!}">{{$childnav->menutitle}}</a>
+                    </li>
                     @endif
                   @endforeach
                   </ul>

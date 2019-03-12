@@ -15,12 +15,13 @@
  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
  <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css">
 
- 
+
+
 <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
         page. However, you can choose any other skin. Make sure you
         apply the skin class to the body tag so the changes take effect. -->
   <link rel="stylesheet" href="{{ asset('dist/css/skins/skin-blue.min.css') }}">
-  @if (\Request::is('profile') or \Request::is('inventory') or \Request::is('invoices')or \Request::is('customers/create') or Route::currentRouteName()=='customers.edit' or \Request::is('admins/create') or Route::currentRouteName()=='admins.edit' or \Request::is('categories/create') or Route::currentRouteName()=='categories.edit' or Route::currentRouteName()=='sellers.create' or Route::currentRouteName()=='sellers.edit') 
+  @if (\Request::is('profile') or \Request::is('inventory') or \Request::is('invoices')or \Request::is('customers/create') or Route::currentRouteName()=='customers.edit' or Route::currentRouteName()=='callistmode'  or \Request::is('admins/create') or Route::currentRouteName()=='admins.edit' or \Request::is('categories/create') or Route::currentRouteName()=='categories.edit' or Route::currentRouteName()=='sellers.create' or Route::currentRouteName()=='sellers.edit') 
   <link rel="stylesheet" href="{{ asset('css/fileinput.min.css') }}">
   @endif
   
@@ -38,12 +39,10 @@
 <!-- jQuery 3 -->
 <script src="{{ asset('bower_components/jquery/dist/jquery.min.js') }}"></script>
 
-
 <!--For Date Range Pickers-->
 <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
 <script src="http://erp.nsol.sg/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
 <link href="http://erp.nsol.sg/bower_components/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-
 <!-- For Select2 --> 
 <link href="{{ asset('bower_components/select2/dist/css/select2.min.css') }}" rel="stylesheet">
 <script src="{{ asset('bower_components/select2/dist/js/select2.full.min.js') }}"></script>
@@ -63,3 +62,8 @@
     border-radius: .2rem;
 }
 </style>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
