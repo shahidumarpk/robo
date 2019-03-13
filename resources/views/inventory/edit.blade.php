@@ -74,7 +74,14 @@
                     <td><b>Rate per meter / pcs</b></td>
                     <td><input type="text" class="form-control"  value="40.2"></td>
                 </tr>
-
+                <tr>
+                    <td><b><span class="text-red">Reorder Level</span></b></td>
+                    <td><input type="text" name="reorder" class="form-control" id="reorder" placeholder="Enter Reorder Level" value="2"></td>
+                </tr>
+                <tr>
+                    <td><b> <label for="rate_per" class="text-red">Buyer Email<span id="type_of_purchase_text"></span></label></b></td>
+                    <td><input type="email" name="buyeremail" class="form-control" id="buyeremail" placeholder="Enter Buyer Email " value="buyer@buyer.com"></td>
+                </tr>
                 <tr>
                     <td><b>Used in Products </b></td>
                     <td>

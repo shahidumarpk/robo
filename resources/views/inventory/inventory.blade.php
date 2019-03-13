@@ -142,6 +142,7 @@
                   <th>Inventory Name</th>
                   <th>Stock</th>
                   <th>Unit</th>
+                  <th>Re-Order Level</th>
                   <th>Material Cost</th>
                   <th>Laser Cutting</th>
                   <th>Powder Coating</th>
@@ -156,6 +157,7 @@
                     <td>19MM STEEL UPRIGHT WHITE LC</td>
                     <td>6.6</td>
                     <td>Meter</td>
+                    <td>2.0</td>
                     <td>R 61.12</td>
                     <td>R 34.00</td>
                     <td>R 30.50</td>
@@ -174,6 +176,7 @@
                     <td>19MM STEEL UPRIGHT CHARCOAL LC</td>
                     <td>6.6</td>
                     <td>Meter</td>
+                    <td>2.0</td>
                     <td>R 61.12</td>
                     <td>R 34.00</td>
                     <td>R 30.50</td>
@@ -192,6 +195,7 @@
                     <td>12MM STEEL UPRIGHT BRONZE LC</td>
                     <td>6.6</td>
                     <td>Meter</td>
+                    <td>2.5</td>
                     <td>R 61.12</td>
                     <td>R 34.00</td>
                     <td>R 30.50</td>
@@ -210,6 +214,7 @@
                     <td>19MM STEEL UPRIGHT CHARCOAL</td>
                     <td>6.6</td>
                     <td>Meter</td>
+                    <td>1.0</td>
                     <td>R 61.12</td>
                     <td>R 34.00</td>
                     <td>R 30.50</td>
@@ -228,6 +233,7 @@
                     <td>20 MM ALUMINIUM UPRIGHTS WHITE LC</td>
                     <td>6.6</td>
                     <td>Meter</td>
+                    <td>2.0</td>
                     <td>R 61.12</td>
                     <td>R 34.00</td>
                     <td>R 30.50</td>
@@ -246,6 +252,7 @@
                     <td>CARDBOARD</td>
                     <td>40.0</td>
                     <td>KG</td>
+                    <td>3.0</td>
                     <td>R 398.00</td>
                     <td>-</td>
                     <td>-</td>
@@ -261,8 +268,9 @@
                   </tr>
                   <tr>
                     <td>STAINLESS STEEL BEARINGS</td>
-                    <td>1</td>
+                    <td>10.00</td>
                     <td>Item</td>
+                    <td>1.0</td>
                     <td>R 61.12</td>
                     <td>-</td>
                     <td>-</td>
@@ -283,6 +291,7 @@
                     <th>Inventory Name</th>
                     <th>Stock</th>
                     <th>Unit</th>
+                    <th>Re-Order Level</th>
                     <th>Material Cost</th>
                     <th>Laser Cutting</th>
                     <th>Powder Coating</th>
@@ -338,6 +347,10 @@
                       <label for="laser_cutting">Inventory Laser Cutting</label>
                       <input onkeyup="calculateRatePerLength()" type="number" name="laser_cutting" class="form-control" id="laser_cutting" placeholder="Enter Laser Cutting Charges">
                     </div>
+                    <div class="form-group">
+                        <label for="rate_per" class="text-red">Reorder Level</label>
+                        <input type="text" name="reorder" class="form-control" id="reorder" placeholder="Enter Reorder Level">
+                      </div>
                    
                   </div>
                   <div class="col-md-6">
@@ -357,8 +370,10 @@
                       <label for="rate_per">Rate per <span id="type_of_purchase_text"></span></label>
                       <input type="text" name="rate_per" class="form-control" id="rate_per" placeholder="Enter Rate per Unit">
                     </div>
-                    
-                    
+                    <div class="form-group">
+                        <label for="buyeremail" class="text-red">Buyer Email</label>
+                        <input type="email" name="buyeremail" class="form-control" id="buyeremail" placeholder="Enter Buyer Email">
+                    </div>          
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
