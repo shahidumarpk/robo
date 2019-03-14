@@ -60,6 +60,18 @@
                     </div>
                   </div>
                   <div class="form-group">
+                    <label for="" class="col-sm-3">Bank Details 1</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="" placeholder="" value="ABSA BANK,  BOKSBURG BRANCH, SWIFT CODE ABSAZAJJ,  BRANCH CODE: 632005, ">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="" class="col-sm-3">Bank Details 2</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="" placeholder="" value="Bank 2">
+                    </div>
+                  </div>
+                  <div class="form-group">
                       <label for="" class="col-sm-3">Contact Phone 1</label>
                       <div class="col-sm-8">
                         <input type="text" class="form-control" id="" placeholder="" value="123123132">

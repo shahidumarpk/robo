@@ -105,6 +105,32 @@
                 </div>
                 
                 <div class="form-group">
+                  <label for="company" class="col-sm-3 control-label">City</label>
+
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="city " name="city " placeholder="Enter City" value="{{ old('company') }}" autocomplete="off" require>
+                    @if ($errors->has('company'))
+                          <span class="text-red">
+                              <strong>{{ $errors->first('company') }}</strong>
+                          </span>
+                      @endif
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="company" class="col-sm-3 control-label">Country</label>
+
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="country" name="country" placeholder="Enter Country" value="{{ old('company') }}" autocomplete="off" require>
+                    @if ($errors->has('company'))
+                          <span class="text-red">
+                              <strong>{{ $errors->first('company') }}</strong>
+                          </span>
+                      @endif
+                  </div>
+                </div>
+                
+                <div class="form-group">
                   <label for="phonenumber" class="col-sm-3 control-label">Phone Number</label>
 
                   <div class="col-sm-9">

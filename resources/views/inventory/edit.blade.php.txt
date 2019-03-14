@@ -82,9 +82,9 @@
                             
                             <select name="status" multiple class="form-control" id="productname">
                                 <option value="0" disabled>Select Quote </option>
-                                <option value="1" selected>Galv Fixture </option>
-                                <option value="2" selected>Galv Trellis </option>
-                                <option value="3">Deluxe Fixture</option>
+                                <option value="1" selected>TRELLES Gate  </option>
+                                <option value="2" selected>DELUXS Gate</option>
+                                <option value="3">Security Chain</option>
                             </select>
                         </div>
                     </td>
@@ -114,8 +114,8 @@
           
               <!-- /.box-body -->
               <div class="box-footer">
-              <a href="{!! url('/inventory'); !!}" class="btn btn-primary">Save</a>
-                <a href="{!! url('/inventory'); !!}" class="btn btn-default">Back</a>
+              <a href="{!! url('/products'); !!}" class="btn btn-primary">Save</a>
+                <a href="{!! url('/products'); !!}" class="btn btn-default">Back</a>
                 
               </div>
               <!-- /.box-footer -->

@@ -53,9 +53,9 @@
                               <tr>
                                   <td><b>Used in Products</b></td>
                                   <td>
-                                      <label class="label label-info margin">Security Chain Gate	</label>
-                                      <label class="label  label-info margin"> DELUX Gate	</label>
-                                      <label class="label  label-info margin">TRELLES Gate	</label>
+                                      <label class="label label-info margin">Galv Fixture	</label>
+                                      <label class="label  label-info margin"> Deluxe Fixture	</label>
+                                      <label class="label  label-info margin">Deluxe TRELLES	</label>
                                       
                                     </td>
                               </tr>

@@ -91,7 +91,7 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Manage Orders</h3>
+              <h3 class="box-title">Manage Job Cards</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -99,8 +99,8 @@
                 <thead>
                 <tr>
                   <th>Order No</th>
-                  <th>Seller Name</th>
-                  <th>Order Date</th>
+                  <th>Job Card</th>
+                  <th>Delivery Date</th>
                   <th>Status</th>
                   <th>Action</th>
                 </tr>
@@ -109,13 +109,13 @@
                 
                   <tr>
                     <td>124</td>
-                    <td>James Bond</td>
+                    <td onclick=""><a href="{{url('/orders/1/product/1')}}">DELUXE TRELLIS <br/><small>This product needs to get ready 2 days before the deadline</small></a></td>
                     <td>01-Jan-2018</td>
                     <td>
                       <span class="label label-primary">New</span>
                     </td>
                     <td>
-                      <a href="{!! url('/orders/1'); !!}" class="btn btn-primary" title="View Detail"><i class="fa fa-eye"></i> </a>    
+                      <a href="{{url('/orders/1/product/1')}}" class="btn btn-primary" title="View Detail"><i class="fa fa-eye"></i> </a>    
                       {{-- <a href="{!! url('/orders/createticket'); !!}" class="btn btn-info"><i class="fa fa-support"></i></a> --}}
                     </td>
                    
@@ -123,14 +123,14 @@
 
                   </tr>
                   <tr>
-                    <td>125</td>
-                    <td>Jhon Doe</td>
+                    <td>124</td>
+                    <td onclick=""><a href="{{url('/orders/1/product/1')}}">Alu TRELLIS <br/><small>Ask buyer for the color once again</small></a></td>
                     <td>02-Jan-2018</td>
                     <td>
                       <span class="label label-success">Completed</span>
                     </td>
                     <td>
-                      <a href="{!! url('/orders/1'); !!}" class="btn btn-primary" title="View Detail"><i class="fa fa-eye"></i> </a>    
+                      <a href="{{url('/orders/1/product/1')}}" class="btn btn-primary" title="View Detail"><i class="fa fa-eye"></i> </a>    
                       {{-- <a href="{!! url('/orders/createticket'); !!}" class="btn btn-info"><i class="fa fa-support"></i></a> --}}
                     </td>
                    
@@ -138,14 +138,14 @@
 
                   </tr>
                   <tr>
-                    <td>126</td>
-                    <td>Michal Rot</td>
+                    <td>124</td>
+                    <td onclick=""><a href="{{url('/orders/1/product/1')}}">ECONO TRELLIS <br/><small>the installation is not yet confirmed</small></a></td>
                     <td>03-Jan-2018</td>
                     <td>
                       <span class="label label-warning">Progress</span>
                     </td>
                     <td>
-                      <a href="{!! url('/orders/1'); !!}" class="btn btn-primary" title="View Detail"><i class="fa fa-eye"></i> </a>    
+                      <a href="{{url('/orders/1/product/1')}}" class="btn btn-primary" title="View Detail"><i class="fa fa-eye"></i> </a>    
                       {{-- <a href="{!! url('/orders/createticket'); !!}" class="btn btn-info"><i class="fa fa-support"></i></a> --}}
                     </td>
                    
@@ -154,13 +154,13 @@
                   </tr>
                   <tr>
                     <td>127</td>
-                    <td>Robert Mag</td>
+                    <td onclick=""><a href="{{url('/orders/1/product/1')}}">Galv TRELLIS <br/><small>Deliver the product by salesperson</small></a></td>
                     <td>04-Jan-2018</td>
                     <td>
                       <span class="label label-danger">Delayed</span>
                     </td>
                     <td>
-                      <a href="{!! url('/orders/1'); !!}" class="btn btn-primary" title="View Detail"><i class="fa fa-eye"></i> </a>    
+                      <a href="{{url('/orders/1/product/1')}}" class="btn btn-primary" title="View Detail"><i class="fa fa-eye"></i> </a>    
                       {{-- <a href="{!! url('/orders/createticket'); !!}" class="btn btn-info"><i class="fa fa-support"></i></a> --}}
                     </td>
                    

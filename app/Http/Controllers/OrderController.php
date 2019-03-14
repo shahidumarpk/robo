@@ -18,6 +18,12 @@ class OrderController extends Controller
         return view('orders.orders',compact('users'));
     }
 
+    public function manageOrders()
+    {
+        $users=\App\User::where('iscustomer',1)->get();
+        return view('orders.manage_orders',compact('users'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -52,6 +58,10 @@ class OrderController extends Controller
         return view('orders.show');
     }
 
+    // single product view advance
+    public function singleProduct(){
+        return view('orders.single_product');
+    }
     /**
      * Show the form for editing the specified resource.
      *

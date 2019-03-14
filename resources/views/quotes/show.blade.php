@@ -13,8 +13,12 @@
     <div class="row">
       <div class="col-xs-12">
         <h2 class="page-header">
-          <i class="fa fa-globe"></i> Quotes No.: 123
-          <small class="pull-right">Expiry Date: 21-Feb-2019</small>
+              <p class="pull-left"> <i class="fa fa-globe"></i> Quotes No.: 123</p>
+              <div class="col-md-2"></div>
+            <img src="{{asset('img/logo_grey.png')}}" class="center"  style="margin:auto; width:200px; text-align:center; align-content:center" />
+        
+         <small class="pull-right">Expiry Date: 21-Feb-2019</small>
+       
         </h2>
       </div>
       <!-- /.col -->
@@ -33,7 +37,7 @@
       </div>
       <!-- /.col -->
       <div class="col-sm-4 invoice-col">
-          <img src="{{asset('img/logo.webp')}}" class="responsive"  style="display: block; width:200px;" />
+          
         Sales Representative
         
         <address>
@@ -134,7 +138,18 @@
     <div class="row">
       <!-- accepted payments column -->
       <div class="col-xs-6">
-        
+          <div class="invoice-col">
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+              Bank Details  
+              <address>
+                  <label>ABSA BANK, </label>
+                  BOKSBURG BRANCH,<br/> SWIFT CODE ABSAZAJJ, <br/>BRANCH CODE: 632005, <br/>
+                  <label>ACCOUNT NUMBER: 4066184721 </label>
+                </address>
+            </div>
       </div>
       <!-- /.col -->
       <div class="col-xs-6">

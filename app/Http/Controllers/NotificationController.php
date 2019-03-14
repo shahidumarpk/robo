@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Setting;
+use App\Notification;
 use Illuminate\Http\Request;
 
-class SettingController extends Controller
+class NotificationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,12 +14,9 @@ class SettingController extends Controller
      */
     public function index()
     {
-        return view('settings');
+        return view('notifications.notifications');
     }
 
-    public function sage(){
-        return view('sage');
-    }
     /**
      * Show the form for creating a new resource.
      *
@@ -44,10 +41,10 @@ class SettingController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Setting  $setting
+     * @param  \App\Notification  $notification
      * @return \Illuminate\Http\Response
      */
-    public function show(Setting $setting)
+    public function show(Notification $notification)
     {
         //
     }
@@ -55,10 +52,10 @@ class SettingController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Setting  $setting
+     * @param  \App\Notification  $notification
      * @return \Illuminate\Http\Response
      */
-    public function edit(Setting $setting)
+    public function edit(Notification $notification)
     {
         //
     }
@@ -67,10 +64,10 @@ class SettingController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Setting  $setting
+     * @param  \App\Notification  $notification
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Setting $setting)
+    public function update(Request $request, Notification $notification)
     {
         //
     }
@@ -78,10 +75,10 @@ class SettingController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Setting  $setting
+     * @param  \App\Notification  $notification
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Setting $setting)
+    public function destroy(Notification $notification)
     {
         //
     }

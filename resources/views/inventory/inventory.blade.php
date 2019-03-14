@@ -39,7 +39,7 @@
                 <select name="shopname" class="form-control select2 select2-hidden-accessible" multiple="" data-placeholder="Select a Shop" multiple style="width: 100%;" tabindex="-1" aria-hidden="true">
                  <option value="all">All</option>
                  <option value="1">Deluxe Fixture</option>
-                 <option value="2">TRELLES Gate</option>
+                 <option value="2">Deluxe TRELLES </option>
                 </select>
                 
               </div>
@@ -142,7 +142,6 @@
                   <th>Inventory Name</th>
                   <th>Stock</th>
                   <th>Unit</th>
-                  <th>Re-Order Level</th>
                   <th>Material Cost</th>
                   <th>Laser Cutting</th>
                   <th>Powder Coating</th>
@@ -157,7 +156,6 @@
                     <td>19MM STEEL UPRIGHT WHITE LC</td>
                     <td>6.6</td>
                     <td>Meter</td>
-                    <td>2.0</td>
                     <td>R 61.12</td>
                     <td>R 34.00</td>
                     <td>R 30.50</td>
@@ -176,7 +174,6 @@
                     <td>19MM STEEL UPRIGHT CHARCOAL LC</td>
                     <td>6.6</td>
                     <td>Meter</td>
-                    <td>2.0</td>
                     <td>R 61.12</td>
                     <td>R 34.00</td>
                     <td>R 30.50</td>
@@ -195,7 +192,6 @@
                     <td>12MM STEEL UPRIGHT BRONZE LC</td>
                     <td>6.6</td>
                     <td>Meter</td>
-                    <td>2.5</td>
                     <td>R 61.12</td>
                     <td>R 34.00</td>
                     <td>R 30.50</td>
@@ -214,7 +210,6 @@
                     <td>19MM STEEL UPRIGHT CHARCOAL</td>
                     <td>6.6</td>
                     <td>Meter</td>
-                    <td>1.0</td>
                     <td>R 61.12</td>
                     <td>R 34.00</td>
                     <td>R 30.50</td>
@@ -233,7 +228,6 @@
                     <td>20 MM ALUMINIUM UPRIGHTS WHITE LC</td>
                     <td>6.6</td>
                     <td>Meter</td>
-                    <td>2.0</td>
                     <td>R 61.12</td>
                     <td>R 34.00</td>
                     <td>R 30.50</td>
@@ -252,7 +246,6 @@
                     <td>CARDBOARD</td>
                     <td>40.0</td>
                     <td>KG</td>
-                    <td>3.0</td>
                     <td>R 398.00</td>
                     <td>-</td>
                     <td>-</td>
@@ -268,9 +261,8 @@
                   </tr>
                   <tr>
                     <td>STAINLESS STEEL BEARINGS</td>
-                    <td>10.00</td>
+                    <td>1</td>
                     <td>Item</td>
-                    <td>1.0</td>
                     <td>R 61.12</td>
                     <td>-</td>
                     <td>-</td>
@@ -291,7 +283,6 @@
                     <th>Inventory Name</th>
                     <th>Stock</th>
                     <th>Unit</th>
-                    <th>Re-Order Level</th>
                     <th>Material Cost</th>
                     <th>Laser Cutting</th>
                     <th>Powder Coating</th>
@@ -347,10 +338,6 @@
                       <label for="laser_cutting">Inventory Laser Cutting</label>
                       <input onkeyup="calculateRatePerLength()" type="number" name="laser_cutting" class="form-control" id="laser_cutting" placeholder="Enter Laser Cutting Charges">
                     </div>
-                    <div class="form-group">
-                        <label for="rate_per" class="text-red">Reorder Level</label>
-                        <input type="text" name="reorder" class="form-control" id="reorder" placeholder="Enter Reorder Level">
-                      </div>
                    
                   </div>
                   <div class="col-md-6">
@@ -370,19 +357,26 @@
                       <label for="rate_per">Rate per <span id="type_of_purchase_text"></span></label>
                       <input type="text" name="rate_per" class="form-control" id="rate_per" placeholder="Enter Rate per Unit">
                     </div>
-                    <div class="form-group">
-                        <label for="buyeremail" class="text-red">Buyer Email</label>
-                        <input type="email" name="buyeremail" class="form-control" id="buyeremail" placeholder="Enter Buyer Email">
-                    </div>          
+                    
+                    
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
                         <label for="status">Select Products in which the component is used</label>
                         <select name="status" multiple class="form-control" id="productname">
                             <option value="0" disabled>Select Products </option>
-                            <option value="1">DELUX Gat  </option>
-                            <option value="2">TRELLES Gate</option>
-                            <option value="3">Security Fixture</option>
+                            <option value="1">Deluxe Trellis  </option>
+                            <option value="2">Deluxe Fixture</option>
+                            <option value="3">Econo Fixture</option>
+                            <option value="3">Alu Trellis</option>
+                            <option value="3">Alu Fixture</option>
+                            <option value="3">Galv Trellis</option>
+                            <option value="3">Galv Fixture</option>
+                            <option value="3">DuPlus Fixture</option>
+                            <option value="3">DuPlus Trellis</option>
+                            <option value="3">Econo Burglar Bars</option>
+                            <option value="3">Econo Burglar Bars</option>
+                            <option value="3">Robo Clear Bars</option>
                         </select>
                     </div>
                   </div>

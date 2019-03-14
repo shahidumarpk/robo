@@ -73,6 +73,8 @@ Route::resource('attributes', 'AttributeController')->middleware('auth');
   Route::get('orders/messages', 'OrderController@messages')->middleware('auth')->name('order.messages');
   Route::get('orders/conversation', 'OrderController@conversation')->middleware('auth')->name('order.conversation');
   Route::get('orders/createticket', 'OrderController@createticket')->middleware('auth')->name('order.messages');
+  Route::get('orders/manage', 'OrderController@manageOrders')->middleware('auth')->name('order.messages');
+  Route::get('orders/{id}/product/{idd}', 'OrderController@singleProduct')->middleware('auth')->name('order.single.show');
   Route::resource('orders', 'OrderController')->middleware('auth');
 
   //Membership
@@ -110,5 +112,15 @@ Route::resource('attributes', 'AttributeController')->middleware('auth');
  Route::get('mail/inbox', 'MailboxController@index')->middleware('auth')->name('mailinbox'); 
  Route::get('mail/read', 'MailboxController@read')->middleware('auth')->name('mailread'); 
  Route::get('mail/compose', 'MailboxController@compose')->middleware('auth')->name('mailcompose'); 
-
  
+ //notifications
+ Route::resource('/notifications', 'NotificationController')->middleware('auth');
+
+ //email template
+ Route::get('/email', function(){
+   return view('email.emailtemplate');
+ });
+
+ //sage api setting page
+ Route::get('/sage-settings', 'SettingController@sage')->name('SageSetting')->middleware('auth');
+

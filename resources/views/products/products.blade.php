@@ -65,22 +65,26 @@
                       </tr>
                       <tr>
                         <td>07</td>
-                        <td data-toggle="modal" data-target="#MarkupModal">Galv Fixture  </td>
+                        <td data-toggle="modal" data-target="#MarkupModal">Galv Trellis  </td>
                       </tr>
                       <tr>
                         <td>08</td>
-                        <td data-toggle="modal" data-target="#MarkupModal">DuPlus Trellis  </td>
+                        <td data-toggle="modal" data-target="#MarkupModal">Galv Fixture  </td>
                       </tr>
                       <tr>
                         <td>09</td>
-                        <td data-toggle="modal" data-target="#MarkupModal">DuPlus Fixture </td>     
+                        <td data-toggle="modal" data-target="#MarkupModal">DuPlus Trellis  </td>
                       </tr>
                       <tr>
                         <td>10</td>
-                        <td data-toggle="modal" data-target="#MarkupModal">Econo Burglar Bars   </td>
+                        <td data-toggle="modal" data-target="#MarkupModal">DuPlus Fixture </td>     
                       </tr>
                       <tr>
                         <td>11</td>
+                        <td data-toggle="modal" data-target="#MarkupModal">Econo Burglar Bars   </td>
+                      </tr>
+                      <tr>
+                        <td>12</td>
                         <td data-toggle="modal" data-target="#MarkupModal">Robo Clear Bars </td>
                       </tr>
                   @endforeach

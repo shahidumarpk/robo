@@ -66,6 +66,14 @@
                     <td>21 West, Barg Town, CA</td>
                 </tr>
                 <tr>
+                    <td><b>City</b></td>
+                    <td>Jhonesburg</td>
+                </tr>
+                <tr>
+                    <td><b>Country</b></td>
+                    <td>South Africa</td>
+                </tr>
+                <tr>
                     <td><b>Company Name</b></td>
                     <td>Robo Door</td>
                 </tr>

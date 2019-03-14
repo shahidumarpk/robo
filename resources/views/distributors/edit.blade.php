@@ -105,6 +105,30 @@
                   </div>
                 </div>
                 <div class="form-group">
+                  <label for="phonenumber" class="col-sm-3 control-label">City</label>
+
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="phonenumber" name="phonenumber" placeholder="Phone Number" value="{{ $user->phonenumber }}" autocomplete="off" require>
+                    @if ($errors->has('phonenumber'))
+                          <span class="text-red">
+                              <strong>{{ $errors->first('phonenumber') }}</strong>
+                          </span>
+                      @endif
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="phonenumber" class="col-sm-3 control-label">Country</label>
+
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="phonenumber" name="phonenumber" placeholder="Phone Number" value="{{ $user->phonenumber }}" autocomplete="off" require>
+                    @if ($errors->has('phonenumber'))
+                          <span class="text-red">
+                              <strong>{{ $errors->first('phonenumber') }}</strong>
+                          </span>
+                      @endif
+                  </div>
+                </div>
+                <div class="form-group">
                   <label for="company" class="col-sm-3 control-label">Company Name</label>
 
                   <div class="col-sm-9">

@@ -62,7 +62,15 @@
                     </tr>
                     <tr>
                         <td><b>Address</b></td>
-                        <td>21 west, park Avenue, CA</td>
+                        <td>21 west, park Avenue, </td>
+                    </tr>
+                    <tr>
+                        <td><b>City</b></td>
+                        <td>JhonesBurg</td>
+                    </tr>
+                    <tr>
+                        <td><b>Country</b></td>
+                        <td>South Africa</td>
                     </tr>
                     <tr>
                         <td><b>Address 2</b></td>

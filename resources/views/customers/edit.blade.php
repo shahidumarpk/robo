@@ -129,6 +129,30 @@
                         @endif
                     </div>
                   </div>
+                <div class="form-group">
+                    <label for="address" class="col-sm-3 control-label">City</label>
+  
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="address" name="address" placeholder="City Name" value="{{ old('address') }}" autocomplete="off" require>
+                      @if ($errors->has('address'))
+                            <span class="text-red">
+                                <strong>{{ $errors->first('address') }}</strong>
+                            </span>
+                        @endif
+                    </div>
+                  </div>
+                <div class="form-group">
+                    <label for="address" class="col-sm-3 control-label">Country</label>
+  
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="address" name="address" placeholder="Country Name" value="{{ old('address') }}" autocomplete="off" require>
+                      @if ($errors->has('address'))
+                            <span class="text-red">
+                                <strong>{{ $errors->first('address') }}</strong>
+                            </span>
+                        @endif
+                    </div>
+                  </div>
                   <div class="form-group">
                     <label for="address2" class="col-sm-3 control-label">Address 2</label>
   

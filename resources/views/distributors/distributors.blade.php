@@ -43,6 +43,8 @@
                   <th>Distributors Name</th>
                   <th>Phone </th>
                   <th>Email</th>
+                  <th>City</th>
+                  <th>Country</th>
                   <th>Address</th>
                   <th>Company Name</th>
                   <th>VAT Number</th>
@@ -58,7 +60,9 @@
                     <td>{{$user->fname}} {{$user->lname}}</td>
                     <td>{{$user->phonenumber}}</td>
                     <td>{{$user->email}}</td>
-                    <td>21, West, Barg Town, CA</td>
+                    <td>Jhonesburg</td>
+                    <td>SA</td>
+                    <td>21, West, Barg Town,</td>
                     <td>Niku Solution PTE LTD</td>
                     <td>NK123456</td>
                     <td>{{$user->status == 1 ? "active" : 'Not active'}}</td>
@@ -94,6 +98,8 @@
                   <th>Distributors Name</th>
                   <th>Phone</th>
                   <th>Email</th>
+                  <th>City</th>
+                  <th>Country</th>
                   <th>Address</th>
                   <th>Company Name</th>
                   <th>VAT Number</th>
@@ -138,6 +144,14 @@
                 <div class="form-group">
                   <label for="code">Email</label>
                   <input type="text" class="form-control" id="email" name="email" placeholder="Enter Email">
+                </div>
+                <div class="form-group">
+                  <label for="code">City</label>
+                  <input type="text" class="form-control" id="email" name="email" placeholder="Enter City">
+                </div>
+                <div class="form-group">
+                  <label for="code">Country</label>
+                  <input type="text" class="form-control" id="email" name="email" placeholder="Enter Country">
                 </div>
                 <div class="form-group">
                   <label for="code">Phone</label>

@@ -12,9 +12,13 @@
     <!-- title row -->
     <div class="row">
       <div class="col-xs-12">
-        <h2 class="page-header">
-          <i class="fa fa-globe"></i> Invoice No.: RB55123
-          <small class="pull-right">Expiry Date: 21-Feb-2019</small>
+          <h2 class="page-header">
+              <p class="pull-left"> <i class="fa fa-globe"></i> Invoice No.: RD123</p>
+              <div class="col-md-2"></div>
+            <img src="{{asset('img/logo_grey.png')}}" class="center"  style="margin:auto; width:200px; text-align:center; align-content:center" />
+        
+         <small class="pull-right">Expiry Date: 21-Feb-2019</small>
+       
         </h2>
       </div>
       <!-- /.col -->
@@ -34,7 +38,7 @@
       <!-- /.col -->
       <div class="col-sm-4 invoice-col">
         Sales Representative
-        <img src="{{asset('img/logo.webp')}}" class="responsive"  style="display: block; width:200px;" />
+        
         <address>
             <strong>Robo Door, RBD</strong><br>
             P O Box 926<br>
@@ -133,7 +137,20 @@
     <div class="row">
       <!-- accepted payments column -->
       <div class="col-xs-6">
-        
+          <div class="invoice-col">
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+                Bank Details  
+                <address>
+                    <label>ABSA BANK, </label>
+                    BOKSBURG BRANCH,<br/> SWIFT CODE ABSAZAJJ, <br/>BRANCH CODE: 632005, <br/>
+                    <label>ACCOUNT NUMBER: 4066184721 </label>
+                  </address>
+              </div>
       </div>
       <!-- /.col -->
       <div class="col-xs-6">

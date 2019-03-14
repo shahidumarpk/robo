@@ -38,10 +38,25 @@ $user = Auth::user();
                   <i class="fa fa-users text-aqua"></i> 5 new members joined today
                 </a>
               </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-users text-aqua"></i>  Deadline for the Order No# RBD13245 is tomorrow
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-users text-aqua"></i>   New Invoice has been created
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-users text-aqua"></i>  2 more items were added to the invoice 
+                </a>
+              </li>
               <!-- end notification -->
             </ul>
           </li>
-          <li class="footer"><a href="#">View all</a></li>
+        <li class="footer"><a href="{{url('/notifications')}}">View all</a></li>
         </ul>
       </li>
       

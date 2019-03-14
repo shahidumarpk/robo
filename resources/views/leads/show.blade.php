@@ -273,11 +273,16 @@ function makeLinks($str) {
                             <textarea class="form-control" rows="12" name="message" id="message" placeholder="Enter your Message Here"></textarea>
                         </div>
                         <div class="form-group">
-                            <input type="file" id="MessageAssets" name="MessageAssets[]" class="btn btn-danger btn-lg" multiple>
-                        </div>                
+                                <select class="form-control">
+                                  <option selected disabled>Select Status</option>
+                                  <option>Progress</option>
+                                  <option>Completed</option>
+                                  <option> Delivered</option>
+                                </select>
+                            </div>                
                         <div class="form-group">
                             <span id="errmessage"></span>
-                            <button class="btn btn-danger btn-lg pull-right">Post Message</button>                  
+                            <button class="btn btn-danger btn-lg pull-right">Update</button>                  
                         </div>
                         </div>
                     </form>
