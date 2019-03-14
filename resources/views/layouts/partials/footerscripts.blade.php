@@ -22,7 +22,8 @@
      Both of these plugins are recommended to enhance the
      user experience. -->
      <!-- page script -->
-@if (\Request::is('admins') or \Request::is('roles') or \Request::is('quotes') or \Request::is('distributors') or \Request::is('categories') or \Request::is('menu') or \Request::is('customers') or \Request::is('leads') or Route::currentRouteName()=='leads.show' or \Request::is('recordings') or \Request::is('sellers') or \Request::is('products') or \Request::is('orders') or \Request::is('attributes') or \Request::is('memberships') or \Request::is('membershipsreports') or  Route::currentRouteName()=='seller.pending' or Route::currentRouteName()=='order.messages' or \Request::is('support')  or \Request::is('inventory') or \Request::is('invoices') or \Request::is('lead') or Route::currentRouteName()=='callistmode')   
+     
+@if (\Request::is('dashboard') or \Request::is('admins') or \Request::is('roles') or \Request::is('quotes') or \Request::is('distributors') or \Request::is('categories') or \Request::is('menu') or \Request::is('customers') or \Request::is('leads') or Route::currentRouteName()=='leads.show' or \Request::is('recordings') or \Request::is('sellers') or \Request::is('products') or \Request::is('orders') or \Request::is('attributes') or \Request::is('memberships') or \Request::is('membershipsreports') or  Route::currentRouteName()=='seller.pending' or Route::currentRouteName()=='order.messages' or \Request::is('support')  or \Request::is('inventory') or \Request::is('invoices') or \Request::is('lead') or Route::currentRouteName()=='callistmode')   
   <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
 
@@ -271,29 +272,7 @@ var areaChartData = {
     barChartOptions.datasetFill = false
     barChart.Bar(barChartData, barChartOptions)
 
-    //-------------
-    //- BAR CHART - 1
-    //-------------
-    var barChartCanvas                   = $('#barChart1').get(0).getContext('2d')
-    var barChart                         = new Chart(barChartCanvas)
-    var barChartData                     = areaChartData
-    barChartData.datasets[0].fillColor   = '#dd4b39'
-    barChartData.datasets[0].strokeColor = '#dd4b39'
-    barChartData.datasets[0].pointColor  = '#dd4b39'
-    barChartOptions.datasetFill = false
-    barChart.Bar(barChartData, barChartOptions)
-
-    //-------------
-    //- BAR CHART - 2
-    //-------------
-    var barChartCanvas                   = $('#barChart2').get(0).getContext('2d')
-    var barChart                         = new Chart(barChartCanvas)
-    var barChartData                     = areaChartData
-    barChartData.datasets[0].fillColor   = '#00c0ef'
-    barChartData.datasets[0].strokeColor = '#00c0ef'
-    barChartData.datasets[0].pointColor  = '#00c0ef'
-    barChartOptions.datasetFill = false
-    barChart.Bar(barChartData, barChartOptions)
+    
 
   })
 </script>

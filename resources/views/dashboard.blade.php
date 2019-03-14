@@ -1,7 +1,130 @@
 @extends('layouts.mainlayout')
 @section('content')
- 
-  
+ <!-- First Line Stats Begins -->
+ <div class="row">
+  <div class="col-lg-3 col-xs-6">
+    <!-- small box -->
+    <div class="small-box bg-blue">
+      <div class="inner">
+        <h3>2</h3>
+
+        <p>Quotes</p>
+      </div>
+      <div class="icon">
+        <i class="ion ion-ios-copy"></i>
+      </div>
+    </div>
+  </div>
+<!-- /.col -->
+
+<div class="col-lg-3 col-xs-6">
+  <!-- small box -->
+  <div class="small-box bg-green">
+    <div class="inner">
+      <h3>0.00</h3>
+
+      <p>Sales</p>
+    </div>
+    <div class="icon">
+      <i class="ion ion-social-usd-outline"></i>
+    </div>
+  </div>
+</div>
+<!-- /.col -->
+<!-- fix for small devices only -->
+<div class="clearfix visible-sm-block"></div>
+
+<div class="col-lg-3 col-xs-6">
+  <!-- small box -->
+  <div class="small-box bg-yellow">
+    <div class="inner">
+      <h3>2</h3>
+
+      <p>Job Cards</p>
+    </div>
+    <div class="icon">
+      <i class="ion ion-ios-pricetags"></i>
+    </div>
+  </div>
+</div>
+<!-- /.col -->
+
+<div class="col-lg-3 col-xs-6">
+  <!-- small box -->
+  <div class="small-box bg-red">
+    <div class="inner">
+      <h3>0</h3>
+
+      <p>Leads</p>
+    </div>
+    <div class="icon">
+      <i class="ion ion-clipboard"></i>
+    </div>
+  </div>
+</div>
+<!-- /.col -->
+</div>
+ <!-- First Line Stats Ends -->
+<!-- Second Line Stats Begins -->
+<div class="row">
+    <div class="col-md-3 col-sm-6 col-xs-12">
+    <div class="info-box">
+      <span class="info-box-icon bg-aqua"><i class="fa fa-object-group"></i></span>
+
+      <div class="info-box-content">
+        <span class="info-box-text">Jobs</span>
+        <span class="info-box-number">22</span>
+      </div>
+      <!-- /.info-box-content -->
+    </div>
+    <!-- /.info-box -->
+  </div>
+  <!-- /.col -->
+  <div class="col-md-3 col-sm-6 col-xs-12">
+    <div class="info-box">
+      <span class="info-box-icon bg-yellow"><i class="fa fa-hourglass-o"></i></span>
+
+      <div class="info-box-content">
+        <span class="info-box-text">In-Process</span>
+        <span class="info-box-number">10</span>
+      </div>
+      <!-- /.info-box-content -->
+    </div>
+    <!-- /.info-box -->
+  </div>
+  <!-- /.col -->
+
+  <!-- fix for small devices only -->
+  <div class="clearfix visible-sm-block"></div>
+
+  <div class="col-md-3 col-sm-6 col-xs-12">
+    <div class="info-box">
+      <span class="info-box-icon bg-red"><i class="fa fa-info-circle"></i></span>
+
+      <div class="info-box-content">
+        <span class="info-box-text">Pending</span>
+        <span class="info-box-number">4</span>
+      </div>
+      <!-- /.info-box-content -->
+    </div>
+    <!-- /.info-box -->
+  </div>
+  <!-- /.col -->
+  <div class="col-md-3 col-sm-6 col-xs-12">
+    <div class="info-box">
+      <span class="info-box-icon bg-green"><i class="fa fa-thumbs-up"></i></span>
+
+      <div class="info-box-content">
+        <span class="info-box-text">Completed</span>
+        <span class="info-box-number">8</span>
+      </div>
+      <!-- /.info-box-content -->
+    </div>
+    <!-- /.info-box -->
+  </div>
+  <!-- /.col -->
+</div>
+<!-- Second Line Stats Ends -->
     <!-- Charts -->
     <div class="row">
       <div class="col-md-6">
