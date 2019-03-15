@@ -83,13 +83,64 @@
         @if (Route::currentRouteName()=='statistics.index')
         <span class="pull-right">
             <div class="custom-input-group">
-                <input type="text" class="form-control" name="city" id="city" placeholder="Enter City">
+                <select class="custom-form-control" name="country" id="country">
+                    <option value="0">All Country</option>
+                    <option value="1" selected>South Africa</option>
+                    <option value="2">Australia</option>
+                    <option value="3">USA</option>
+                </select>
+            </div>  
+            <div class="custom-input-group">
+                <select class="custom-form-control" name="city" id="city">
+                    <option value="0">All City</option>
+                    <option value="1" selected>Johannesburg</option>
+                    <option value="2">Cape Town</option>
+                    <option value="3">Port Elizabeth</option>
+                </select>
             </div>
            
+            <div class="custom-input-group">
+                <button type="button" class="btn btn-default" id="daterange-btndashboard">
+                  <span>{{date('F d, Y')}} - {{date('F d, Y')}}</span>
+                  <input type="hidden" name="dateFrom" id="dateFrom" value="{{date('Y-m-d')}}">
+                  <input type="hidden" name="dateTo" id="dateTo" value="{{date('Y-m-d')}}">
+                  <i class="fa fa-caret-down"></i>
+                </button>
+              </div>
+            <script>
+                
+                $(document).ready(function() { 
+                  
+                  //Date range as a button
+                  $('#daterange-btndashboard').daterangepicker(
+                    {
+                      ranges   : {
+                        'Today'       : [moment(), moment()],
+                        'Yesterday'   : [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                        'Last 7 Days' : [moment().subtract(6, 'days'), moment()],
+                        'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                        'This Month'  : [moment().startOf('month'), moment().endOf('month')],
+                        'Last Month'  : [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                      },
+                      startDate: moment().subtract(29, 'days'),
+                      endDate  : moment()
+                    },
+                    function (start, end) {
+                      $('#daterange-btn span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+                      $('#dateFrom').val(start.format('YYYY-MM-DD'));
+                      $('#dateTo').val(end.format('YYYY-MM-DD'));
+                      var maintabledate = $('#table_data').DataTable();
+                      maintabledate.column('6').search(
+                      $('#dateFrom').val()+','+$('#dateTo').val()
+                      ).draw();
+                    }
+                  );
+                
+                    
+                  });
+  
+            </script>
 
-          <div class="custom-input-group">
-                <input type="month" class="form-control" name="srcmonth" id="srcmonth" value="{{date('Y-m')}}">
-            </div>
           <button type="button" class="btn btn-primary"><li class="fa fa-search"></li></button>
         </span>
         @endif
