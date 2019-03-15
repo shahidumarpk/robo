@@ -62,11 +62,27 @@
                                     </span>
                                 </div>
                             </div> 
-                        <div class="form-group">
+                        <div class="form-group" >
                             <label for="title">Title</label>
-                            <input type="text" name="title" class="form-control" id="title" placeholder="Enter Title">
+                            <select id="title" class="form-control" onchange="titleMethod()">
+                                <option value="1">Meeting</option>
+                                <option value="2">Installation</option>
+                                <option value="3">Repairs</option>
+                            </select>
                         </div>                                 
-                        <div class="form-group">
+                        <div class="form-group" style="" id="customersList" >
+                            <label for="customers">Select Customer</label>
+                            <select id="customers" class="form-control">
+                                <option value="" disabled selected>Choose from List</option>
+                                <option value="1">Jhon Doe</option>
+                                <option value="2">Kabi Eer</option>
+                                <option value="3">Racheal Kan</option>
+                                <option value="3">Racheal Kan</option>
+                                <option value="3">Racheal Kan</option>
+                                <option value="3">Racheal Kan</option>
+                            </select>
+                        </div>                                 
+                        <div class="form-group" style="display:none;" id="orderInput" >
                             <label for="orderno">Enter Order No</label>
                             <input type="text" name="orderno" class="form-control" id="orderno" placeholder="Enter Order No">
                         </div>
@@ -104,5 +120,13 @@
             minDate: new Date(<?php echo date('Y')?>, <?php echo date('m')?> - 1, <?php echo date('d')?>),
         });
     });
+    function titleMethod(){
+        var title = $('#title').val();
+        if(title == '2'){
+            $('#orderInput').show();
+        } else{
+            $('#orderInput').hide();
+        }
+    }
 </script>
 @endsection

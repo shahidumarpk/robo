@@ -43,6 +43,7 @@
                   <th>Email</th>
                   <th>Assigned To</th>
                   <th>At</th>
+                  <th>Type</th>
                   <th>Status</th>
                   <th>Action</th>
                 </tr>
@@ -61,9 +62,10 @@
                     <td>Address goes here</td>
                     <td>+1 123 4567 89</td>
                     <td>email@robodoor.com</td>
-                    <td>Florin Ristea</td>
+                    <td>Florista Rean</td>
                     <td>01-Jan-2019 11:15 AM</td>
-                    <td><span class="btn btn-success">Active</span></td>
+                    <td class="text-primary">WebLead</td>
+                    <td><span class="label label-success">Assigned</span></td>
                     <td>
                       <a href="{{url('lead')}}/1" class="btn btn-primary" title="View Detail"><i class="fa fa-eye"></i> </a>    
                       <button  class="btn btn-success" title="Edit" data-toggle="modal" data-target="#EditModalCenter"><i class="fa fa-edit"></i> </button>
@@ -84,6 +86,7 @@
                   <th>Email</th>
                   <th>Assigned To</th>
                   <th>At</th>
+                  <th>Type</th>
                   <th>Status</th>
                   <th>Action</th>
                 </tr>
@@ -137,9 +140,20 @@
                   <label for="status">Assigned To</label>
                   <select name="status" class="form-control">
                     <option disabled selected>Select Agent/Distributor </option>
+                    <option value="0">None </option>
                     <option value="1">Florin Ristea(Agent)</option>
                     <option value="2">John SMith (Agent)</option>
                     <option value="3">Shahid (Distributor)</option>
+                  </select>
+                </div>
+                
+                <div class="form-group">
+                  <label for="status">Type</label>
+                  <select name="status" class="form-control">
+                    <option disabled selected>Select Type of Lead </option>
+                    <option value="1">Cold Lead</option>
+                    <option value="2">Web Lead</option>
+                    <option value="3">Call-in Lead</option>
                   </select>
                 </div>
                 

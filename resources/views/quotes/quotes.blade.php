@@ -50,8 +50,9 @@
                 <select name="status" class="form-control select2 select2-hidden-accessible" multiple="" data-placeholder="Select Status" multiple style="width: 100%;" tabindex="-1" aria-hidden="true">
                  <option value="all">All</option>
                  <option value="1">New</option>
-                 <option value="2">Closed</option>
+                 <option value="2">Invoiced</option>
                  <option value="2">Draft</option>
+                 <option value="2">Expired</option>
                 </select>
                 
               </div>
@@ -157,7 +158,7 @@
                     <td>08-Jan-2018</td>
                     <td>$277.97</td>
                     <td>
-                      <span class="label label-primary">Closed</span>
+                      <span class="label label-danger">Expired</span>
                     </td>
                     <td>
                       {{-- <a href="{!! url('/quote/table'); !!}" class="btn btn-info" title="View Table"><i class="fa fa-suitcase"></i> </a>     --}}
@@ -240,7 +241,7 @@
                           <td>$967.97</td>
                           <td>
                             
-                            <span class="label label-primary">Closed</span>
+                            <span class="label label-success">Invoiced</span>
                           </td>
                           <td>
                             <a href="{!! url('/quotes/1'); !!}" class="btn btn-primary" title="View Detail"><i class="fa fa-eye"></i> </a>    

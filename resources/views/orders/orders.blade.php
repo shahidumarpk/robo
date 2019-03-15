@@ -50,17 +50,14 @@
               <div class="col-md-6">
                 <label>Sellers Name</label>
                <input type="text" class="form-control" name="sellersname" placeholder="Sellers Name"/>
-                
               </div>
               <div class="col-md-6">
                 <label>Order Number</label>
                <input type="text" class="form-control" name="sellersname" placeholder="Order Number"/>
-                
               </div>
               <div class="col-md-6">
                 <label>Select Status</label>
                <input type="text" class="form-control" id="advanceSearchDate" name="sellersname"/>
-                
               </div>
            
             <script>
@@ -118,9 +115,18 @@
                       <a href="{!! url('/orders/1'); !!}" class="btn btn-primary" title="View Detail"><i class="fa fa-eye"></i> </a>    
                       {{-- <a href="{!! url('/orders/createticket'); !!}" class="btn btn-info"><i class="fa fa-support"></i></a> --}}
                     </td>
-                   
-                    
-
+                  </tr>
+                  <tr>
+                    <td>124</td>
+                    <td>James Bond</td>
+                    <td>01-Jan-2018</td>
+                    <td>
+                      <span class="label label-info">Pending</span>
+                    </td>
+                    <td>
+                      <a href="{!! url('/orders/1'); !!}" class="btn btn-primary" title="View Detail"><i class="fa fa-eye"></i> </a>    
+                      {{-- <a href="{!! url('/orders/createticket'); !!}" class="btn btn-info"><i class="fa fa-support"></i></a> --}}
+                    </td>
                   </tr>
                   <tr>
                     <td>125</td>
@@ -142,7 +148,7 @@
                     <td>Michal Rot</td>
                     <td>03-Jan-2018</td>
                     <td>
-                      <span class="label label-warning">Progress</span>
+                      <span class="label label-warning">In Progress</span>
                     </td>
                     <td>
                       <a href="{!! url('/orders/1'); !!}" class="btn btn-primary" title="View Detail"><i class="fa fa-eye"></i> </a>    

@@ -490,15 +490,15 @@
                       
                         <div class="form-group">
                             <label for="" class=""> Mark Up</label>
-                            
                               <input type="text" class="form-control" id="" placeholder="" value="10">
-                            
                           </div>
                         <div class="form-group">
                           <label for="" class="">Factory Mark up</label>
-                          
                             <input type="text" class="form-control" id="" placeholder="" value="15">
-                         
+                        </div>
+                        <div class="form-group">
+                          <label for="" class="">Additional Mark up</label>
+                            <input type="text" class="form-control" id="" placeholder="" value="15">
                         </div>
                 </div>
                 <!-- /.box-body -->

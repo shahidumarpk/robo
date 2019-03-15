@@ -73,10 +73,6 @@
                         <td>South Africa</td>
                     </tr>
                     <tr>
-                        <td><b>Address 2</b></td>
-                        <td></td>
-                    </tr>
-                    <tr>
                         <td><b>Status</b></td>
                         <td>
                             <span class="text-green"><b>Active</b></span>                        

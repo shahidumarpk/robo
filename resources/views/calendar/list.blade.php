@@ -153,32 +153,41 @@
             <div class="modal-body">
                 <form role="form">
                     <div class="box-body">
-                        <div class="col-md-12">     
-                            <div class='input-group date' id='datetimepicker2'>
-                                <input type='text' class="form-control" name="eventtime" id="eventtime" autocomplete="off" value="2019-01-01 04:40:00" />
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-calendar"></span>
-                                </span>
-                            </div>              
-                          <div class="form-group">
-                              <label for="title">Title</label>
-                              <input type="text" name="title" class="form-control" id="title" placeholder="Enter Title" value="This is the title of event.">
-                          </div>
-                        <div class="form-group">
-                            <label for="orderno">Enter Order No</label>
-                            <input type="text" name="orderno" class="form-control" id="orderno" placeholder="Enter Order No" value="123">
-                        </div>
-                        <div class="form-group">
-                        <label for="description">Description</label>
-                        <textarea rows="10" name="description" class="form-control" id="description" placeholder="Enter Description">This is the note and description of this events.</textarea>
-                        </div>
-                        
-                    </div>
+                      <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter Name">
+                      </div>
+                      <div class="form-group">
+                          <label for="code">Address</label>
+                          <input type="text" class="form-control" id="address" placeholder="Enter Address">
+                       </div>
+                      <div class="form-group">
+                          <label for="price">Phone</label>
+                          <input type="text" class="form-control" id="phoneno" placeholder="Enter Phone">
+                      </div>
+                      <div class="form-group">
+                          <label for="price">Email</label>
+                          <input type="email" class="form-control" id="email" placeholder="Enter Email">
+                      </div>
+                      <div class="form-group">
+                          <label for="description">Description</label>
+                          <textarea name="description" class="form-control" rows="5"> </textarea>
+                      </div>
+                      <div class="form-group">
+                        <label for="status">Assigned To</label>
+                        <select name="status" class="form-control">
+                          <option disabled selected>Select Agent/Distributor </option>
+                          <option value="1">Florin Ristea(Agent)</option>
+                          <option value="2">John SMith (Agent)</option>
+                          <option value="3">Shahid (Distributor)</option>
+                        </select>
+                      </div>
+                      
                     </div>
                     <!-- /.box-body -->
-                
-                    
-                    </form>
+      
+                      
+                  </form>
             </div>
             <div class="modal-footer">
                 <button type="submit" class="btn btn-primary" onclick="showsuccess()">Created</button>

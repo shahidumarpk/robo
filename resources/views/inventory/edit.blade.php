@@ -51,7 +51,11 @@
                     <td><input type="text" class="form-control" value="12MM STEEL UPRIGHT BRONZE LC "></td>
                 </tr>
                 <tr>
-                    <td><b>Stock Length</b></td>
+                    <td><b>Total Stock</b></td>
+                    <td><input type="text" class="form-control"  value="3.5" readonly></td>
+                </tr>
+                <tr>
+                    <td><b>Stock Value</b></td>
                     <td><input type="text" class="form-control"  value="3.5" readonly></td>
                 </tr>
                 <tr>

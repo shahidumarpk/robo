@@ -54,11 +54,23 @@
                     <td>{{$user->lname}}</td>
                 </tr>
                 <tr>
+                    <td><b>Company Name</b></td>
+                    <td>Robo Door</td>
+                </tr>
+                <tr>
+                    <td><b>VAT Number</b></td>
+                    <td>RB123123</td>
+                </tr>
+                <tr>
                     <td><b>Email</b></td>
                     <td>{{$user->email}}</td>
                 </tr>
                 <tr>
                     <td><b>Phone Number</b></td>
+                    <td>{{$user->phonenumber}}</td>
+                </tr>
+                <tr>
+                    <td><b>Mobile Number</b></td>
                     <td>{{$user->phonenumber}}</td>
                 </tr>
                 <tr>
@@ -73,14 +85,7 @@
                     <td><b>Country</b></td>
                     <td>South Africa</td>
                 </tr>
-                <tr>
-                    <td><b>Company Name</b></td>
-                    <td>Robo Door</td>
-                </tr>
-                <tr>
-                    <td><b>VAT Number</b></td>
-                    <td>RB123123</td>
-                </tr>
+                
                 <tr>
                     <td><b>Created At</b></td>
                     <td>{{$user->created_at->format('d-m-Y')}}</td>

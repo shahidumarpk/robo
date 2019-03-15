@@ -43,6 +43,9 @@
                 </thead>
                 <tbody>
                 @foreach($users as $user)
+                @if($user->role_id == '8')
+                  @continue
+                @endif
                   <tr>
                     <td>{{$user['fname']}} {{$user['lname']}}</td>
                     <td>{{$user['email']}}</td>

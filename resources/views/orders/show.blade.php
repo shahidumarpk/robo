@@ -36,7 +36,7 @@
         Sales Representative
         
         <address>
-            <strong>Robo Door, RBD</strong><br>
+            <strong>Micheal Kabit</strong><br>
             {{-- P O Box 926<br>
             CA, USA<br>
             Phone: +0123 4567<br>
@@ -64,7 +64,7 @@
             <th>Product Name</th>
             <th>Size</th>
             <th>Qty</th>
-            <th>Status</th>
+            
           </tr>
           </thead>
           <tbody>
@@ -73,31 +73,25 @@
             <td onclick=""><a href="{{url('/orders/1/product/1')}}">DELUXE TRELLIS <br/><small>This product needs to get ready 2 days before the deadline</small></a></td>
             <td>300 x 200</td>
             <td>1</td>
-            <td><label class="label label-success">Ready</label></td>
+            
           </tr>
           <tr>
             <td>2</td>
             <td onclick=""><a href="{{url('/orders/1/product/1')}}">Alu TRELLIS <br/><small>Ask buyer for the color once again</small></a></td>
             <td>150 x 200</td>
             <td>1</td>
-            
-            <td><label class="label label-warning">Progress</label></td>
           </tr>
           <tr>
             <td>3</td>
             <td onclick=""><a href="{{url('/orders/1/product/1')}}">ECONO TRELLIS <br/><small>the installation is not yet confirmed</small></a></td>
             <td>900 x 200</td>
             <td>2</td>
-            
-            <td><label class="label label-danger">Not Started</label></td>
           </tr>
           <tr>
             <td>4</td>
             <td onclick=""><a href="{{url('/orders/1/product/1')}}">Galv TRELLIS <br/><small>Deliver the product by salesperson</small></a></td>
             <td>900 x 200</td>  
             <td>1</td>
-           
-            <td><label class="label label-success">Ready</label></td>
           </tr>
           <tr>
               <th colspan="6" ></th></th>
@@ -519,9 +513,11 @@
                             <div class="form-group">
                                 <select class="form-control">
                                   <option selected disabled>Select Status</option>
-                                  <option>Progress</option>
+                                  <option>In Progress</option>
                                   <option>Completed</option>
-                                  <option> Delivered</option>
+                                  <option> Pending</option>
+                                  <option> Delayed</option>
+                                  <option> Booked</option>
                                 </select>
                             </div>               
                             <div class="form-group">

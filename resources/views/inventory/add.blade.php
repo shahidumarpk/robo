@@ -33,21 +33,25 @@
                     </select>
                   </div>
                   <div class="form-group">
-                    <label for="stock_length">Inventory Stock Length</label>
+                    <label for="stock_length"> Total Stock</label>
                     <input type="text" name="stock_length" class="form-control" id="stock_length" placeholder="Enter Stock Length of Inventory">
                   </div>
                   <div class="form-group">
-                    <label for="laser_cutting">Inventory Laser Cutting</label>
+                    <label for="stock_length"> Stock Value</label>
+                    <input type="text" name="stock_length" class="form-control" id="stock_length" placeholder="Enter Stock Length of Inventory">
+                  </div>
+                  <div class="form-group">
+                    <label for="laser_cutting"> Laser Cutting</label>
                     <input onkeyup="calculateRatePerLength()" type="number" name="laser_cutting" class="form-control" id="laser_cutting" placeholder="Enter Laser Cutting Charges">
                   </div>
                   <div class="form-group">
-                    <label for="material_cost">Inventory Material Costs</label>
+                    <label for="material_cost"> Material Costs</label>
                     <input onkeyup="calculateRatePerLength()" type="number" name="material_cost" class="form-control" id="material_cost" placeholder="Enter Material Cost of Inventory">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="powder_coating">Inventory Powder Coating</label>
+                    <label for="powder_coating"> Powder Coating</label>
                     <input onkeyup="calculateRatePerLength()" type="number" name="powder_coating" class="form-control" id="powder_coating" placeholder="Enter Powder Coating Charges">
                   </div>
                   <div class="form-group">

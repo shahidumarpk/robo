@@ -142,6 +142,14 @@
                   <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Enter Last Name">
                 </div>
                 <div class="form-group">
+                  <label for="code">Company Name</label>
+                  <input type="text" name="company" class="form-control" id="company" placeholder="Enter Address">
+                </div>
+                <div class="form-group">
+                    <label for="code">VAT Number</label>
+                    <input type="text" class="form-control" id="vat_number" name="vat_number" placeholder="Enter VAT Number">
+                  </div>
+                <div class="form-group">
                   <label for="code">Email</label>
                   <input type="text" class="form-control" id="email" name="email" placeholder="Enter Email">
                 </div>
@@ -158,17 +166,14 @@
                   <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter Phone">
                 </div>
                 <div class="form-group">
+                  <label for="code">Mobile</label>
+                  <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter Mobile">
+                </div>
+                <div class="form-group">
                   <label for="code">Address</label>
                   <input type="text" class="form-control" id="address" name="address" placeholder="Enter Address">
                 </div>
-                <div class="form-group">
-                  <label for="code">Company Name</label>
-                  <input type="text" name="company" class="form-control" id="company" placeholder="Enter Address">
-                </div>
-                <div class="form-group">
-                    <label for="code">VAT Number</label>
-                    <input type="text" class="form-control" id="vat_number" name="vat_number" placeholder="Enter VAT Number">
-                  </div>
+                
                 <div class="form-group">
                   <label for="status">Status</label>
                   <select name="status" class="form-control">

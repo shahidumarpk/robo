@@ -128,3 +128,8 @@ Route::resource('attributes', 'AttributeController')->middleware('auth');
 
  //Statistics
  Route::resource('/statistics', 'StatisticsController')->middleware('auth');
+
+ //commissions
+ Route::resource('/commissions', 'CommissionsController')->middleware('auth');
+
+ 

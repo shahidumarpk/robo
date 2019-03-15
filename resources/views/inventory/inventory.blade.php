@@ -140,12 +140,9 @@
                 <thead>
                 <tr>
                   <th>Inventory Name</th>
-                  <th>Stock</th>
                   <th>Unit</th>
-                  <th>Material Cost</th>
-                  <th>Laser Cutting</th>
-                  <th>Powder Coating</th>
-                  <th>Rate Per Unit</th>
+                  <th>Total Stock</th>
+                  <th>Stock Value</th>
                   <th>Rate m/p</th>
                   <th>Action</th>
                 </tr>
@@ -154,12 +151,10 @@
                 @foreach($users as $user)
                   <tr>
                     <td>19MM STEEL UPRIGHT WHITE LC</td>
-                    <td>6.6</td>
                     <td>Meter</td>
-                    <td>R 61.12</td>
-                    <td>R 34.00</td>
-                    <td>R 30.50</td>
-                    <td>R 125.62</td>
+                    <td>6.6</td>
+                    <td>6.6</td>
+                    
                     <td>R 19.03</td>
                     <td>
                       <a href="{{url('/inventory/1/')}}" class="btn btn-info" title="View Detail"><i class="fa fa-eye"></i> </a>    
@@ -172,12 +167,10 @@
                   
                   <tr>
                     <td>19MM STEEL UPRIGHT CHARCOAL LC</td>
-                    <td>6.6</td>
                     <td>Meter</td>
-                    <td>R 61.12</td>
-                    <td>R 34.00</td>
-                    <td>R 30.50</td>
-                    <td>R 125.62</td>
+                    <td>6.6</td>
+                    <td>6.6</td>
+                    
                     <td>R 19.03</td>
                     <td>
                       <a href="{{url('/inventory/1/')}}" class="btn btn-info" title="View Detail"><i class="fa fa-eye"></i> </a>    
@@ -190,12 +183,10 @@
 
                   <tr>
                     <td>12MM STEEL UPRIGHT BRONZE LC</td>
-                    <td>6.6</td>
                     <td>Meter</td>
-                    <td>R 61.12</td>
-                    <td>R 34.00</td>
-                    <td>R 30.50</td>
-                    <td>R 125.62</td>
+                    <td>6.6</td>
+                    <td>6.6</td>
+                   
                     <td>R 19.03</td>
                     <td>
                       <a href="{{url('/inventory/1/')}}" class="btn btn-info" title="View Detail"><i class="fa fa-eye"></i> </a> 
@@ -208,12 +199,10 @@
 
                   <tr>
                     <td>19MM STEEL UPRIGHT CHARCOAL</td>
-                    <td>6.6</td>
                     <td>Meter</td>
-                    <td>R 61.12</td>
-                    <td>R 34.00</td>
-                    <td>R 30.50</td>
-                    <td>R 125.62</td>
+                    <td>6.6</td>
+                    <td>6.6</td>
+                   
                     <td>R 19.03</td>
                     <td>
                       <a href="{{url('/inventory/1/')}}" class="btn btn-info" title="View Detail"><i class="fa fa-eye"></i> </a>    
@@ -226,12 +215,10 @@
 
                   <tr>
                     <td>20 MM ALUMINIUM UPRIGHTS WHITE LC</td>
-                    <td>6.6</td>
                     <td>Meter</td>
-                    <td>R 61.12</td>
-                    <td>R 34.00</td>
-                    <td>R 30.50</td>
-                    <td>R 125.62</td>
+                    <td>6.6</td>
+                    <td>6.6</td>
+
                     <td>R 19.03</td>
                     <td>
                       <a href="{{url('/inventory/1/')}}" class="btn btn-info" title="View Detail"><i class="fa fa-eye"></i> </a>    
@@ -244,12 +231,10 @@
 
                   <tr>
                     <td>CARDBOARD</td>
-                    <td>40.0</td>
                     <td>KG</td>
-                    <td>R 398.00</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>R 398.00</td>
+                    <td>40.0</td>
+                    <td>40.0</td>
+
                     <td>R 9.95</td>
                     <td>
                       <a href="{{url('/inventory/1/')}}" class="btn btn-info" title="View Detail"><i class="fa fa-eye"></i> </a>    
@@ -261,13 +246,11 @@
                   </tr>
                   <tr>
                     <td>STAINLESS STEEL BEARINGS</td>
+                    <td>Pcs</td>
                     <td>1</td>
-                    <td>Item</td>
-                    <td>R 61.12</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>R 125.62</td>
+                    <td>1</td>
                     <td>R 19.03</td>
+
                     <td>
                       <a href="{{url('/inventory/1/')}}" class="btn btn-info" title="View Detail"><i class="fa fa-eye"></i> </a>
                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddStock" title="Add More Stock"><i class="fa fa-plus"></i></button>
@@ -281,12 +264,9 @@
                 <tfoot>
                 <tr>
                     <th>Inventory Name</th>
-                    <th>Stock</th>
+                    <th>Total Stock</th>
+                    <th>Stock Value </th>
                     <th>Unit</th>
-                    <th>Material Cost</th>
-                    <th>Laser Cutting</th>
-                    <th>Powder Coating</th>
-                    <th>Rate / Length</th>
                     <th>Rate m/p</th>
                     <th>Action</th>
                 </tr>
@@ -331,22 +311,26 @@
                       </select>
                     </div>
                     <div class="form-group">
-                      <label for="stock_length">Inventory Stock Length</label>
+                      <label for="stock_length"> Total Stock </label>
                       <input type="text" name="stock_length" class="form-control" id="stock_length" placeholder="Enter Stock Length of Inventory">
                     </div>
                     <div class="form-group">
-                      <label for="laser_cutting">Inventory Laser Cutting</label>
+                      <label for="stock_length"> Stock Value</label>
+                      <input type="text" name="stock_length" class="form-control" id="stock_length" placeholder="Enter Stock Length of Inventory">
+                    </div>
+                    <div class="form-group">
+                      <label for="laser_cutting"> Laser Cutting</label>
                       <input onkeyup="calculateRatePerLength()" type="number" name="laser_cutting" class="form-control" id="laser_cutting" placeholder="Enter Laser Cutting Charges">
                     </div>
                    
                   </div>
                   <div class="col-md-6">
                      <div class="form-group">
-                      <label for="material_cost">Inventory Material Costs</label>
+                      <label for="material_cost"> Material Costs</label>
                       <input onkeyup="calculateRatePerLength()" type="number" name="material_cost" class="form-control" id="material_cost" placeholder="Enter Material Cost of Inventory">
                     </div>
-                    <div class="form-group">
-                      <label for="powder_coating">Inventory Powder Coating</label>
+                    <div class="form-group">  
+                      <label for="powder_coating"> Powder Coating</label>
                       <input onkeyup="calculateRatePerLength()" type="number" name="powder_coating" class="form-control" id="powder_coating" placeholder="Enter Powder Coating Charges">
                     </div>
                     <div class="form-group">

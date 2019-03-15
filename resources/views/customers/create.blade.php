@@ -143,10 +143,10 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="address" class="col-sm-3 control-label">Address 1</label>
+                  <label for="address" class="col-sm-3 control-label">Address</label>
 
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" id="address" name="address" placeholder="Address 1" value="{{ old('address') }}" autocomplete="off" require>
+                    <input type="text" class="form-control" id="address" name="address" placeholder="Address" value="{{ old('address') }}" autocomplete="off" require>
                     @if ($errors->has('address'))
                           <span class="text-red">
                               <strong>{{ $errors->first('address') }}</strong>
@@ -154,19 +154,6 @@
                       @endif
                   </div>
                 </div>
-                <div class="form-group">
-                  <label for="address2" class="col-sm-3 control-label">Address 2</label>
-
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="address2" name="address2" placeholder="Address 2" value="{{ old('address2') }}" autocomplete="off" require>
-                    @if ($errors->has('address2'))
-                          <span class="text-red">
-                              <strong>{{ $errors->first('address2') }}</strong>
-                          </span>
-                      @endif
-                  </div>
-                </div>
-                
 
               </div>
               </div>

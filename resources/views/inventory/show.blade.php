@@ -31,7 +31,11 @@
                                   <td>7.25</td>
                               </tr>
                               <tr>
-                                  <td><b>Stock Length</b></td>
+                                  <td><b>Total Stock </b></td>
+                                  <td>4.5</td>
+                              </tr>
+                              <tr>
+                                  <td><b>Stock Value</b></td>
                                   <td>4.5</td>
                               </tr>
                               <tr>

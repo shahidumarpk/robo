@@ -34,7 +34,7 @@
 
 
             <div class="box-header with-border">
-              <h3 class="box-title">Edit Staff/User {{$user->fname}} {{$user->lname}}</h3>
+              <h3 class="box-title">Edit Distributor {{$user->fname}} {{$user->lname}}</h3>
             </div>
             <!-- /.box-header -->
             <!-- form start -->
@@ -77,7 +77,30 @@
                       @endif
                   </div>
                 </div>
+                <div class="form-group">
+                  <label for="company" class="col-sm-3 control-label">Company Name</label>
 
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="company" name="company" placeholder="Company Name" value="Robo Door" autocomplete="off" require>
+                    @if ($errors->has('company'))
+                          <span class="text-red">
+                              <strong>{{ $errors->first('company') }}</strong>
+                          </span>
+                      @endif
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="vatnumber" class="col-sm-3 control-label">VAT Number</label>
+
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="vatnumber" name="vatnumber" placeholder="VAT Number" value="RB123123" autocomplete="off" require>
+                    @if ($errors->has('vatnumber'))
+                          <span class="text-red">
+                              <strong>{{ $errors->first('vatnumber') }}</strong>
+                          </span>
+                      @endif
+                  </div>
+                </div>
                 <div class="form-group">
                   <label for="email" class="col-sm-3 control-label">Email</label>
 
@@ -105,49 +128,13 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="phonenumber" class="col-sm-3 control-label">City</label>
+                  <label for="mobilenumber" class="col-sm-3 control-label">Mobile Number</label>
 
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" id="phonenumber" name="phonenumber" placeholder="Phone Number" value="{{ $user->phonenumber }}" autocomplete="off" require>
-                    @if ($errors->has('phonenumber'))
+                    <input type="text" class="form-control" id="mobilenumber" name="mobilenumber" placeholder="Mobile Number" value="+1 123 123 9870 " autocomplete="off" require>
+                    @if ($errors->has('mobilenumber'))
                           <span class="text-red">
-                              <strong>{{ $errors->first('phonenumber') }}</strong>
-                          </span>
-                      @endif
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="phonenumber" class="col-sm-3 control-label">Country</label>
-
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="phonenumber" name="phonenumber" placeholder="Phone Number" value="{{ $user->phonenumber }}" autocomplete="off" require>
-                    @if ($errors->has('phonenumber'))
-                          <span class="text-red">
-                              <strong>{{ $errors->first('phonenumber') }}</strong>
-                          </span>
-                      @endif
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="company" class="col-sm-3 control-label">Company Name</label>
-
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="company" name="company" placeholder="Company Name" value="Robo Door" autocomplete="off" require>
-                    @if ($errors->has('company'))
-                          <span class="text-red">
-                              <strong>{{ $errors->first('company') }}</strong>
-                          </span>
-                      @endif
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="vatnumber" class="col-sm-3 control-label">VAT Number</label>
-
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="vatnumber" name="vatnumber" placeholder="VAT Number" value="RB123123" autocomplete="off" require>
-                    @if ($errors->has('vatnumber'))
-                          <span class="text-red">
-                              <strong>{{ $errors->first('vatnumber') }}</strong>
+                              <strong>{{ $errors->first('mobilenumber') }}</strong>
                           </span>
                       @endif
                   </div>
@@ -164,6 +151,33 @@
                       @endif
                   </div>
                 </div>
+                <div class="form-group">
+                  <label for="phonenumber" class="col-sm-3 control-label">City</label>
+
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="phonenumber" name="phonenumber" placeholder="Phone Number" value="Cape Town" autocomplete="off" require>
+                    @if ($errors->has('phonenumber'))
+                          <span class="text-red">
+                              <strong>{{ $errors->first('phonenumber') }}</strong>
+                          </span>
+                      @endif
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="phonenumber" class="col-sm-3 control-label">Country</label>
+
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="phonenumber" name="phonenumber" placeholder="Phone Number" value="South Africa" autocomplete="off" require>
+                    @if ($errors->has('phonenumber'))
+                          <span class="text-red">
+                              <strong>{{ $errors->first('phonenumber') }}</strong>
+                          </span>
+                      @endif
+                  </div>
+                </div>
+                
+                
+               
                 <div class="form-group">
                   <label for="status" class="col-sm-3 control-label">Status</label>
 

@@ -160,12 +160,7 @@
               <tr>
                 <th style="width:64%">Subtotal:</th>
                 <td>$232.90</td>
-            </tr>
-            <tr>
-              <th>Delivery(1-7 business days):</th>
-              <td>$19.80</td>
-            </tr>
-            
+              </tr>
             <tr>
                 <th></th>
                 <td><b>$252.70</b></td>

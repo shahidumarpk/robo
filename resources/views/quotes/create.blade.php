@@ -7,7 +7,10 @@
     font-size: 16px;
 }
 /* custom code for the checkboxes */
-
+/* upper case all labels in Modals */
+#ProductDetailsTrellis, #ProductDetailsFixture, #ProductDetailsClear, #ProductDetailsBurglar, #ProductDetails, #ProductDetailsShow label{
+  text-transform: uppercase;
+}
 
 
 </style>
@@ -263,12 +266,11 @@
             <div class="modal-body" id="add_windows">
               <!-- /.box-header -->
               <!-- form start -->
-              <form role="form">
+              <form role="form" id="form_PDTrellis">
                 <div class="box-body">
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label for="name">Product Name</label>
-                      <input type="text" class="form-control" id="tproduct_name" placeholder="Enter Name">
+                        <h3><label for="" id="product_name">Deluxe Trellis</label></h3>
                     </div>
                   </div>
                   <div class="col-md-3">
@@ -279,15 +281,15 @@
                        
                   </div>
                   <div class="col-md-3">
+                      <div class="form-group">
+                          <label for="price">Width  </label>
+                          <input type="text" class="form-control" id="tproduct_width" placeholder="Enter Width">
+                        </div>
+                  </div>
+                  <div class="col-md-3">
                     <div class="form-group">
                         <label for="code">Heigth</label>
                         <input type="text" class="form-control" id="tproduct_height" placeholder="">
-                      </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="form-group">
-                        <label for="price">Width  </label>
-                        <input type="text" class="form-control" id="tproduct_width" placeholder="Enter Length">
                       </div>
                 </div>
                   <div class="col-md-3">
@@ -303,11 +305,10 @@
                       <label for="status">Choose Color</label><br/>
                       <select class="form-control" id="tproduct_color">
                         <option selected disabled> Select</option>
-                        <option value="1"> Green</option>
+                        <option value="1"> Bronze</option>
                         <option value="2"> White</option>
-                        <option value="3"> Grey</option>
-                        <option value="4"> Red</option>
-                        <option value="5"> Blue</option>
+                        <option value="3"> Charcoal</option>
+                        <option value="4"> Special</option>
                       </select>
                     </div>
                   <div class="col-md-3">
@@ -396,7 +397,7 @@
                   {{-- 3--}}
                   <div class="col-md-3">
                         <div class="form-group">
-                            <label for="status">Top</label>
+                            <label for="status">Top Beam</label>
                             <select name="status" class="form-control" id="tproduct_top">
                               <option disabled selected>Select Lock Type </option>
                               <option value="0"  >NO</option>
@@ -409,7 +410,7 @@
                   </div>
                   <div class="col-md-3">
                         <div class="form-group">
-                            <label for="status">Left</label>
+                            <label for="status">Left Beam</label>
                             <select name="status" class="form-control" id="tproduct_left">
                               <option disabled selected>Select Lock Type </option>
                               <option va >NO</option>
@@ -422,7 +423,7 @@
                   </div>
                   <div class="col-md-3">
                         <div class="form-group">
-                            <label for="status">Bottom</label>
+                            <label for="status">Bottom Beam</label>
                             <select name="status" class="form-control" id="tproduct_bottom">
                               <option disabled selected>Select Lock Type </option>
                               <option  >NO</option>
@@ -435,7 +436,7 @@
                   </div>
                   <div class="col-md-3">
                         <div class="form-group">
-                            <label for="status">Right</label>
+                            <label for="status">Right Beam</label>
                             <select name="status" class="form-control" id="tproduct_right">
                               <option disabled selected>Select Lock Type </option>
                               <option  >NO</option>
@@ -521,8 +522,7 @@
                 <div class="box-body">
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label for="name">Product Name</label>
-                      <input type="text" class="form-control" id="fproduct_name" placeholder="Enter Name">
+                        <h3><label for="" id="product_name">Deluxe Fixture</label></h3>
                     </div>
                   </div>
                   <div class="col-md-3">
@@ -533,15 +533,15 @@
                        
                   </div>
                   <div class="col-md-3">
+                      <div class="form-group">
+                          <label for="price">Width  </label>
+                          <input type="text" class="form-control" id="fproduct_width" placeholder="Enter Width">
+                        </div>
+                  </div>
+                  <div class="col-md-3">
                     <div class="form-group">
                         <label for="code">Heigth</label>
-                        <input type="text" class="form-control" id="fproduct_height" placeholder="">
-                      </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="form-group">
-                        <label for="price">Width  </label>
-                        <input type="text" class="form-control" id="fproduct_width" placeholder="Enter Length">
+                        <input type="text" class="form-control" id="fproduct_height" placeholder="Enter Heigth">
                       </div>
                 </div>
                   <div class="col-md-3">
@@ -557,11 +557,10 @@
                       <label for="status">Choose Color</label><br/>
                       <select class="form-control" id="fproduct_color">
                         <option selected disabled> Select</option>
-                        <option value="1"> Green</option>
+                        <option value="1"> Bronze</option>
                         <option value="2"> White</option>
-                        <option value="3"> Grey</option>
-                        <option value="4"> Red</option>
-                        <option value="5"> Blue</option>
+                        <option value="3"> Charcoal</option>
+                        <option value="4"> Special</option>
                       </select>
                     </div>
                   <div class="col-md-3">
@@ -598,7 +597,7 @@
                   {{-- 3--}}
                   <div class="col-md-3">
                         <div class="form-group">
-                            <label for="status">Top</label>
+                            <label for="status">Top Beam</label>
                             <select name="status" class="form-control" id="fproduct_top">
                               <option disabled selected>Select Lock Type </option>
                               <option  value="1" >NO</option>
@@ -611,7 +610,7 @@
                   </div>
                   <div class="col-md-3">
                         <div class="form-group">
-                            <label for="status">Left</label>
+                            <label for="status">Left Beam</label>
                             <select name="status" class="form-control" id="fproduct_left">
                               <option disabled selected>Select Lock Type </option>
                               <option  >NO</option>
@@ -624,7 +623,7 @@
                   </div>
                   <div class="col-md-3">
                         <div class="form-group">
-                            <label for="status">Bottom</label>
+                            <label for="status">Bottom Beam</label>
                             <select name="status" class="form-control" id="fproduct_bottom">
                               <option disabled selected>Select Lock Type </option>
                               <option  >NO</option>
@@ -637,7 +636,7 @@
                   </div>
                   <div class="col-md-3">
                         <div class="form-group">
-                            <label for="status">Right</label>
+                            <label for="status">Right Beam</label>
                             <select name="status" class="form-control" id="fproduct_right">
                               <option disabled selected>Select Lock Type </option>
                               <option  >NO</option>
@@ -723,8 +722,7 @@
                 <div class="box-body">
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label for="name">Product Name</label>
-                      <input type="text" class="form-control" id="fproduct_name" placeholder="Enter Name">
+                        <h3><label for="" id="product_name">Robo Clear Bars</label></h3>
                     </div>
                   </div>
                   <div class="col-md-3">
@@ -735,15 +733,15 @@
                        
                   </div>
                   <div class="col-md-3">
+                      <div class="form-group">
+                          <label for="price">Width  </label>
+                          <input type="text" class="form-control" id="fproduct_width" placeholder="Enter Length">
+                        </div>
+                  </div>
+                  <div class="col-md-3">
                     <div class="form-group">
                         <label for="code">Heigth</label>
                         <input type="text" class="form-control" id="fproduct_height" placeholder="">
-                      </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="form-group">
-                        <label for="price">Width  </label>
-                        <input type="text" class="form-control" id="fproduct_width" placeholder="Enter Length">
                       </div>
                 </div>
                 <div class="col-md-3">
@@ -844,8 +842,7 @@
                 <div class="box-body">
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label for="name">Product Name</label>
-                      <input type="text" class="form-control" id="fproduct_name" placeholder="Enter Name">
+                        <h3><label for="" id="product_name">Econo Burglar Bars</label></h3>
                     </div>
                   </div>
                   <div class="col-md-3">
@@ -856,15 +853,15 @@
                        
                   </div>
                   <div class="col-md-3">
+                      <div class="form-group">
+                          <label for="price">Width  </label>
+                          <input type="text" class="form-control" id="fproduct_width" placeholder="Enter Width">
+                        </div>
+                  </div>
+                  <div class="col-md-3">
                     <div class="form-group">
                         <label for="code">Heigth</label>
-                        <input type="text" class="form-control" id="fproduct_height" placeholder="">
-                      </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="form-group">
-                        <label for="price">Width  </label>
-                        <input type="text" class="form-control" id="fproduct_width" placeholder="Enter Length">
+                        <input type="text" class="form-control" id="fproduct_height" placeholder="Enter Height">
                       </div>
                 </div>
                   <div class="col-md-3">

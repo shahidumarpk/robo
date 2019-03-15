@@ -137,7 +137,10 @@
                     <select name="role_id" class="form-control">
                             @if(count($roles) > 0)
                                 <option value="" selected>None</option>
-                                @foreach($roles as $role)    
+                                @foreach($roles as $role)
+                                    @if($role->id == '8')   
+                                      @continue;
+                                    @endif 
                                     <option value="{{$role->id}}">{{$role->role_title}}</option>                    
                                 @endforeach
                             @else

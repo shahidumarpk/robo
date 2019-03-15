@@ -131,10 +131,10 @@
                               <tr id="row_1">
                                 <td>
                                     <select onchange="onProductChange(this.value)" class="form-control select_group product" data-row-id="row_1" id="product_1" name="product[]" style="width:100%;" onchange="putPrice()" required>
-                                        <option value="" selected disabled>Select Product</option>
+                                        <option value=""  disabled>Select Product</option>
                                         <option value="1" >Deluxe Trellis</option>
                                         <option value="2">Deluxe Fixture</option>
-                                        <option value="1" >Econo Trellis</option>
+                                        <option value="1" selected>Econo Trellis</option>
                                         <option value="2" >Econo Fixture</option>
                                         <option value="1">	Alu Trellis</option>
                                         <option value="2">	Alu Fixture</option>
@@ -164,15 +164,15 @@
                             <tr id="row_2">
                                 <td>
                                     <select onchange="onProductChange(this.value)" class="form-control select_group product" data-row-id="row_1" id="product_1" name="product[]" style="width:100%;" onchange="putPrice()" required>
-                                        <option value="" selected disabled>Select Product</option>
+                                        <option value="" disabled>Select Product</option>
                                         <option value="1" >Deluxe Trellis</option>
                                         <option value="2">Deluxe Fixture</option>
                                         <option value="1" >Econo Trellis</option>
                                         <option value="2" >Econo Fixture</option>
                                         <option value="1">	Alu Trellis</option>
                                         <option value="2">	Alu Fixture</option>
-                                        <option value="1">	Galv Trellis</option>
-                                        <option value="2">Galv Fixture  </option>
+                                        <option value="1" selected>	Galv Trellis</option>
+                                        <option value="2" >Galv Fixture  </option>
                                         <option value="1">DuPlus Trellis </option>
                                         <option value="2">DuPlus Fixture </option>
                                         <option value="3">Econo Burglar Bars </option>
@@ -199,15 +199,15 @@
                                 <td>
                                     <select onchange="onProductChange(this.value)" class="form-control select_group product" data-row-id="row_1" id="product_1" name="product[]" style="width:100%;" onchange="putPrice()" required>
                                         <option value="" selected disabled>Select Product</option>
-                                        <option value="1" >Deluxe Trellis</option>
+                                        <option value="1">Deluxe Trellis</option>
                                         <option value="2">Deluxe Fixture</option>
-                                        <option value="1" >Econo Trellis</option>
-                                        <option value="2" >Econo Fixture</option>
-                                        <option value="1">	Alu Trellis</option>
-                                        <option value="2">	Alu Fixture</option>
-                                        <option value="1">	Galv Trellis</option>
+                                        <option value="1">Econo Trellis</option>
+                                        <option value="2">Econo Fixture</option>
+                                        <option value="1">Alu Trellis</option>
+                                        <option value="2">Alu Fixture</option>
+                                        <option value="1">Galv Trellis</option>
                                         <option value="2">Galv Fixture  </option>
-                                        <option value="1">DuPlus Trellis </option>
+                                        <option value="1" selected>DuPlus Trellis </option>
                                         <option value="2">DuPlus Fixture </option>
                                         <option value="3">Econo Burglar Bars </option>
                                         <option value="4">Robo Clear Bars </option>

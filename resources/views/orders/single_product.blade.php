@@ -9,6 +9,12 @@
     </script>
 @endif
 <style>
+  table th{
+    text-transform: uppercase;
+  }
+  .box-title{
+    text-transform: uppercase;
+  }
 .badge {
     padding: 5px 10px;
     font-size: 14px;
@@ -37,14 +43,8 @@
                 <!-- form start -->
                 <form role="form">
                   <div class="box-body">
-                      <div class="col-md-4">
-                            <div class="form-group">
-                                    <label for="quantity">Uploaded Photo</label>
-                                    <br/>
-                                <label><img src="{{asset('img/doors/door1.jpeg')}}" style="width: 80%"/></label>
-                                  </div>
-                      </div>
-                    <div class="col-md-8    ">
+                     
+                    <div class="col-md-12">
                       <div class="form-group">
                         <label for="name">Product Name</label>
                         <h4> Deluxe Trellis </h4>
@@ -202,10 +202,19 @@
                       
                         <div class="form-group">
                             <label for="quantity">Comment</label>
-                           <textarea rows="5" class="form-control">This product should be deliver before 3 days of the deadline because it has to be cleaned before installation. </textarea>
+                           <textarea disabled rows="5" class="form-control">This product should be deliver before 3 days of the deadline because it has to be cleaned before installation. </textarea>
                           </div>
                       
                     </div>
+                    <div class="col-md-7">
+                        <div class="form-group">
+                                <label   for="quantity">Uploaded Photo</label>
+                                <a id="showImage" class="btn btn-primary">Show Image</a>
+                                
+                                <br/>
+                            <label><img id="image"  style="display:none;" src="{{asset('img/doors/door1.jpeg')}}"  class="responsive"/></label>
+                              </div>
+                  </div>
                     <div class="clearfix"></div>
                             
     
@@ -223,10 +232,10 @@
     </div>
 
 
-<!-- Stock Ledger Begins -->
-
-<!-- Stock Ledger ends -->
-</section>
+    <!-- Stock Ledger Begins -->
+    
+    <!-- Stock Ledger ends -->
+  </section>
 <div class="">
   <div class="col-md-12" style="padding:22px;">
       <div class="box" style="display: none;">
@@ -236,7 +245,7 @@
             <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#AddStock" >
               Add New Inventory
             </button>
-
+            
           </div>
           <!-- /.box-header -->
           <div class="box-body">
@@ -290,7 +299,7 @@
                   <td>1 cm</td>
                   
                 </tr>
-               
+                
               </tbody>
               <tfoot>
               <tr>
@@ -301,17 +310,15 @@
               </tfoot>
             </table>
           </div>
-           
+            
 
             
           </div>
           <!-- /.box-body -->
   </div>
   <div class="row">
-      <div id="btnNew" style="cursor:pointer;z-index:100;" class="pull-right">
-          <span class="btn bg-orange btn-flat btn-lg margin" onclick="openNav()" id="btnNewMessage"><li class="fa fa-plus"></li> Update Status</span>
-      </div>
-  <div class="col-md-6">
+      
+  <div class="col-md-12">
           <div class="box box-success">
                   <div class="box-header with-border">
                       <h3 class="box-title">Inventory Ledger</h3>
@@ -422,114 +429,295 @@
                   
                   <!-- /.box-body -->
               </div>
-  </div>
-  <div class="col-md-6">
-
-        
-              <!-- The time line -->
-              <ul class="timeline" id="timelinemore" data-next-page="https://erp.nsol.sg/projects/24?page=2">
-                              <!-- timeline time label -->
-                  <li class="time-label">
-                              <span class="bg-red">
-                                  29-Nov-2018
-                              </span>
-                  </li>
-                  <!-- /.timeline-label -->
-                              <!-- timeline item -->
-                  <li>
-                      <i class="fa fa-envelope bg-blue"></i>
-      
-                      <div class="timeline-item">
-                          <span class="time"><i class="fa fa-clock-o"></i> 13:35 </span>
-      
-                          <h3 class="timeline-header"><a href="#">John Smith</a> posted with <span class="label bg-blue">STATUS</span> </h3>
-      
-                          <div class="timeline-body">
-                              Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here 
-                              Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here 
-                              Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here 
-                              Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here 
-                          </div>
-      
-                      </div>
-                  </li>
-              <!-- End timeline item -->
-              
-                                  <!-- The time line -->
-              <ul class="timeline" id="timelinemore" data-next-page="#">
-                              <!-- timeline item -->
-                  <li>
-                      <i class="fa fa-envelope bg-blue"></i>
-      
-                      <div class="timeline-item">
-                          <span class="time"><i class="fa fa-clock-o"></i> 13:35 </span>
-      
-                          <h3 class="timeline-header"><a href="#">John Smith</a> posted with <span class="label bg-yellow">STATUS</span> </h3>
-      
-                          <div class="timeline-body">
-                              Need Samples. Need Samples. Need Samples. Need Samples. Need Samples. Need Samples. Need Samples. 
-                          </div>
-      
-                      </div>
-                  </li>
-                  <!-- END timeline item -->
-                  
-                                  <!-- The time line -->
-              <ul class="timeline" id="timelinemore" data-next-page="#">
-                              <!-- timeline item -->
-                  <li>
-                      <i class="fa fa-envelope bg-blue"></i>
-      
-                      <div class="timeline-item">
-                          <span class="time"><i class="fa fa-clock-o"></i> 13:35 </span>
-      
-                          <h3 class="timeline-header"><a href="#">John Smith</a> posted with <span class="label bg-green">STATUS</span> </h3>
-      
-                          <div class="timeline-body">
-                              Need Samples. Need Samples. Need Samples. Need Samples. Need Samples. Need Samples. 
-                              Need Samples. Need Samples. Need Samples. Need Samples. Need Samples. Need Samples. Need Samples. 
-                              <div class="clearfix"><br></div>
-                          </div>
-      
-                      </div>
-                  </li>
-                  <!-- END timeline item -->
-                  
-                                  <!-- The time line -->
-              <ul class="timeline" id="timelinemore" data-next-page="#">
-                              <!-- timeline time label -->
-                  <li class="time-label">
-                              <span class="bg-red">
-                                  28-Nov-2018
-                              </span>
-                  </li>
-                  <!-- /.timeline-label -->
-                              <!-- timeline item -->
-                  <li>
-                      <i class="fa fa-envelope bg-blue"></i>
-      
-                      <div class="timeline-item">
-                          <span class="time"><i class="fa fa-clock-o"></i> 05:27 </span>
-      
-                          <h3 class="timeline-header"><a href="#">John Smith</a> posted with <span class="label bg-blue">STATUS</span> </h3>
-      
-                          <div class="timeline-body">
-                              Qoute Sent to him my post and email. 
-                          </div>
-      
-                      </div>
-                  </li>
-                  <!-- END timeline item -->
-               
-                  
-                          </ul>
-          </ul></ul></ul>
       </div>
-          <!-- /.col -->
- 
-  </div>
+     
 </div>
-<div class="modal fade" id="AddStock" tabindex="-1" role="dialog" aria-labelledby="AddStock" aria-hidden="true">
+<div class="">
+  <div class="col-md-12" style="padding:22px;">
+      <div class="box" style="">
+          
+          <div class="box-header">
+            <h3 class="box-title">CUTTING SPECIFICATIONS</h3>
+            <div class="box-body">
+              <div class="">
+                  <div class="row">
+                      <div class="col-xs-12 ">
+                        <table class="table table-striped">
+                          <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>ITEM NAME</th>
+                            <th>SPECIFICATIONS </th>
+                            <th>QTY</th>
+                            <th>CUT LENGTH</th>
+                            <th>NAME AND SIGNATURE
+                              </th>
+                            
+                          </tr>
+                          </thead>
+                          <tbody>
+                          @php 
+                          $id=0;
+                          @endphp
+                          @for ($i = 0; $i <= 9; $i++)
+                          @php 
+                          $id++;
+                          @endphp
+                          <tr>
+                          <td>{{$id}}</td>
+                            <td onclick="">LASER CUTTED UPRIGHTS  </td>
+                            <td>19MM STEEL UPRIGHT WHITE LC</td>
+                            <td>1</td>
+                            <td>1020</td>
+                            <td>_________________________</td>
+                          </tr>
+                          @endfor
+                          </tbody>
+                        </table>
+                     </div>
+                      <!-- /.col -->
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="">
+    <div class="col-md-12" style="padding:22px;">
+        <div class="box" style="">
+            
+            <div class="box-header">
+              <h3 class="box-title">ACCESSORIES LIST</h3>
+              <div class="box-body">
+                <div class="">
+                    <div class="row">
+                        <div class="col-xs-12 ">
+                          <table class="table table-bordered dark">
+                            <thead>
+                            <tr>
+                              <th>ACCESSORIES</th>
+                              <th>6MM COACHMAN SCREWS</th>
+                              <th>8MM WALL PLUGS</th>
+                              <th>TAK SCREWS 20MM</th>
+                              <th>16MM GROMMETS WHITE</th>
+                              <th>6MM NAIL-INS</th>
+                              <th>END CAPS PLASTIC BLACK</th>
+                              <th>NAME AND SIGNATURE</th>
+                              
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                              <td onclick="">TOP CHANNEL</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td>_________________________</td>
+                            </tr>
+                            <tr>
+                              <td onclick="">BOTTOM CHANNEL </td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td>_________________________</td>
+                            </tr>
+                            <tr>
+                              <td onclick="">LEFT CHANNEL </td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td>_________________________</td>
+                            </tr>
+                            <tr>
+                              <td onclick="">RIGHT CHANNEL </td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td>_________________________</td>
+                            </tr>
+                            <tr>
+                              <td onclick="">FACE ON BEAM TOP  </td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td>_________________________</td>
+                            </tr>
+                            <tr>
+                              <td onclick="">FACE ON BEAM BOTTOM </td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td>_________________________</td>
+                            </tr>
+                            <tr>
+                              <td onclick="">FACE ON BEAM LEFT  </td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td>_________________________</td>
+                            </tr>
+                            <tr>
+                              <td onclick="">FACE ON BEAM RIGHT  </td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td>_________________________</td>
+                            </tr>
+                            <tr>
+
+                            </tr>
+                            <tr>
+                              <td colspan="7">TOTAL SCREWS AND FITTINGS</td>
+                              <td style="background: f7f7f7;" >_________________________</td>
+                            </tr>
+                            </tbody>
+                          </table>
+                       </div>
+                        <!-- /.col -->
+                      </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{-- status timeline code goes here  --}}
+<div id="btnNew" style="cursor:pointer;z-index:100;" class="pull-right">
+    <span class="btn bg-orange btn-flat btn-lg margin" onclick="openNav()" id="btnNewMessage"><li class="fa fa-plus"></li> Update Status</span>
+</div>
+<div class="col-md-12">
+
+      
+            <!-- The time line -->
+            <ul class="timeline" id="timelinemore" data-next-page="https://erp.nsol.sg/projects/24?page=2">
+                            <!-- timeline time label -->
+                <li class="time-label">
+                            <span class="bg-red">
+                                29-Nov-2018
+                            </span>
+                </li>
+                <!-- /.timeline-label -->
+                            <!-- timeline item -->
+                <li>
+                    <i class="fa fa-envelope bg-blue"></i>
+    
+                    <div class="timeline-item">
+                        <span class="time"><i class="fa fa-clock-o"></i> 13:35 </span>
+    
+                        <h3 class="timeline-header"><a href="#">John Smith</a> posted with <span class="label bg-blue">STATUS</span> </h3>
+    
+                        <div class="timeline-body">
+                            Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here 
+                            Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here 
+                            Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here 
+                            Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here Detail Message Goes Here 
+                        </div>
+    
+                    </div>
+                </li>
+            <!-- End timeline item -->
+            
+                                <!-- The time line -->
+            <ul class="timeline" id="timelinemore" data-next-page="#">
+                            <!-- timeline item -->
+                <li>
+                    <i class="fa fa-envelope bg-blue"></i>
+    
+                    <div class="timeline-item">
+                        <span class="time"><i class="fa fa-clock-o"></i> 13:35 </span>
+    
+                        <h3 class="timeline-header"><a href="#">John Smith</a> posted with <span class="label bg-yellow">STATUS</span> </h3>
+    
+                        <div class="timeline-body">
+                            Need Samples. Need Samples. Need Samples. Need Samples. Need Samples. Need Samples. Need Samples. 
+                        </div>
+    
+                    </div>
+                </li>
+                <!-- END timeline item -->
+                
+                                <!-- The time line -->
+            <ul class="timeline" id="timelinemore" data-next-page="#">
+                            <!-- timeline item -->
+                <li>
+                    <i class="fa fa-envelope bg-blue"></i>
+    
+                    <div class="timeline-item">
+                        <span class="time"><i class="fa fa-clock-o"></i> 13:35 </span>
+    
+                        <h3 class="timeline-header"><a href="#">John Smith</a> posted with <span class="label bg-green">STATUS</span> </h3>
+    
+                        <div class="timeline-body">
+                            Need Samples. Need Samples. Need Samples. Need Samples. Need Samples. Need Samples. 
+                            Need Samples. Need Samples. Need Samples. Need Samples. Need Samples. Need Samples. Need Samples. 
+                            <div class="clearfix"><br></div>
+                        </div>
+    
+                    </div>
+                </li>
+                <!-- END timeline item -->
+                
+                                <!-- The time line -->
+            <ul class="timeline" id="timelinemore" data-next-page="#">
+                            <!-- timeline time label -->
+                <li class="time-label">
+                            <span class="bg-red">
+                                28-Nov-2018
+                            </span>
+                </li>
+                <!-- /.timeline-label -->
+                            <!-- timeline item -->
+                <li>
+                    <i class="fa fa-envelope bg-blue"></i>
+    
+                    <div class="timeline-item">
+                        <span class="time"><i class="fa fa-clock-o"></i> 05:27 </span>
+    
+                        <h3 class="timeline-header"><a href="#">John Smith</a> posted with <span class="label bg-blue">STATUS</span> </h3>
+    
+                        <div class="timeline-body">
+                            Qoute Sent to him my post and email. 
+                        </div>
+    
+                    </div>
+                </li>
+                <!-- END timeline item -->
+              
+                
+                        </ul>
+        </ul></ul></ul>
+    </div>
+        <!-- /.col -->
+
+</div>
+{{-- end of the status code  --}}
+
+  <div class="modal fade" id="AddStock" tabindex="-1" role="dialog" aria-labelledby="AddStock" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -680,6 +868,8 @@
           font-size: 56px;
               border-radius:100%;
       }
+      #image{
+      }
       @media screen and (max-height: 450px)
       {
           .sidenav
@@ -721,6 +911,9 @@
           </div>              
       </div>
 <script>
+ $('#showImage').click(function(){
+  $('#image').toggle();
+ });
 function openNav() {
   document.getElementById("mySidenav").style.width = "70%";
 }

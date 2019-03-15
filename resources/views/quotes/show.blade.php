@@ -53,8 +53,7 @@
          <span>  Date: 18-Feb-2019 </span><br>
         <b>Order No.: RBD001</b><br>
         <br>
-        <b>Status: <span class="text-green">New</span></b><br>
-        <b>Total Amount:</b> $277.97<br>
+        
       </div>
       <!-- /.col -->
     </div>
@@ -159,10 +158,6 @@
               <tr>
                 <th style="width:64%">Subtotal:</th>
                 <td>$232.90</td>
-            </tr>
-            <tr>
-              <th>Delivery(1-7 business days):</th>
-              <td>$19.80</td>
             </tr>
             <tr>
                 <th></th>
