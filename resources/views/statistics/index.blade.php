@@ -12,7 +12,7 @@
         <h5 class="widget-user-desc">Distributor</h5>
       </div>
       <div class="widget-user-image">
-        <img class="img-circle" src="../dist/img/user1-128x128.jpg" alt="User Avatar">
+        <img class="img-circle" src="{{asset('dist/img/user1-128x128.jpg')}}" alt="User Avatar">
       </div>
       <div class="box-footer">
         <div class="row">
@@ -58,7 +58,7 @@
         <h5 class="widget-user-desc">Sales Agents</h5>
       </div>
       <div class="widget-user-image">
-        <img class="img-circle" src="../dist/img/user1-128x128.jpg" alt="User Avatar">
+        <img class="img-circle" src="{{asset('dist/img/user1-128x128.jpg')}}" alt="User Avatar">
       </div>
       <div class="box-footer">
         <div class="row">
@@ -105,7 +105,7 @@
         <h5 class="widget-user-desc">Sales Agents</h5>
       </div>
       <div class="widget-user-image">
-        <img class="img-circle" src="../dist/img/user1-128x128.jpg" alt="User Avatar">
+        <img class="img-circle" src="{{asset('dist/img/user1-128x128.jpg')}}" alt="User Avatar">
       </div>
       <div class="box-footer">
         <div class="row">
