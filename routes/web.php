@@ -124,3 +124,7 @@ Route::resource('attributes', 'AttributeController')->middleware('auth');
  //sage api setting page
  Route::get('/sage-settings', 'SettingController@sage')->name('SageSetting')->middleware('auth');
 
+
+
+ //Statistics
+ Route::resource('/statistics', 'StatisticsController')->middleware('auth');

@@ -79,5 +79,19 @@
           <button type="button" class="btn btn-primary"><li class="fa fa-search"></li></button>
         </span>
         @endif
+
+        @if (Route::currentRouteName()=='statistics.index')
+        <span class="pull-right">
+            <div class="custom-input-group">
+                <input type="text" class="form-control" name="city" id="city" placeholder="Enter City">
+            </div>
+           
+
+          <div class="custom-input-group">
+                <input type="month" class="form-control" name="srcmonth" id="srcmonth" value="{{date('Y-m')}}">
+            </div>
+          <button type="button" class="btn btn-primary"><li class="fa fa-search"></li></button>
+        </span>
+        @endif
       </h1>
 </section>
