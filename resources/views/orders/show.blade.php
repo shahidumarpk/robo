@@ -137,7 +137,7 @@
       <div class="col-xs-12">
         <span class="pull-right">
             <button type="button" class="btn btn-primary" style="margin-right: 5px;">
-                <i class="fa fa-file"></i> Print
+                <i class="fa fa-file"></i> Print All Job Cards
               </button>
               <button type="button" class="btn btn-info" style="margin-right: 5px;">
                 <i class="fa fa-download"></i> PDF
@@ -347,6 +347,10 @@
 </div>
 
     <div id="btnNew" style="cursor:pointer;z-index:100;" class="pull-right">
+        <span class="btn bg-blue btn-flat btn-lg margin" data-toggle="modal" data-target="#NewEvent"><li class="fa fa-calendar"></li> Schedule Delivery</span>
+    </div>
+
+    <div id="btnNew" style="cursor:pointer;z-index:100;" class="pull-right">
         <span class="btn bg-orange btn-flat btn-lg margin" onclick="openNav()" id="btnNewMessage"><li class="fa fa-plus"></li> New Status</span>
     </div>
     
@@ -453,7 +457,10 @@
         </div>
             <!-- /.col -->
     </div>
-    
+    <div id="btnNew" style="cursor:pointer;z-index:100;" class="pull-right">
+        <span class="btn bg-blue btn-flat btn-lg margin" data-toggle="modal" data-target="#NewEvent"><li class="fa fa-calendar"></li> Schedule Delivery</span>
+    </div>
+
     <div id="btnNew" style="cursor:pointer;z-index:100;" class="pull-right">
         <span class="btn bg-orange btn-flat btn-lg margin" onclick="openNav()" id="btnNewMessage"><li class="fa fa-plus"></li> New Status</span>
     </div>
@@ -655,3 +662,57 @@
       </div>
     </div>
 </div>
+
+
+
+<!-- modal add event -->
+<div class="modal fade" id="NewEvent" tabindex="-1" role="dialog" aria-labelledby="NewEvent" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Update Event Details</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <div class="box-body">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div class='input-group date' id='datetimepicker1'>
+                                    <input type='text' class="form-control" name="eventtime" autocomplete="off" />
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                          <div class="form-group">
+                              <label for="title">Title</label>
+                              <input type="text" name="title" class="form-control" id="title" placeholder="Enter Title">
+                          </div>                 
+                        <div class="form-group">
+                            <label for="orderno">Enter Order No</label>
+                            <input type="text" name="orderno" class="form-control" id="orderno" placeholder="Enter Order No">
+                        </div>
+                        <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea rows="10" name="description" class="form-control" id="description" placeholder="Enter Description"></textarea>
+                        </div>
+                        
+                    </div>
+                    </div>
+                    <!-- /.box-body -->
+                
+                    
+                    </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" onclick="showsuccess()">Created</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+            </div>
+        
+        
+        </div>
+    </div>
+    </div>
+    <!-- model ends -->

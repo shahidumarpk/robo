@@ -128,107 +128,143 @@
                             </thead>
                             
                             <tbody>
-                              <tr id="row_1">
-                                <td>
-                                    <select onchange="onProductChange(this.value)" class="form-control select_group product" data-row-id="row_1" id="product_1" name="product[]" style="width:100%;" onchange="putPrice()" required>
-                                        <option value=""  disabled>Select Product</option>
-                                        <option value="1" >Deluxe Trellis</option>
-                                        <option value="2">Deluxe Fixture</option>
-                                        <option value="1" selected >Econo Trellis</option>
-                                        <option value="2" >Econo Fixture</option>
-                                        <option value="1">	Alu Trellis</option>
-                                        <option value="2">	Alu Fixture</option>
-                                        <option value="1">	Galv Trellis</option>
-                                        <option value="2">Galv Fixture  </option>
-                                        <option value="1">DuPlus Trellis </option>
-                                        <option value="2">DuPlus Fixture </option>
-                                        <option value="3">Econo Burglar Bars </option>
-                                        <option value="4">Robo Clear Bars </option>
-                                          
-                                          </select>
-                                </td>
-                                <td>
-                                  <a class="btn btn-primary" onclick="showProductDetails()"><i class="fa fa-eye"></i></a>
-                                </td>
-                                <td><input type="number" value="1" placeholder="Qty" name="qty[]" id="qty_1" class="form-control" required="" onkeyup="getTotal(1)"></td>
-                                <td>
-                                    <input type="text" name="rate[]" id="rate_1" class="form-control" disabled="" autocomplete="off" value="200">
-                                    <input type="hidden" name="rate_value[]" id="rate_value_1" class="form-control" autocomplete="off">
-                                </td>
-                                <td>
-                                    <input type="text"  value="1502"  name="amount[]" id="amount_1" class="form-control" disabled="" autocomplete="off">
-                                    <input type="hidden" name="amount_value[]" id="amount_value_1" class="form-control" autocomplete="off">
-                                </td>
-                                <td><button disabled  type="button" class="btn btn-danger" onclick="removeRow(1)"><i class="fa fa-close"></i></button></td>
-                            </tr>
-
-                            <tr id="row_2">
-                                <td>
-                                    <select onchange="onProductChange(this.value)" class="form-control select_group product" data-row-id="row_1" id="product_1" name="product[]" style="width:100%;" onchange="putPrice()" required>
-                                        <option value="" selected disabled>Select Product</option>
-                                        <option value="1" >Deluxe Trellis</option>
-                                        <option value="2">Deluxe Fixture</option>
-                                        <option value="1" >Econo Trellis</option>
-                                        <option value="2" >Econo Fixture</option>
-                                        <option value="1">	Alu Trellis</option>
-                                        <option value="2">	Alu Fixture</option>
-                                        <option value="1">	Galv Trellis</option>
-                                        <option value="2" selected>Galv Fixture  </option>
-                                        <option value="1">DuPlus Trellis </option>
-                                        <option value="2">DuPlus Fixture </option>
-                                        <option value="3">Econo Burglar Bars </option>
-                                        <option value="4">Robo Clear Bars </option>
-                                          
-                                          </select>
-                                </td>
-                                <td>
-                                  <a class="btn btn-primary" onclick="showProductDetails()"><i class="fa fa-eye"></i></a>
-                                </td>
-                                <td><input type="number" value="1"  placeholder="Qty" name="qty[]" id="qty_1" class="form-control" required="" onkeyup="getTotal(1)"></td>
-                                <td>
-                                    <input type="text" name="rate[]" id="rate_1" class="form-control" disabled="" autocomplete="off" value="200">
-                                    <input type="hidden" name="rate_value[]" id="rate_value_1" class="form-control" autocomplete="off">
-                                </td>
-                                <td>
-                                    <input type="text"  value="1200"  name="amount[]" id="amount_1" class="form-control" disabled="" autocomplete="off">
-                                    <input type="hidden" name="amount_value[]" id="amount_value_1" class="form-control" autocomplete="off">
-                                </td>
-                                <td><button type="button" class="btn btn-danger" onclick="removeRow(2)"><i class="fa fa-close"></i></button></td>
-                            </tr>
-
-                            <tr id="row_3">
-                                <td>
-                                    <select onchange="onProductChange(this.value)" class="form-control select_group product" data-row-id="row_1" id="product_1" name="product[]" style="width:100%;" onchange="putPrice()" required>
-                                        <option value="" selected disabled>Select Product</option>
-                                        <option value="1" >Deluxe Trellis</option>
-                                        <option value="2">Deluxe Fixture</option>
-                                        <option value="1" >Econo Trellis</option>
-                                        <option value="2" >Econo Fixture</option>
-                                        <option value="1">	Alu Trellis</option>
-                                        <option value="2">	Alu Fixture</option>
-                                        <option value="1">	Galv Trellis</option>
-                                        <option value="2">Galv Fixture  </option>
-                                        <option value="1">DuPlus Trellis </option>
-                                        <option value="2" selected>DuPlus Fixture </option>
-                                        <option value="3">Econo Burglar Bars </option>
-                                        <option value="4">Robo Clear Bars </option>
-                                          
-                                          </select>
-                                </td>
-                                <td>
-                                  <a class="btn btn-primary" onclick="showProductDetails()"><i class="fa fa-eye"></i></a>
-                                </td>
-                                <td><input type="number" value="1"  placeholder="Qty" name="qty[]" id="qty_1" class="form-control" required="" onkeyup="getTotal(1)"></td>
-                                <td>
-                                    <input type="text" name="rate[]" id="rate_1" class="form-control" disabled="" autocomplete="off" value="200">
-                                    <input type="hidden" name="rate_value[]" id="rate_value_1" class="form-control" autocomplete="off">
-                                </td>
-                                <td>
-                                    <input type="text" value="1000"  name="amount[]" id="amount_1" class="form-control" disabled="" autocomplete="off">
-                                    <input type="hidden" name="amount_value[]" id="amount_value_1" class="form-control" autocomplete="off">
-                                </td>
-                                <td><button type="button" class="btn btn-danger" onclick="removeRow(3)"><i class="fa fa-close"></i></button></td>
-                            </tr>
+                                <tr id="row_1">
+                                    <td>
+                                        <select onchange="onProductChange(this.value)" class="form-control select_group product" data-row-id="row_1" id="product_1" name="product[]" style="width:100%;" onchange="putPrice()" required>
+                                            <option value=""  disabled>Select Product</option>
+                                            <option value="1" >Deluxe Trellis</option>
+                                            <option value="2">Deluxe Fixture</option>
+                                            <option value="1" selected>Econo Trellis</option>
+                                            <option value="2" >Econo Fixture</option>
+                                            <option value="1">	Alu Trellis</option>
+                                            <option value="2">	Alu Fixture</option>
+                                            <option value="1">	Galv Trellis</option>
+                                            <option value="2">Galv Fixture  </option>
+                                            <option value="1">DuPlus Trellis </option>
+                                            <option value="2">DuPlus Fixture </option>
+                                            <option value="3">Econo Burglar Bars </option>
+                                            <option value="4">Robo Clear Bars </option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                      <a class="btn btn-primary" onclick="showProductDetails()"><i class="fa fa-eye"></i></a>
+                                    </td>
+                                    <td><input type="number" value="1" placeholder="Qty" name="qty[]" id="qty_1" class="form-control" required="" onkeyup="getTotal(1)"></td>
+                                    <td>
+                                        
+                                        <div class="input-group">
+                                          <div class="input-group-addon">
+                                            <i class="fa fa-zar"></i>
+                                          </div>
+                                          <input type="text" name="rate[]" id="rate_1" class="form-control" disabled="" autocomplete="off" value="200">
+                                        </div>
+                                        <input type="hidden" name="rate_value[]" id="rate_value_1" class="form-control" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        
+                                        <div class="input-group">
+                                          <div class="input-group-addon">
+                                            <i class="fa fa-zar"></i>
+                                          </div>
+                                          <input type="text"  value="1502"  name="amount[]" id="amount_1" class="form-control" disabled="" autocomplete="off">
+                                        </div>
+                                        <input type="hidden" name="amount_value[]" id="amount_value_1" class="form-control" autocomplete="off">
+                                    </td>
+                                    <td><button disabled  type="button" class="btn btn-danger" onclick="removeRow(1)"><i class="fa fa-close"></i></button></td>
+                                </tr>
+    
+                                <tr id="row_2">
+                                    <td>
+                                        <select onchange="onProductChange(this.value)" class="form-control select_group product" data-row-id="row_1" id="product_1" name="product[]" style="width:100%;" onchange="putPrice()" required>
+                                            <option value="" disabled>Select Product</option>
+                                            <option value="1" >Deluxe Trellis</option>
+                                            <option value="2">Deluxe Fixture</option>
+                                            <option value="1" >Econo Trellis</option>
+                                            <option value="2" >Econo Fixture</option>
+                                            <option value="1">	Alu Trellis</option>
+                                            <option value="2">	Alu Fixture</option>
+                                            <option value="1" selected>	Galv Trellis</option>
+                                            <option value="2" >Galv Fixture  </option>
+                                            <option value="1">DuPlus Trellis </option>
+                                            <option value="2">DuPlus Fixture </option>
+                                            <option value="3">Econo Burglar Bars </option>
+                                            <option value="4">Robo Clear Bars </option>
+                                              
+                                              </select>
+                                    </td>
+                                    <td>
+                                      <a class="btn btn-primary" onclick="showProductDetails()"><i class="fa fa-eye"></i></a>
+                                    </td>
+                                    <td><input type="number" value="1"  placeholder="Qty" name="qty[]" id="qty_1" class="form-control" required="" onkeyup="getTotal(1)"></td>
+                                    <td>
+                                        
+                                        <div class="input-group">
+                                          <div class="input-group-addon">
+                                            <i class="fa fa-zar"></i>
+                                          </div>
+                                          <input type="text" name="rate[]" id="rate_1" class="form-control" disabled="" autocomplete="off" value="200">
+                                        </div>
+                                        <input type="hidden" name="rate_value[]" id="rate_value_1" class="form-control" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        
+                                        <div class="input-group">
+                                          <div class="input-group">
+                                          <div class="input-group-addon">
+                                            <i class="fa fa-zar"></i>
+                                          </div>
+                                          <input type="text"  value="1200"  name="amount[]" id="amount_1" class="form-control" disabled="" autocomplete="off">
+                                        </div>
+                                        <input type="hidden" name="amount_value[]" id="amount_value_1" class="form-control" autocomplete="off">
+                                    </td>
+                                    <td><button type="button" class="btn btn-danger" onclick="removeRow(2)"><i class="fa fa-close"></i></button></td>
+                                </tr>
+    
+                                <tr id="row_3">
+                                    <td>
+                                        <select onchange="onProductChange(this.value)" class="form-control select_group product" data-row-id="row_1" id="product_1" name="product[]" style="width:100%;" onchange="putPrice()" required>
+                                            <option value="" selected disabled>Select Product</option>
+                                            <option value="1">Deluxe Trellis</option>
+                                            <option value="2">Deluxe Fixture</option>
+                                            <option value="1">Econo Trellis</option>
+                                            <option value="2">Econo Fixture</option>
+                                            <option value="1">Alu Trellis</option>
+                                            <option value="2">Alu Fixture</option>
+                                            <option value="1">Galv Trellis</option>
+                                            <option value="2">Galv Fixture  </option>
+                                            <option value="1" selected>DuPlus Trellis </option>
+                                            <option value="2">DuPlus Fixture </option>
+                                            <option value="3">Econo Burglar Bars </option>
+                                            <option value="4">Robo Clear Bars </option>
+                                              
+                                              </select>
+                                    </td>
+                                    <td>
+                                      <a class="btn btn-primary" onclick="showProductDetails()"><i class="fa fa-eye"></i></a>
+                                    </td>
+                                    <td><input type="number" value="1"  placeholder="Qty" name="qty[]" id="qty_1" class="form-control" required="" onkeyup="getTotal(1)"></td>
+                                    <td>
+                                        
+                                        <div class="input-group">
+                                          <div class="input-group-addon">
+                                            <i class="fa fa-zar"></i>
+                                          </div>
+                                          <input type="text" name="rate[]" id="rate_1" class="form-control" disabled="" autocomplete="off" value="200">
+                                        </div>
+                                        <input type="hidden" name="rate_value[]" id="rate_value_1" class="form-control" autocomplete="off">
+                                    </td>
+                                    <td>
+                                        
+                                        <div class="input-group">
+                                          <div class="input-group-addon">
+                                            <i class="fa fa-zar"></i>
+                                          </div>
+                                          <input type="text" value="1000"  name="amount[]" id="amount_1" class="form-control" disabled="" autocomplete="off">
+                                        </div>
+                                        <input type="hidden" name="amount_value[]" id="amount_value_1" class="form-control" autocomplete="off">
+                                    </td>
+                                    <td><button type="button" class="btn btn-danger" onclick="removeRow(3)"><i class="fa fa-close"></i></button></td>
+                                </tr>
                             <tr>
                                 <td></td>
                                 <td></td>
@@ -241,47 +277,56 @@
                             </table>
                             
                     <div class="">
-                        
-                      <div class="col-md-12">
-                          <label id="additionalWorkLabel" style=""> Additional Work (if any)</label>
-                          <div class="form-group row controlremove" style="margin-top:20px">
-                              <div class="col-md-7">
-                                <input type="text" value="Locks for outdoor needs to change" name="addmore[]" class="form-control" placeholder="Enter Additional Work Here">
-                              </div>
-                              <div class="col-md-4">
-                                <input type="number" value="250" name="addmore[]" class="form-control" placeholder="Price"> 
-                              </div>
-                              <div class="col-md-1">
-                                <button class="btn btn-danger remove" type="button"><i class="fa fa-close"></i></button>
-                              </div>
-                            </div>
+                        <div class="col-md-12">
+                            <label id="additionalWorkLabel" style=""> Additional Work (if any)</label>
                             <div class="form-group row controlremove" style="margin-top:20px">
                                 <div class="col-md-7">
-                                  <input type="text"  value="New Lock alike keys for outdoor needed"  name="addmore[]" class="form-control" placeholder="Enter Additional Work Here">
+                                  <input type="text" value="Locks for outdoor needs to change" name="addmore[]" class="form-control" placeholder="Enter Additional Work Here">
                                 </div>
                                 <div class="col-md-4">
-                                  <input type="number"  value="250" name="addmore[]" class="form-control" placeholder="Price"> 
+                                  <div class="input-group">
+                                    <div class="input-group-addon">
+                                      <i class="fa fa-zar"></i>
+                                    </div>
+                                    <input type="number" value="250" name="addmore[]" class="form-control" placeholder="Price"> 
+                                  </div>
                                 </div>
                                 <div class="col-md-1">
                                   <button class="btn btn-danger remove" type="button"><i class="fa fa-close"></i></button>
                                 </div>
                               </div>
-                          <div class=" row control-group after-add-more" id="after_additional_work_">
-                              <div class="col-md-7">
-                                  {{-- <label id="additionalWorkOldLabel"> Additional Work (if any)</label> --}}
-                                  {{-- <input type="text" name="addmore[]" class="form-control" placeholder="Enter Additional Work Here"> --}}
-                                </div>
-                                <div class="col-md-4">
-                                  {{-- <input type="number" name="addmore[]" class="form-control" placeholder="Price">  --}}
-                                </div>
-                                <div class="col-md-1">
-                                  <div class="input-group-btn"> 
-                                    <button class="btn btn-success add-more" type="button"><i class="fa fa-plus"></i></button>
+                              <div class="form-group row controlremove" style="margin-top:20px">
+                                  <div class="col-md-7">
+                                    <input type="text"  value="New Lock alike keys for outdoor needed"  name="addmore[]" class="form-control" placeholder="Enter Additional Work Here">
+                                  </div>
+                                  <div class="col-md-4">
+                                    <div class="input-group">
+                                      <div class="input-group-addon">
+                                        <i class="fa fa-zar"></i>
+                                      </div>
+                                      <input type="number"  value="250" name="addmore[]" class="form-control" placeholder="Price"> 
+                                    </div>
+                                  </div>
+                                  <div class="col-md-1">
+                                    <button class="btn btn-danger remove" type="button"><i class="fa fa-close"></i></button>
                                   </div>
                                 </div>
-                          </div>
+                            <div class=" row control-group after-add-more" id="after_additional_work_">
+                                <div class="col-md-7">
+                                    {{-- <label id="additionalWorkOldLabel"> Additional Work (if any)</label> --}}
+                                    {{-- <input type="text" name="addmore[]" class="form-control" placeholder="Enter Additional Work Here"> --}}
+                                  </div>
+                                  <div class="col-md-4">
+                                    {{-- <input type="number" name="addmore[]" class="form-control" placeholder="Price">  --}}
+                                  </div>
+                                  <div class="col-md-1">
+                                    <div class="input-group-btn"> 
+                                      <button class="btn btn-success add-more" type="button"><i class="fa fa-plus"></i></button>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
                       </div>
-                    </div>
 
                     <div class="col-md-6 col-xs-12 pull-right">
                               
@@ -334,7 +379,12 @@
                       <input type="text" name="addmore[]" class="form-control" placeholder="Enter Additional Work Here">
                     </div>
                     <div class="col-md-4">
-                      <input type="number" name="addmore[]" class="form-control" placeholder="Price"> 
+                        <div class="input-group">
+                          <div class="input-group-addon">
+                            <i class="fa fa-zar"></i>
+                          </div>
+                          <input type="number" name="addmore[]" class="form-control" placeholder="Price"> 
+                        </div>
                     </div>
                     <div class="col-md-1">
                       <button class="btn btn-danger remove" type="button"><i class="fa fa-close"></i></button>
@@ -2062,8 +2112,8 @@
             </a>
             </td>` +
             '<td><input type="number" placeholder="Qty" name="qty[]" value="1" id="qty_1" class="form-control" onkeyup="getTotal(1)" ></td>'+
-            '<td><input type="text" name="rate[]" id="rate_1" class="form-control" disabled value="350"><input type="hidden" name="rate_value[]" id="rate_value_1" class="form-control"></td>'+
-            '<td><input type="text" name="amount[]" id="amount_1" class="form-control" disabled><input type="hidden" name="amount_value[]" id="amount_value_1" class="form-control"></td>'+
+            '<td><div class="input-group"><div class="input-group-addon"><i class="fa fa-zar"></i></div><input type="text" name="rate[]" id="rate_1" class="form-control" disabled autocomplete="off" value="350"></div><input type="hidden" name="rate_value[]" id="rate_value_1" class="form-control"></td>'+
+            '<td><div class="input-group"><div class="input-group-addon"><i class="fa fa-zar"></i></div><input type="text" name="amount[]" id="amount_1" class="form-control" disabled></div><input type="hidden" name="amount_value[]" id="amount_value_1" class="form-control"></td>'+
             '<td><button type="button" class="btn btn-danger" onclick="removeRow(' + row_id + ')"><i class="fa fa-close"></i></button>'+
             //'<button type="button" class="btn btn-success"  id="addBtn_'+row_id+'" onclick="addNewRow()"><i class="fa fa-plus"></i></button></td>'+
             '</tr>';

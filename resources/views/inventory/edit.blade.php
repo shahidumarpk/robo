@@ -78,7 +78,10 @@
                     <td><b>Rate per meter / pcs</b></td>
                     <td><input type="text" class="form-control"  value="40.2"></td>
                 </tr>
-
+                <tr class="text-red">
+                    <td><b>Re-Order Leave</b></td>
+                    <td><input type="text" class="form-control"  value="5"></td>
+                </tr>
                 <tr>
                     <td><b>Used in Products </b></td>
                     <td>

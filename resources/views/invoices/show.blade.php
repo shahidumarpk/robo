@@ -53,7 +53,7 @@
         <b>Order No.: RBD001</b><br>
         <br>
         <b>Status: <span class="text-green">Partial Paid</span></b><br>
-        <b>Total Amount:</b> $277.97<br>
+        <b>Total Amount:</b> R 277.97<br>
       </div>
       <!-- /.col -->
     </div>
@@ -79,32 +79,32 @@
             <td>DELUXE TRELLIS</td>
             <td>300 x 200</td>
             <td>1</td>
-            <td>$45.00</td>
-            <td>$45.00</td>
+            <td>R 45.00</td>
+            <td>R 45.00</td>
           </tr>
           <tr>
             <td>2</td>
             <td>DELUXE FIXTURE</td>
             <td>150 x 200</td>
             <td>1</td>
-            <td>$87.90</td>
-            <td>$87.90</td>
+            <td>R 87.90</td>
+            <td>R 87.90</td>
           </tr>
           <tr>
             <td>3</td>
             <td>ECONO TRELLIS</td>
             <td>900 x 200</td>
             <td>2</td>
-            <td>$20.00</td>
-            <td>$40.00</td>
+            <td>R 20.00</td>
+            <td>R 40.00</td>
           </tr>
           <tr>
             <td>4</td>
             <td>ECONO FIXTURE</td>
             <td>900 x 200</td>  
             <td>1</td>
-            <td>$60.00</td>
-            <td>$60.00</td>
+            <td>R 60.00</td>
+            <td>R 60.00</td>
           </tr>
           <tr>
               <th colspan="7" ></th></th>
@@ -115,17 +115,17 @@
             <tr>
                 <td>1</td>
                 <td colspan="4">Change Door Lock</td>
-                <td>$45.00</td>
+                <td>R 45.00</td>
             </tr>
             <tr>
                 <td>2</td>
                 <td colspan="4">Door is very old, repair</td>
-                <td>$45.00</td>
+                <td>R 45.00</td>
             </tr>
             <tr>
                 <td>3</td>
                 <td colspan="4">Blue paint for new door</td>
-                <td>$45.00</td>
+                <td>R 45.00</td>
             </tr>
           </tbody>
         </table>
@@ -159,27 +159,27 @@
             <tbody>
               <tr>
                 <th style="width:64%">Subtotal:</th>
-                <td>$232.90</td>
+                <td>R 232.90</td>
               </tr>
             <tr>
                 <th></th>
-                <td><b>$252.70</b></td>
+                <td><b>R 252.70</b></td>
                 </tr>
             <tr>
                 <th>GST (10%)</th>
-                <td>$25.27</td>
+                <td>R 25.27</td>
                 </tr>
             <tr>
               <th><b>Sub Total:</b></th>
-              <td><b>$277.97</b></td>
+              <td><b>R 277.97</b></td>
             </tr>
             <tr>
                 <th>Advance</th>
-                <td>$200</td>
+                <td>R 200</td>
             </tr>
             <tr>
                     <th><b>Total:</b></th>
-                    <td><b>$77.97</b></td>
+                    <td><b>R 77.97</b></td>
                   </tr>
           </tbody></table>
         </div>

@@ -4,6 +4,21 @@
  <div class="row">
   <div class="col-lg-3 col-xs-6">
     <!-- small box -->
+    <div class="small-box bg-red">
+      <div class="inner">
+        <h3>0</h3>
+  
+        <p>Leads</p>
+      </div>
+      <div class="icon">
+        <i class="ion ion-clipboard"></i>
+      </div>
+    </div>
+  </div>
+  <!-- /.col -->
+  
+  <div class="col-lg-3 col-xs-6">
+    <!-- small box -->
     <div class="small-box bg-blue">
       <div class="inner">
         <h3>2</h3>
@@ -16,6 +31,24 @@
     </div>
   </div>
 <!-- /.col -->
+
+<div class="col-lg-3 col-xs-6">
+    <!-- small box -->
+    <div class="small-box bg-yellow">
+      <div class="inner">
+        <h3>2</h3>
+  
+        <p>Invoices</p>
+      </div>
+      <div class="icon">
+        <i class="ion ion-ios-pricetags"></i>
+      </div>
+    </div>
+  </div>
+  <!-- /.col -->
+
+<!-- fix for small devices only -->
+<div class="clearfix visible-sm-block"></div>
 
 <div class="col-lg-3 col-xs-6">
   <!-- small box -->
@@ -31,38 +64,10 @@
   </div>
 </div>
 <!-- /.col -->
-<!-- fix for small devices only -->
-<div class="clearfix visible-sm-block"></div>
 
-<div class="col-lg-3 col-xs-6">
-  <!-- small box -->
-  <div class="small-box bg-yellow">
-    <div class="inner">
-      <h3>2</h3>
 
-      <p>Job Cards</p>
-    </div>
-    <div class="icon">
-      <i class="ion ion-ios-pricetags"></i>
-    </div>
-  </div>
-</div>
-<!-- /.col -->
 
-<div class="col-lg-3 col-xs-6">
-  <!-- small box -->
-  <div class="small-box bg-red">
-    <div class="inner">
-      <h3>0</h3>
 
-      <p>Leads</p>
-    </div>
-    <div class="icon">
-      <i class="ion ion-clipboard"></i>
-    </div>
-  </div>
-</div>
-<!-- /.col -->
 </div>
  <!-- First Line Stats Ends -->
 <!-- Second Line Stats Begins -->
@@ -72,7 +77,7 @@
       <span class="info-box-icon bg-aqua"><i class="fa fa-object-group"></i></span>
 
       <div class="info-box-content">
-        <span class="info-box-text">Jobs</span>
+        <span class="info-box-text">Orders</span>
         <span class="info-box-number">22</span>
       </div>
       <!-- /.info-box-content -->
@@ -149,7 +154,7 @@
     <div class="col-md-6">
     <div class="box box-info">
             <div class="box-header with-border">
-              <h3 class="box-title">Income in last 7 days</h3>
+              <h3 class="box-title">Commission/Profit in last 7 days</h3>
 
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>

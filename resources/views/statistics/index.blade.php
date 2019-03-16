@@ -164,7 +164,7 @@
                   <th>Commission/Profit</th>
                   <th>Sales</th>
                   <th>Conversion Rate</th>
-                  <th>Qoutes</th>
+                  <th>Quotes</th>
                   <th>Leads</th>
                 </tr>
                 </thead>
@@ -291,7 +291,7 @@
                     <th>Commission/Profit</th>
                     <th>Sales</th>
                     <th>Conversion Rate</th>
-                    <th>Qoutes</th>
+                    <th>Quotes</th>
                     <th>Leads</th>
                   </tr>
                   </thead>

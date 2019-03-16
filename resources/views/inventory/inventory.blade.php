@@ -141,9 +141,9 @@
                 <tr>
                   <th>Inventory Name</th>
                   <th>Unit</th>
+                  <th>Rate m/p</th>
                   <th>Total Stock</th>
                   <th>Stock Value</th>
-                  <th>Rate m/p</th>
                   <th>Action</th>
                 </tr>
                 </thead>
@@ -152,10 +152,10 @@
                   <tr>
                     <td>19MM STEEL UPRIGHT WHITE LC</td>
                     <td>Meter</td>
-                    <td>6.6</td>
-                    <td>6.6</td>
-                    
                     <td>R 19.03</td>
+                    <td>6.6</td>
+                    <td>6.6</td>                    
+                    
                     <td>
                       <a href="{{url('/inventory/1/')}}" class="btn btn-info" title="View Detail"><i class="fa fa-eye"></i> </a>    
                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddStock" title="Add More Stock"><i class="fa fa-plus"></i></button>
@@ -168,10 +168,9 @@
                   <tr>
                     <td>19MM STEEL UPRIGHT CHARCOAL LC</td>
                     <td>Meter</td>
-                    <td>6.6</td>
-                    <td>6.6</td>
-                    
                     <td>R 19.03</td>
+                    <td>6.6</td>
+                    <td>6.6</td>
                     <td>
                       <a href="{{url('/inventory/1/')}}" class="btn btn-info" title="View Detail"><i class="fa fa-eye"></i> </a>    
                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddStock" title="Add More Stock"><i class="fa fa-plus"></i></button>
@@ -184,11 +183,10 @@
                   <tr>
                     <td>12MM STEEL UPRIGHT BRONZE LC</td>
                     <td>Meter</td>
-                    <td>6.6</td>
-                    <td>6.6</td>
-                   
                     <td>R 19.03</td>
-                    <td>
+                    <td>6.6</td>
+                    <td>6.6</td>
+                   <td>
                       <a href="{{url('/inventory/1/')}}" class="btn btn-info" title="View Detail"><i class="fa fa-eye"></i> </a> 
                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddStock" title="Add More Stock"><i class="fa fa-plus"></i></button>
                       <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#MinusStock" title="Less Stock"><i class="fa fa-minus"></i></button>   
@@ -200,10 +198,9 @@
                   <tr>
                     <td>19MM STEEL UPRIGHT CHARCOAL</td>
                     <td>Meter</td>
-                    <td>6.6</td>
-                    <td>6.6</td>
-                   
                     <td>R 19.03</td>
+                    <td>6.6</td>
+                    <td>6.6</td>
                     <td>
                       <a href="{{url('/inventory/1/')}}" class="btn btn-info" title="View Detail"><i class="fa fa-eye"></i> </a>    
                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddStock" title="Add More Stock"><i class="fa fa-plus"></i></button>
@@ -216,10 +213,9 @@
                   <tr>
                     <td>20 MM ALUMINIUM UPRIGHTS WHITE LC</td>
                     <td>Meter</td>
-                    <td>6.6</td>
-                    <td>6.6</td>
-
                     <td>R 19.03</td>
+                    <td>6.6</td>
+                    <td>6.6</td>
                     <td>
                       <a href="{{url('/inventory/1/')}}" class="btn btn-info" title="View Detail"><i class="fa fa-eye"></i> </a>    
                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddStock" title="Add More Stock"><i class="fa fa-plus"></i></button>
@@ -232,10 +228,9 @@
                   <tr>
                     <td>CARDBOARD</td>
                     <td>KG</td>
-                    <td>40.0</td>
-                    <td>40.0</td>
-
                     <td>R 9.95</td>
+                    <td>40.0</td>
+                    <td>40.0</td>
                     <td>
                       <a href="{{url('/inventory/1/')}}" class="btn btn-info" title="View Detail"><i class="fa fa-eye"></i> </a>    
                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddStock" title="Add More Stock"><i class="fa fa-plus"></i></button>
@@ -247,10 +242,9 @@
                   <tr>
                     <td>STAINLESS STEEL BEARINGS</td>
                     <td>Pcs</td>
-                    <td>1</td>
-                    <td>1</td>
                     <td>R 19.03</td>
-
+                    <td>1</td>
+                    <td>1</td>
                     <td>
                       <a href="{{url('/inventory/1/')}}" class="btn btn-info" title="View Detail"><i class="fa fa-eye"></i> </a>
                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddStock" title="Add More Stock"><i class="fa fa-plus"></i></button>
@@ -264,10 +258,10 @@
                 <tfoot>
                 <tr>
                     <th>Inventory Name</th>
-                    <th>Total Stock</th>
-                    <th>Stock Value </th>
                     <th>Unit</th>
                     <th>Rate m/p</th>
+                    <th>Total Stock</th>
+                    <th>Stock Value </th>
                     <th>Action</th>
                 </tr>
                 </tfoot>
@@ -340,6 +334,10 @@
                     <div class="form-group">
                       <label for="rate_per">Rate per <span id="type_of_purchase_text"></span></label>
                       <input type="text" name="rate_per" class="form-control" id="rate_per" placeholder="Enter Rate per Unit">
+                    </div>
+                    <div class="form-group text-red">
+                      <label for="laser_cutting">Re-Ordre Level</label>
+                      <input onkeyup="calculateRatePerLength()" type="number" name="laser_cutting" class="form-control" id="laser_cutting" placeholder="Enter Laser Cutting Charges">
                     </div>
                     
                     

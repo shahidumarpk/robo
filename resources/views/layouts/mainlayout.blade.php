@@ -10,6 +10,12 @@
   <title>{{ config('app.name', 'Robo | Admin Console') }}</title>
 
   @include('layouts.partials.headerscripts')
+  <style>
+  .fa-zar:before {
+      font-weight: bold;
+      content: "R";
+    }
+  </style>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">

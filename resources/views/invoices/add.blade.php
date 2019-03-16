@@ -170,11 +170,23 @@
                                     </td>
                                     <td><input type="number" value="1" placeholder="Qty"  name="qty[]" id="qty_1" class="form-control" required onkeyup="getTotal(1)"></td>
                                     <td>
-                                        <input type="text" name="rate[]" id="rate_1" class="form-control" disabled autocomplete="off" value="200">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                              <i class="fa fa-zar"></i>
+                                            </div>
+                                            <input type="text" name="rate[]" id="rate_1" class="form-control" disabled autocomplete="off" value="200">
+                                          </div>
+      
                                         <input type="hidden" name="rate_value[]" id="rate_value_1" class="form-control" autocomplete="off">
                                     </td>
                                     <td>
-                                        <input type="text" value="975.12" name="amount[]" id="amount_1" class="form-control" disabled autocomplete="off">
+                                        <div class="input-group">
+                                          <div class="input-group-addon">
+                                            <i class="fa fa-zar"></i>
+                                          </div>
+                                          <input type="text" name="amount[]" id="amount_1" class="form-control" disabled autocomplete="off">
+                                        </div>
+    
                                         <input type="hidden" name="amount_value[]" id="amount_value_1" class="form-control" autocomplete="off">
                                     </td>
                                     <td><button disabled type="button" class="btn btn-danger" onclick="removeRow(1)"><i class="fa fa-close"></i></button></td>
@@ -203,11 +215,23 @@
                                 </td>
                                 <td><input type="number" value="1" placeholder="Qty"  name="qty[]" id="qty_1" class="form-control" required onkeyup="getTotal(1)"></td>
                                 <td>
-                                    <input type="text" name="rate[]" id="rate_1" class="form-control" disabled autocomplete="off" value="200">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                          <i class="fa fa-zar"></i>
+                                        </div>
+                                        <input type="text" name="rate[]" id="rate_1" class="form-control" disabled autocomplete="off" value="200">
+                                      </div>
+  
                                     <input type="hidden" name="rate_value[]" id="rate_value_1" class="form-control" autocomplete="off">
                                 </td>
                                 <td>
-                                    <input type="text" value="975.12" name="amount[]" id="amount_1" class="form-control" disabled autocomplete="off">
+                                    <div class="input-group">
+                                      <div class="input-group-addon">
+                                        <i class="fa fa-zar"></i>
+                                      </div>
+                                      <input type="text" name="amount[]" id="amount_1" class="form-control" disabled autocomplete="off" value="975.50">
+                                    </div>
+
                                     <input type="hidden" name="amount_value[]" id="amount_value_1" class="form-control" autocomplete="off">
                                 </td>
                                 <td><button type="button" class="btn btn-danger" onclick="removeRow(1)"><i class="fa fa-close"></i></button></td>
@@ -236,11 +260,23 @@
                                 </td>
                                 <td><input type="number" value="2" placeholder="Qty"  name="qty[]" id="qty_1" class="form-control" required onkeyup="getTotal(1)"></td>
                                 <td>
-                                    <input type="text" name="rate[]" id="rate_1" class="form-control" disabled autocomplete="off" value="200">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                          <i class="fa fa-zar"></i>
+                                        </div>
+                                        <input type="text" name="rate[]" id="rate_1" class="form-control" disabled autocomplete="off" value="200">
+                                      </div>
+  
                                     <input type="hidden" name="rate_value[]" id="rate_value_1" class="form-control" autocomplete="off">
                                 </td>
                                 <td>
-                                    <input type="text" value="850" name="amount[]" id="amount_1" class="form-control" disabled autocomplete="off">
+                                    <div class="input-group">
+                                      <div class="input-group-addon">
+                                        <i class="fa fa-zar"></i>
+                                      </div>
+                                      <input type="text" name="amount[]" id="amount_1" class="form-control" disabled autocomplete="off" value="500.00">
+                                    </div>
+
                                     <input type="hidden" name="amount_value[]" id="amount_value_1" class="form-control" autocomplete="off">
                                 </td>
                                 <td><button type="button" class="btn btn-danger" onclick="removeRow(1)"><i class="fa fa-close"></i></button></td>
@@ -268,7 +304,12 @@
                               <input type="text" value="Outside Door lock needs to change" name="addmore[]" class="form-control" placeholder="Enter Additional Work Here">
                             </div>
                             <div class="col-md-4">
-                              <input type="number" value="230" name="addmore[]" class="form-control" placeholder="Price"> 
+                              <div class="input-group">
+                                <div class="input-group-addon">
+                                  <i class="fa fa-zar"></i>
+                                </div>
+                                <input type="number" name="addmore[]" value="200" class="form-control" placeholder="Price"> 
+                              </div>
                             </div>
                             <div class="col-md-1">
                               <button class="btn btn-danger remove" type="button"><i class="fa fa-close"></i></button>
@@ -279,7 +320,12 @@
                               <input type="text" value="Needs Alike keys for new locks" name="addmore[]" class="form-control" placeholder="Enter Additional Work Here">
                             </div>
                             <div class="col-md-4">
-                              <input type="number" value="850" name="addmore[]" class="form-control" placeholder="Price"> 
+                                <div class="input-group">
+                                  <div class="input-group-addon">
+                                    <i class="fa fa-zar"></i>
+                                  </div>
+                                  <input type="number" name="addmore[]" value="520" class="form-control" placeholder="Price"> 
+                                </div>
                             </div>
                             <div class="col-md-1">
                               <button class="btn btn-danger remove" type="button"><i class="fa fa-close"></i></button>
@@ -308,7 +354,12 @@
                             <input type="text" name="addmore[]" class="form-control" placeholder="Enter Additional Work Here">
                           </div>
                           <div class="col-md-4">
-                            <input type="number" name="addmore[]" class="form-control" placeholder="Price"> 
+                              <div class="input-group">
+                                <div class="input-group-addon">
+                                  <i class="fa fa-zar"></i>
+                                </div>
+                                <input type="number" name="addmore[]" class="form-control" placeholder="Price"> 
+                              </div>
                           </div>
                           <div class="col-md-1">
                             <button class="btn btn-danger remove" type="button"><i class="fa fa-close"></i></button>
@@ -324,7 +375,12 @@
               <div class="form-group">
                 <label for="gross_amount" class="col-sm-5 ">Gross Amount</label>
                 <div class="col-sm-7">
-                  <input type="text" value="45,003" class="form-control" id="gross_amount" name="gross_amount"  autocomplete="off" disabled>
+                    <div class="input-group">
+                      <div class="input-group-addon">
+                        <i class="fa fa-zar"></i>
+                      </div>
+                      <input type="text" value="45,003" class="form-control" id="gross_amount" name="gross_amount"  autocomplete="off" disabled>
+                    </div>
                   <input type="hidden" class="form-control" id="gross_amount_value" name="gross_amount_value" autocomplete="off">
                 </div>
               </div>
@@ -355,7 +411,12 @@
               <div class="form-group">
                 <label for="total_amount" class="col-sm-5">Total Amount</label>
                 <div class="col-sm-7">
-                  <input type="text"  value="59,113" class="form-control" id="total_amount" name="total_amount"  autocomplete="off" disabled>
+                    <div class="input-group">
+                      <div class="input-group-addon">
+                        <i class="fa fa-zar"></i>
+                      </div>
+                      <input type="text"  value="59,113" class="form-control" id="total_amount" name="total_amount"  autocomplete="off" disabled>
+                    </div>
                   <input type="hidden" class="form-control" id="total_amount_value" name="total_amount_value" autocomplete="off">
                 </div>
               </div>
@@ -1918,8 +1979,8 @@
             </a>
             </td>` +
             '<td><input type="number" placeholder="Qty" name="qty[]" value="1" id="qty_1" class="form-control" onkeyup="getTotal(1)" ></td>'+
-            '<td><input type="text" name="rate[]" id="rate_1" class="form-control" disabled value="350"><input type="hidden" name="rate_value[]" id="rate_value_1" class="form-control"></td>'+
-            '<td><input type="text" name="amount[]" id="amount_1" class="form-control" disabled><input type="hidden" name="amount_value[]" id="amount_value_1" class="form-control"></td>'+
+            '<td><div class="input-group"><div class="input-group-addon"><i class="fa fa-zar"></i></div><input type="text" name="rate[]" id="rate_1" class="form-control" disabled autocomplete="off" value="350"></div><input type="hidden" name="rate_value[]" id="rate_value_1" class="form-control"></td>'+
+            '<td><div class="input-group"><div class="input-group-addon"><i class="fa fa-zar"></i></div><input type="text" name="amount[]" id="amount_1" class="form-control" disabled></div><input type="hidden" name="amount_value[]" id="amount_value_1" class="form-control"></td>'+
             '<td><button type="button" class="btn btn-danger" onclick="removeRow(' + row_id + ')"><i class="fa fa-close"></i></button>'+
             //'<button type="button" class="btn btn-success"  id="addBtn_'+row_id+'" onclick="addNewRow()"><i class="fa fa-plus"></i></button></td>'+
             '</tr>';

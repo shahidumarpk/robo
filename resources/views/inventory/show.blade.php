@@ -54,6 +54,10 @@
                                   <td><b>Rate per Length</b></td>
                                   <td>75.82</td>
                               </tr>
+                              <tr class="text-red">
+                                  <td><b>Re-Order Level </b></td>
+                                  <td>5</td>
+                              </tr>
                               <tr>
                                   <td><b>Used in Products</b></td>
                                   <td>
@@ -102,6 +106,12 @@
                     <input type="date" name="SrchDate" style="height:32px;">
                     <select name="type" style="height:32px;">
                         <option value="">All</option>
+                        <option value="1">Florin Ristea</option>
+                        <option value="2">Shahid Umar</option>
+                    </select>
+
+                    <select name="type" style="height:32px;">
+                        <option value="">All</option>
                         <option value="add">Add</option>
                         <option value="minus">Minus</option>
                     </select>
@@ -120,6 +130,7 @@
                             <th>Description</th>
                             <th>Type</th>
                             <th>Quantity</th>
+                            <th>By</th>
                         </tr>
                         </thead>
                         
@@ -130,6 +141,7 @@
                             <td>Purhcased on Demannd of Factory</td>
                             <td><span class="text-green">ADD</span></td>
                             <td>5.00</td>
+                            <td>Florin Ristea</td>
                         </tr>
                         <tr>
                             <td>02-Jan-2018</td>
@@ -137,6 +149,7 @@
                             <td>Damaged while tranporting</td>
                             <td><span class="text-red">MINUS</span></td>
                             <td>1.5</td>
+                            <td>Florin Ristea</td>
                         </tr>
                         <tr>
                             <td>05-Jan-2018</td>
@@ -144,6 +157,7 @@
                             <td>This quantity us useless</td>
                             <td><span class="text-red">MINUS</span></td>
                             <td>2.0</td>
+                            <td>Florin Ristea</td>
                         </tr>
                         <tr>
                             <td>08-Jan-2018</td>
@@ -151,6 +165,7 @@
                             <td>Purhcased on Demannd of Factory</td>
                             <td><span class="text-green">ADD</span></td>
                             <td>10.00</td>
+                            <td>Florin Ristea</td>
                         </tr>
                         </tbody>
                         <tfoot>

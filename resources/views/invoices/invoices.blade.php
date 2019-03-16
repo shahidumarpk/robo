@@ -140,7 +140,7 @@
                       <td>James Bond</td>
                       <td>Racheal Jack</td>
                       <td>08-Jan-2018</td>
-                      <td>$277.97</td>
+                      <td>R 277.97</td>
                       <td>
                         <span  data-toggle="modal" data-target="#exampleModalCenter"  class="label label-success">Paid</span>
                       </td>
@@ -155,7 +155,7 @@
                         <td>James Bond</td>
                         <td>Racheal Jack</td>
                         <td>08-Jan-2018</td>
-                        <td>$277.97</td>
+                        <td>R 277.97</td>
                         <td>
                           <span data-toggle="modal" data-target="#exampleModalCenter" class="label label-partial">Partial Paid</span>
                         </td>
@@ -170,7 +170,7 @@
                           <td>James Bond</td>
                           <td>Racheal Jack</td>
                           <td>08-Jan-2018</td>
-                          <td>$277.97</td>
+                          <td>R 277.97</td>
                           <td>
                             <span data-toggle="modal" data-target="#exampleModalCenter"  class="label label-success">Paid</span>
                           </td>
@@ -186,7 +186,7 @@
                         <td>Jhon Elia</td>
                         <td>Racheal Jack</td>
                         <td>07-Jan-2018</td>
-                        <td>$187.97</td>
+                        <td>R 187.97</td>
                         <td>
                             <span class="label label-danger">Unpaid</span>
                         </td>
@@ -202,7 +202,7 @@
                           <td>Mc Grith </td>
                           <td>Chinara Ait</td>
                           <td>05-Jan-2018</td>
-                          <td>$877.97</td>
+                          <td>R 877.97</td>
                           <td>
                             <span class="label label-danger">Unpaid</span>
                           </td>
@@ -218,7 +218,7 @@
                             <td>Mc Grith </td>
                             <td>Chinara Ait</td>
                             <td>05-Jan-2018</td>
-                            <td>$877.97</td>
+                            <td>R 877.97</td>
                             <td>
                               <span class="label label-warning">Draft</span>
                             </td>
